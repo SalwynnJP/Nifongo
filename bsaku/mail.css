@@ -1,0 +1,135 @@
+div.mail {
+	width: 700px ;
+	padding: 10px ;
+	text-align: left ;
+	margin: 0 auto ;
+	background: navy ;}
+div.mail table {
+	width: 700px ;
+	border-collapse: collapse ;
+	border-spacing: 0 ;
+	padding: 0 ;
+	margin: 0 ;
+	border-style: none ;
+	text-align: left ;
+	line-height: 1.0 ;}
+div.mail table tr {
+	margin: 0 ;
+	padding: 0 ;
+	border-style: none ;}
+div.mail table td {
+	margin: 0 ;
+	padding: 0 ;
+	border-style: none ;}
+table tr.top {
+	background: url('../image/mail_top_center.png') ;
+	background-repeat: repeat-x ;
+	height: 22px ;}
+td.tleft {
+	width: 70px ;
+	text-align: left ;}
+td.tcent {
+	width: 600px ;
+	background: url('../image/mail_top_center.png') ;
+	background-repeat: repeat-x ;}
+span.tit {
+	font-family: sans-serif ;
+	font-size: 12pt ;
+	position: relative ;
+	top: 1px ;
+	left: 180px ;}
+td.tright {
+	width: 30px ;
+	width: 10px ;
+	text-align: right ;}
+tr.add {
+	background: url('../image/mail_add_cent.png') ;
+	background-repeat: repeat-x ;
+	height: 57px ;}	
+td.add_left {
+	width: 360px ;
+	text-align: left ;}
+td.add_cent {
+	width: 310px ;
+	background: url('../image/mail_add_cent.png') ;
+	background-repeat: repeat-x ;}
+td.add_right {
+	width: 30px ;}
+tr.book {
+	background: url('../image/mail_book_cent.png') ;
+	background-repeat: repeat-x ;
+	height: 33px ;}
+td.book_left {
+	width: 70px ;
+	text-align: left ;}
+td.book_cent {
+	background: url('../image/mail_book_cent.png') ;
+	background-repeat: repeat-x ;
+	text-align: left ;
+	font-size: 10pt ;
+	font-family: sans-serif ;
+	font-weight: 400 ;}	
+td.book_right {
+	width: 30px ;}
+tr.tab {
+	background: url('../image/mail_tab_cent.png') ;
+	background-repeat: repeat-x ;
+	height: 45px ;}
+td.tab_left {
+	width: 70px ;
+	text-align: left ;}
+td.tab_cent {
+	width: 600px ;
+	background: url('../image/mail_tab_cent.png') ;
+	background-repeat: repeat-x ;
+	text-align: left ;}
+span.adrr {
+	font-size: 10pt ;
+	font-family: sans-serif ;
+	font-weight: 400 ;
+	vertical-align: top ;
+	position: relative ;
+	top: 5px ;
+	left: 1px ;}	
+td.tab_right {
+	width: 30px ;}
+tr.sub {
+	background: url('../image/mail_sub_cent.png') ;
+	background-repeat: repeat-x ;
+	height: 39px ;}
+td.sub_left {
+	width: 70px ;
+	text-align: left ;}
+td.sub_cent {
+	width: 600px ;
+	background: url('../image/mail_sub_cent.png') ;
+	background-repeat: repeat-x ;
+	text-align: left ;
+	vertical-align: middle ;}
+span.sub {
+	font-size: 10pt ;
+	font-family: sans-serif ;
+	position: relative ;
+	top: -6px ;
+	left: 1px ;}	
+td.sub_right {
+	width: 30px ;}
+tr.body {
+	background: white ;}
+div.mail tr.body td {
+	padding: 0.5em ;
+	font-size: 11pt ;
+	font-family: sans-serif ;}
+div.honbun p {
+	line-height: 1.0 ;
+	text-indent: 0 ;}
+div.mail tr.bottom {
+	text-align: right ;
+	height: 18px ;}	
+img.top {
+	vertical-align: top; }
+div.mail table img {
+	display: inline ;
+	vertical-align: bottom; }
+.wh {
+	background: white ;}
