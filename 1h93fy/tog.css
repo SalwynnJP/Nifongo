@@ -1,0 +1,13 @@
+span.togmenu {
+	margin-left: 1em ;}
+span.togmenu a {
+	text-decoration: none;
+	color: blue ;}
+span.togmenu a:hover {
+	background-color: yellow ;
+	color: black ;
+	text-decoration: underline;}
+#chap1, #close1,#chap2, #close2,#chap3, #close3,#chap4, #close4,#chap5, #close5,#chap6, #close6,#chap7, #close7,#chap8, #close8 {
+	display: none ;}
+.min {
+	font-family: serif ;}
