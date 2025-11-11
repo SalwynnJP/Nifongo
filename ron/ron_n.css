@@ -1,0 +1,75 @@
+table.rasi {
+	background: #FFFFFA ;
+	margin: 1.5em ; 
+	border: 2px solid #333333 ;}
+table.rasi td {
+	border-bottom: thin dotted #000000 ;
+	border-top: thin dotted #000000 ;	}
+table.rasi tbody {
+	border: 2px solid #333333 ;}
+table.rasi thead {
+	background: #F5F5DC ;}
+div.samp {
+	margin-left: 3em ;
+	border-left: 3px solid #666666 ;
+	padding: 2px 0.5em ;} 
+div.smpnt {
+	margin-left: 2em ;
+	font-style: italic ;}
+ul.ref {
+	border: thin solid gray ;
+	padding: 0.5em ;}
+ul.ref li {
+	list-style-type: none ;
+	margin-left: 2em ;
+	text-indent: -2em ;}
+ul.refl {
+	padding: 0.5em ;}
+ul.refl li {
+	list-style-type: none ;
+	margin-left: 2em ;
+	text-indent: -2em ;}
+ol.ref {
+	list-style-type: lower-alpha ;
+	font-size: smaller ;
+	font-family: sans-serif ;
+	margin-left: 1.5em ;
+	padding: 0.5em 0.5em 0.5em 2em ;
+	border: thin dashed #DC143C ;}
+h5 {
+	background: #F8F8FF ;
+	border-top: thin solid #191970 ;
+	border-left: 3px solid #191970 ;
+	border-bottom: thin dotted #191970 ;
+	font-size: large ;
+	font-weight: 700 ;
+	margin: 1em 0 1em 1.5em ;
+	padding: 0 3em ;
+	letter-spacing: 0.1em ;}
+h6 {
+	background: #FFFAFA ;
+	font-size: large ;
+	font-weight: 700 ;
+	text-align: center ;
+	border-top: thin solid #333333 ;
+	border-left: 2px solid #999999 ;
+	border-bottom: thin solid #DCDCDC ;
+	margin: 1.5em ;
+	letter-spacing: 0.1em ;}
+blockquote.ref {
+	border-style: none ;
+	margin: 1.5em 0 1.5em 2em ;
+	padding: 0 ;}
+div.rubyyn {
+	text-align: right ;} 
+span.rubyyn {
+	color: #0033cc ;
+	background: inherit ;
+	text-decoration: underline ;} 
+span.rubyyn:hover {
+	background: yellow ;
+	color: #0033cc ;
+	cursor: pointer ;} 
+ruby rt,rp {
+	display: none ;}
+	

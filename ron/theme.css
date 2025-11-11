@@ -1,0 +1,75 @@
+body {
+	margin: 1em ;
+	padding: 1em ;
+	color: black ;
+	background: #ADD8E6 ;
+	line-height: 1.8 ;
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	border: none ;
+	font-family: "New York", "Georgia", serif ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #4169E1 ;
+	text-decoration: underline ;}
+a:visited {
+	color: #0033cc ;
+	text-decoration: none ;}
+a:active {
+	color: #DC143C ;
+	text-decoration: none ;}
+a:focus {
+	color: black ;
+	text-decoration: none ;
+	border: 1px gray ;}
+table {
+	width: 100% ;
+	table-layout: auto ;
+	border: medium solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	text-align: center ;}
+td,th {
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;}
+table td {
+	text-align: left ;
+	padding: 0 0.5em ;
+	font-weight: 700 ;
+	color: black ;
+	background: #FFF0F5 ;}
+table th {
+	text-align: center ;
+	padding: 0 0.5em ;
+	font-family: sans-serif ;
+	font-weight: 700 ;
+	color: black ;
+	background: #FFFACD ;}
+caption {
+	color: #333333 ;
+	background: white ;
+	border-bottom: thin dotted black ;
+	caption-side: top ;
+	font-weight: bolder ;
+	font-size: larger ;
+	font-family: sans-serif ;
+	margin-bottom: 1em ;}
+div.back {
+	color: inherit ;
+	background: white ;
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 2em ;
+	padding: 1em ;}
+div.totop {
+	color: inherit ;
+	background: white ;
+	text-align: right ;
+	padding: 0.3em 1em ;
+	margin: 1em 1em 1em 0 ;}
