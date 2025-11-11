@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/036.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:40 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="037.html" />
+	<link rel="prev" href="035.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<link rel="stylesheet" type="text/css" href="procc_7.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>表の表示を変更する</h3>
+<div class="main">
+<div class="sect">
+<p>ここでは「data.html」ファイルの中の〈table要素〉の表示を変更してみる。具体的には、次のように変更してみる。</p>
+<ol>
+	<li>表の行と列に線を引く（→<a href="#bord">表に枠線をつける</a>）</li>
+	<li>表のセルに色をつける（→<a href="#bgcol">表に背景色を設定する</a>）</li>
+</ol>
+<h4>スタイルシートを指定する</h4>
+<p class="try">「data.css」という名前のスタイルシートファイルを作成し【参考→「<a href="029.html">スタイルシートファイルの作成</a>」】、「data.html」に「data.css」への参照を記述しよう【参考→<a href="028.html">スタイルシートを指定する</a>】。</p>
+<p>スタイルシートファイルの先頭に</p>
+<p><span class="red">@import url(</span>ファイルの場所<span class="red">);</span></p>
+<p class="none">と書けば、指定したスタイルシートファイルの内容をすべて取り込むことができる。たとえば、ひとつ上のディレクトリにある「default.css」を取り込む場合には次のように記述すればよい。</p>
+<pre>@import url(<span class="red">../default.css</span>);</pre>
+<p class="try">「data.css」に「normal.css」の内容を取り込んでみよう。</p>
+<h4 id="bord">表に枠線をつける</h4>
+<p>表（テーブル）に枠線をつけるには、〈table要素〉の&quot;borderプロパティ&quot;で指定すれば良い。次のように書けば、表（テーブル）全体に枠線をつけることができる。</p>
+<pre>table {
+  border: thin solid black ;}</pre>
+<p>表（テーブル）のひとつひとつのセルに枠線をつけるには、〈th要素〉と〈td要素〉の&quot;borderプロパティ&quot;で指定すれば良い。複数の〈要素〉に同じスタイルを指定する場合は、要素名をコンマで区切って記述することができる。次のように書けば、表（テーブル）のセルに枠線をつけることができる。</p>
+<pre><span class="red">th,td</span> {
+  border: thin solid black ;}</pre>
+<h5>表のセルの枠線の表示方法</h5>
+<p>表（テーブル）のセルの枠線の表示方法は、&quot;border-collapseプロパティ&quot;で指定する。&quot;border-collapseプロパティ&quot;の値に「collapse」を指定すると枠線（ボーダーライン）が重なって表示され、「separate」を指定すると枠線の間に隙間ができる。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<table class="sm1" summary="border-collapseプロパティの値にcollapseを指定した場合の表示例">
+	<caption>border-collapse: collapse ;</caption>
+	<tr>
+		<th scope="col">名前</th><th scope="col">年齢</th><th scope="col">身長</th><th scope="col">体重</th><th scope="col">体脂肪率</th>
+	</tr>
+	<tr>
+		<td>寛之</td><td>30才</td><td>173cm</td><td>57kg</td><td>8%</td>
+	</tr>
+	<tr>
+		<td>真樹</td><td>19才</td><td>170cm</td><td>55kg</td><td>12%</td>
+	</tr>
+</table>
+<table class="sm2" summary="border-collapseプロパティの値にseparateを指定した場合の表示例">
+	<caption>border-collapse: separate ;</caption>
+	<tr>
+		<th scope="col">名前</th><th scope="col">年齢</th><th scope="col">身長</th><th scope="col">体重</th><th scope="col">体脂肪率</th>
+	</tr>
+	<tr>
+		<td>寛之</td><td>30才</td><td>173cm</td><td>57kg</td><td>8%</td>
+	</tr>
+	<tr>
+		<td>真樹</td><td>19才</td><td>170cm</td><td>55kg</td><td>12%</td>
+	</tr>
+</table>
+</div>
+<h6>枠線の隙間の大きさの指定</h6>
+<p>&quot;border-collapseプロパティ&quot;の値が「separate」のときには、&quot;border-spacingプロパティ&quot;で枠線の間の隙間の大きさを指定することができる。&quot;border-spacingプロパティ&quot;の値には、<a href="030.html#unit">値の一般的な単位</a>を用いれば良い。例えば、</p>
+<p>table {border-spacing: <span class="red">5px</span> ;}</p>
+<p class="none">と指定すれば「5px」の間隔で表示される。</p>
+<p>&quot;border-spacingプロパティ&quot;では、左右と上下の値を別々に指定することもできる。例えば、</p>
+<p>table {border-spacing: <span class="red">10px 1px</span> ;}</p>
+<p class="none">と記述すれば、左右の間隔が「10px」になり、上下の間隔は「1px」になる。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<table class="sm3" summary="border-spacingプロパティの値に1pxを指定した場合の表示例">
+	<caption>border-spacing: 1px ;</caption>
+	<tr>
+		<th scope="col">名前</th><th scope="col">年齢</th><th scope="col">身長</th><th scope="col">体重</th><th scope="col">体脂肪率</th>
+	</tr>
+	<tr>
+		<td>寛之</td><td>30才</td><td>173cm</td><td>57kg</td><td>8%</td>
+	</tr>
+	<tr>
+		<td>真樹</td><td>19才</td><td>170cm</td><td>55kg</td><td>12%</td>
+	</tr>
+</table>
+<table class="sm4" summary="border-spacingプロパティの値に10pxと1pxを指定した場合の表示例">
+	<caption>border-spacing: 10px 1px;</caption>
+	<tr>
+		<th scope="col">名前</th><th scope="col">年齢</th><th scope="col">身長</th><th scope="col">体重</th><th scope="col">体脂肪率</th>
+	</tr>
+	<tr>
+		<td>寛之</td><td>30才</td><td>173cm</td><td>57kg</td><td>8%</td>
+	</tr>
+	<tr>
+		<td>真樹</td><td>19才</td><td>170cm</td><td>55kg</td><td>12%</td>
+	</tr>
+</table>
+</div>
+<h6>空白セルの表示の指定</h6>
+<p>&quot;border-collapseプロパティ&quot;の値が「separate」のとき、「&lt;td&gt;&lt;/td&gt;」のようにデータのないセル（空白セル）の枠線の表示方法を指定することができる。具体的には、〈td要素〉に対して&quot;empty-cellsプロパティ&quot;を用いればよい。</p>
+<p>&quot;empty-cellsプロパティ&quot;の値に「show」を指定すれば枠線が表示され、「hide」を指定すれば枠線は表示されない。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<table class="sm5" summary="empty-cellsプロパティの値にshowを指定した場合の表示例">
+	<caption>td {empty-cells: show ;}</caption>
+	<tr>
+		<th scope="col">名前</th><th scope="col">年齢</th><th scope="col">身長</th><th scope="col">体重</th><th scope="col">体脂肪率</th>
+	</tr>
+	<tr>
+		<td>寛之</td><td>30才</td><td>173cm</td><td>57kg</td><td>8%</td>
+	</tr>
+	<tr>
+		<td>真樹</td><td>19才</td><td>170cm</td><td>55kg</td><td>12%</td>
+	</tr>
+	<tr>
+		<td>標準値</td><td></td><td>172cm</td><td>65kg</td><td>15-20%</td>
+	</tr>
+</table>
+<table class="sm6" summary="empty-cellsプロパティの値にhideを指定した場合の表示例">
+	<caption>td {empty-cells: hide ;}</caption>
+	<tr>
+		<th scope="col">名前</th><th scope="col">年齢</th><th scope="col">身長</th><th scope="col">体重</th><th scope="col">体脂肪率</th>
+	</tr>
+	<tr>
+		<td>寛之</td><td>30才</td><td>173cm</td><td>57kg</td><td>8%</td>
+	</tr>
+	<tr>
+		<td>真樹</td><td>19才</td><td>170cm</td><td>55kg</td><td>12%</td>
+	</tr>
+	<tr>
+		<td>標準値</td><td></td><td>172cm</td><td>65kg</td><td>15-20%</td>
+	</tr>
+</table>
+</div>
+<h5>実際に表に枠線を表示を変更する</h5>
+<p class="try">表の枠線を自由に変更してみよう。</p>
+<div class="rimg">
+<img src="036_1.png" width="300" height="300" alt="" />
+</div>
+<pre><span class="big">※サンプル：</span>
+table {
+  border: medium solid black ;
+  border-collapse: collapse ;}
+th,td {
+  border: thin solid black ;
+  padding: 3px 0.5em ;}
+th {
+  font-size: larger ;
+  text-align: center ;}</pre>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 id="bgcol">表に背景色を設定する</h4>
+<p>表（テーブル）に背景色を設定するには、&quot;background-colorプロパティ&quot;で指定すればよい【参考→<a href="030.html#fbcolor">文字の色と背景の色を指定する</a>】。</p>
+<h5>特定の子要素にだけスタイルを指定する</h5>
+<p><abbr title="Cascading Style Sheet">CSS</abbr>では、<abbr title="HyperText Markup Language">HTML</abbr>の<a href="008.html#prtch" title="入れ子">入れ子</a>にしたがって、特定の<a href="008.html#prtch" title="子要素">子要素</a>にだけスタイルを指定することができる。具体的には、親要素と子要素をスペースで区切って記述すれば良い。</p>
+<pre><span class="red">親要素の要素名 スタイルを指定する子要素の要素名</span> {指定するプロパティ: 指定する値 ;}</pre>
+<p>たとえば、</p>
+<p><span class="red">thead th</span> {background-color: yellow ;}</p>
+<p class="none">のように書けば、〈thead要素〉の中の〈th要素〉にだけ「background-color: yellow ;」を指定することができる（〈tbody要素〉の中の〈th要素〉には適用されない）。</p>
+<h5>実際に表の背景色を変更する</h5>
+<p class="try">表（テーブル）の背景色を好みのものに変更しよう【参考→<a href="030.html#clrcntr">文字の色と背景の色を変更に関する注意</a>】。</p>
+<div class="rimg">
+<img src="036_2.png" width="300" height="300" alt="" /></div>
+<pre><span class="big">※サンプル</span>
+<span class="red">table</span> {
+  border: medium solid black ;
+  border-collapse: collapse ;
+  <span class="red">background-color: #F5F5DC ;</span>}
+th,td {
+  border: thin solid black ;
+  padding: 3px 0.5em ;}
+<span class="red">th</span> {
+  font-size: larger ;
+  text-align: center ;
+  <span class="red">background-color: #FFFFE0 ;</span>}
+<span class="red">thead th</span> {
+  <span class="red">background-color: #FAFAD2 ;</span>}</pre>
+</div>
+<div class="link">
+→ <a href="035.html">ハイパーリンク（アンカーテキスト）の表示を変更する</a>&nbsp;〔<a href="035.html" title="戻る">prev</a>〕<br />
+→ <a href="037.html">テキストの一部の表示を変更する</a>&nbsp;〔<a href="037.html" title="次へ">next</a>〕<br />
+→ <a href="038.html">全体をいくつかのブロックにわける</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/036.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:41 GMT -->
+</html>

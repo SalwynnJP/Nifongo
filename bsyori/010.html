@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/010.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:26 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="011.html" />
+	<link rel="prev" href="009.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<link rel="stylesheet" type="text/css" href="procc_1.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>body要素の構造</h3>
+<div class="main">
+<div class="sect">
+<p>〈body要素〉の内容は、紙の文章の『本文』に相当するものである。<abbr title="HyperText Markup Language">HTML</abbr><span class="en">HyperText Markup Language</span>では〈body要素〉の内容として、<a href="#hdng">見出し</a>、<a href="#para">段落</a>、<a href="#listel">箇条書き</a>、<a href="#anchor">ハイパーリンク</a>などの要素が定義されている。</p>
+<h4 id="blltxl">ブロックレベル要素とインライン要素</h4>
+<p>〈body要素〉の中に含まれる要素は、「ブロックレベル要素<span class="en">Block-level elements</span>」と「インライン要素<span class="en">Inline elements</span>（またはテキストレベル要素<span class="en">Text-level elements</span>）」に区別されている。</p>
+<div class="rimg">
+<img src="010.png" width="435" height="262" alt="正しい入れ子［body要素［ブロックレベル要素［インライン要素］］］、正しくない入れ子［body要素［ブロックレベル要素］［インライン要素］］" />
+</div>
+<p><em>ブロックレベル要素は、直接〈body要素〉の子要素になる</em>もので、<abbr title="World Wide Web">WWW</abbr>ブラウザで表示されるときにはひとつのブロック（かたまり）として扱われ、前後が改行される。一方、<em>インライン要素は、直接〈body要素〉の子要素にはならず、必ずブロック要素の子要素になる</em>ものである。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 class="cl">よく使われるブロックレベル要素</h4>
+<h5 id="hdng">見出し要素</h5>
+<p>文書の見出しにあたる部分を定義するのが「見出し要素<span class="en">heading elements</span>」である。見出し要素には、6段階のレベルがあり、それぞれ〈h1要素〉、〈h2要素〉、〈h3要素〉、〈h4要素〉、〈h5要素〉、〈h6要素〉という。</p>
+<p>見出し要素は、以下のように記述する。</p>
+<pre>   &lt;h1&gt;ここに見出しとなる語句を書く&lt;/h1&gt;</pre>
+<p>見出しを階層的に用いる場合は、次のようになる。</p>
+<pre>   &lt;h1&gt;見出しレベル1&lt;/h1&gt;
+        &lt;h2&gt;見出しレベル2&lt;/h2&gt;
+   &lt;h1&gt;見出しレベル1&lt;/h1&gt;
+        &lt;h2&gt;見出しレベル2&lt;/h2&gt;
+             &lt;h3&gt;見出しレベル3&lt;/h3&gt;
+        &lt;h2&gt;見出しレベル2&lt;/h2&gt;
+             &lt;h3&gt;見出しレベル3&lt;/h3&gt;
+                   &lt;h4&gt;見出しレベル4&lt;/h4&gt;</pre>
+<p><em>見出しを階層的に用いる場合は、必ず『〈h1要素〉→〈h2要素〉→〈h3要素〉…』と数字の小さい順に使わなければならない。</em></p>
+<h5 id="para">段落要素</h5>
+<p>本文中の段落を定義するのが「段落要素<span class="en">paragraph elements</span>」である。</p>
+<p>段落要素は、以下のように記述する。</p>
+<pre>   &lt;p&gt;ここに本文を書く&lt;/p&gt;
+   &lt;p&gt;ここに本文を書く&lt;/p&gt;</pre>
+<h5 id="listel">リスト要素</h5>
+<p>箇条書き（リストによる一覧）を定義するのが「リスト要素<span class="en">list elements</span>」である。リスト要素には、</p>
+<ol>
+	<li>
+		<dl>
+			<dt>〈ul要素〉<span class="en">Unordered List</span></dt>
+			<dd>順序なしの箇条書き（列挙型のリスト）</dd>
+		</dl>
+	</li>
+	<li>
+		<dl>
+			<dt>〈ol要素〉<span class="en">Ordered List</span></dt>
+			<dd>順序ありの箇条書き（序列型のリスト）</dd>
+		</dl>
+	</li>
+	<li>
+		<dl>
+			<dt>〈dl要素〉<span class="en">Definition List</span></dt>
+			<dd>説明つきの箇条書き（定義型のリスト）</dd>
+		</dl>
+	</li>
+</ol>
+<p class="none">の３種類がある。</p>
+<p>項目の順序に意味のない場合は〈ul要素〉を用い、項目の順序に意味のある場合（または、項目に番号を付ける必要がある場合）は〈ol要素〉を用いる。また、項目とその説明のペアからなるリスト（辞書のような形のもの）を作る場合には〈dl要素〉を用いる。</p>
+<h6 id="ul">ul要素について</h6>
+<p>〈ul要素〉は、以下のように記述する。</p>
+<pre>   &lt;ul&gt;
+     &lt;li&gt;フォークボール&lt;/li&gt;
+     &lt;li&gt;シンカー&lt;/li&gt;
+     &lt;li&gt;ナックル&lt;/li&gt;
+     &lt;li&gt;パームボール&lt;/li&gt;
+   &lt;/ul&gt;</pre>
+<p>全体が〈ul要素〉となり、項目のひとつひとつは〈li要素〉<span class="en">List Item elements</span>で示す。</p>
+<p>これは、ブラウザでは以下のように表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<ul>
+	<li>フォークボール</li>
+	<li>シンカー</li>
+	<li>ナックルボール</li>
+	<li>パームボール</li>
+</ul>
+</div>
+<p>〈ul要素〉の内容は〈li要素〉だけでなければならない。次のような書き方は正しくない。</p>
+<pre><span class="big">※誤った記述の例：〈li要素〉以外が子要素になっている</span>
+   &lt;ul&gt;
+     <span class="red">フォークボール</span>
+     <span class="red">シンカー</span>
+   &lt;/ul&gt;</pre>
+<p>〈li要素〉の内容には、テキストやインライン要素を記述することができる。その他に、〈段落要素〉なども記述することができる。</p>
+<pre>   &lt;ul&gt;
+     &lt;li&gt;
+       &lt;p&gt;もしエジソンが電球を発明しなかったとしたら、私たちの生活はどうなっていただろうか。&lt;/p&gt;
+       &lt;p&gt;電球がなければ、ロウソクの灯りでパソコンを使わなければならなかっただろう。&lt;/p&gt;
+     &lt;/li&gt;
+     &lt;li&gt;
+       &lt;p&gt;工場から大きな荷車を引いた男が出てきた。警備員は男が何かを盗んだのではないかと疑って
+       荷車を調べたが、中身は空だった。&lt;/p&gt;
+       &lt;p&gt;翌日、男が逮捕され、警備員はクビになった。男が盗んだのは、大きな荷車だった。&lt;/p&gt;
+     &lt;/li&gt;
+   &lt;/ul&gt;</pre>
+<p>これは、ブラウザでは以下のように表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<ul>
+	<li>
+		<p class="none">もしエジソンが電球を発明しなかったとしたら、私たちの生活はどうなっていただろうか。</p>
+		<p class="none">電球がなければ、ロウソクの灯りでパソコンを使わなければならなかっただろう。</p>
+	</li>
+	<li>
+		<p class="none">工場から大きな荷車を引いた男が出てきた。警備員は男が何かを盗んだのではないかと疑って荷車を調べたが、中身は空だった。</p>
+		<p class="none">翌日、男が逮捕され、警備員はクビになった。男が盗んだのは、大きな荷車だった。</p>
+	</li>
+</ul>
+</div>
+<p>また、〈li要素〉は必ず〈ul要素〉の直接の子要素にならなければならない。次のような書き方は正しくない。</p>
+<pre><span class="big">※誤った記述の例：〈li要素〉が〈ul要素〉の子要素になっていない</span>
+   <span class="red">&lt;p&gt;</span>
+    &lt;li&gt;フォークボール&lt;/li&gt;
+    &lt;li&gt;シンカー&lt;/li&gt;
+   <span class="red">&lt;/p&gt;</span></pre>
+<h6 id="ol">ol要素について</h6>
+<p>〈ol要素〉は、以下のように記述する。</p>
+<pre>   &lt;ol&gt;
+     &lt;li&gt;鶏の卵を割る&lt;/li&gt;
+     &lt;li&gt;フライパンを温める&lt;/li&gt;
+     &lt;li&gt;鶏の卵を焼く&lt;/li&gt;
+   &lt;/ol&gt;</pre>
+<p>全体が〈ol要素〉となり、項目のひとつひとつは〈li要素〉で示す。</p>
+<p>これは、ブラウザでは以下のように表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<ol>
+	<li>鶏の卵を割る</li>
+	<li>フライパンを温める</li>
+	<li>鶏の卵を焼く</li>
+</ol>
+</div>
+<p>〈ol要素〉の内容は〈li要素〉だけでなければならない。次のような書き方は正しくない。</p>
+<pre><span class="big">※誤った記述の例</span>
+   &lt;ol&gt;
+     <span class="red">鶏の卵を割る</span>
+     <span class="red">フライパンを温める</span>
+   &lt;/ol&gt;</pre>
+<p>〈ul要素〉の場合と同じく、〈li要素〉の内容には、テキストやインライン要素を記述することができる。その他に、段落なども記述することができる。</p>
+<p>また、〈li要素〉は必ず〈ol要素〉の直接の子要素にならなければならない。次のような書き方は正しくない。</p>
+<pre><span class="big">※誤った記述の例：〈li要素〉が〈ol要素〉の子要素になっていない</span>
+   <span class="red">&lt;p&gt;</span>
+    &lt;li&gt;鶏の卵を割る&lt;/li&gt;
+    &lt;li&gt;フライパンを温める&lt;/li&gt;
+   <span class="red">&lt;/p&gt;</span></pre>
+<h6 id="dl">dl要素について</h6>
+<p>〈dl要素〉は、以下のように記述する。</p>
+<pre>   &lt;dl&gt;
+     &lt;dt&gt;山口アキラ&lt;/dt&gt;
+     &lt;dd&gt;宮崎県出身・男性&lt;/dd&gt;
+     &lt;dt&gt;戸川ミエコ&lt;/dt&gt;
+     &lt;dd&gt;香川県出身・女性&lt;/dd&gt;
+   &lt;/dl&gt;</pre>
+<p>全体が〈dl要素〉となり、用語（見出しの項目）を〈dt要素〉<span class="en">definition term</span>で示し、用語の定義（項目の説明）を〈dd要素〉<span class="en">definition description</span>で示す。</p>
+<p>これは、ブラウザでは以下のように表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<dl class="none">
+	<dt>山口アキラ</dt>
+	<dd>宮崎県出身・男性</dd>
+	<dt>戸川ミエコ</dt>
+	<dd>香川県出身・女性</dd>
+</dl>
+</div>
+<p>それぞれのリスト要素は入れ子にすることができるが、ここでは詳しい説明は省略する。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>よく使われるインライン要素</h4>
+<h5 id="anchor">アンカー要素</h5>
+<p>ハイパーリンク<span class="en">HyperLink</span>を記述するのが「アンカー要素<span class="en">anchor elements</span>」である。</p>
+<p>〈アンカー要素〉は、以下のように記述する。</p>
+<pre><span class="red">&lt;a href=&quot;リンク先のURLを書く&quot;&gt;</span>リンク先にジャンプする<span class="red">&lt;/a&gt;</span></pre>
+<p>これは、ブラウザでは以下のように表示される（注意：例ではリンク先はこのページの先頭になっている）。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<a href="#top">リンク先にジャンプする</a>
+</div>
+<p>〈アンカー要素〉の中の『href=&quot;〜〜&quot;』の部分を「属性<span class="en">attribute</span>」という。さらに、属性の種類を示す〈href〉を「属性名<span class="en">attribute name</span>」、『&quot;&nbsp;&quot;』の間に書かれるもの（ここでは<abbr title="Uniform Resource Locator">URL</abbr>）を「属性値<span class="en">attribute value</span>」という。要素は、その性質に応じて様々な属性を持つことができる。アンカー要素では〈href属性〉が必須であり、省略することはできない。</p>
+<pre>　　開始タグ　　　　　　　　　　終了タグ
+　　　↓　　　　　　　　　　　　　↓
+　&lt;要素名 <span class="red">属性名=&quot;属性値</span>&quot;&gt; 内容 &lt;/要素名&gt;  ⇒⇒  全体が要素</pre>
+<h5 id="brk">br要素</h5>
+<p><abbr title="HyperText Markup Language">HTML</abbr>では、テキストに改行を入れなくても、ブラウザでは自動的に改行されて表示される。また、テキストに改行を入れても、改行はスペース（半角スペース）と同じものとして処理される。</p>
+<p>例えば、</p>
+<pre>   &lt;p&gt;若い時は誰でも記憶力が良いものです。忘れたいことも忘れられません。&lt;/p&gt;
+   &lt;p&gt;しかし、年をとると大事なことから順番に忘れていくようになります。&lt;/p&gt;
+   <span class="red">&lt;p&gt;そして、もっと年をとると、
+   何が大事なことなのかが判断できなくなってしまいます。&lt;/p&gt;</span></pre>
+<p class="none">と書いた場合、ブラウザでは以下のように表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<p>若い時は誰でも記憶力が良いものです。忘れたいことも忘れられません。</p>
+<p>しかし、年をとると大事なことから順番に忘れていくようになります。</p>
+<p>そして、もっと年をとると、
+何が大事なことなのかが判断できなくなってしまいます。</p>
+</div>
+<p>テキストを強制的に改行<span class="en">brake</span>させたいときに使うのが「br要素」である。</p>
+<p>〈br要素〉は、以下のように記述する。なお、〈br要素〉には対になる（終了）タグがない。このように内容を持たない要素は「空要素<span class="en">empty element</span>」と呼ばれる。</p>
+<pre>&lt;br /&gt;</pre>
+<p>このとき『/』の前にスペース（半角スペース）をひとつ入れておく方が良い（スペースがない場合、正常に表示されない可能性がある）。</p>
+<p>〈br要素〉を強制的に改行させたい場所に記述する。</p>
+<pre>   &lt;p&gt;若い時は誰でも記憶力が良いものです。忘れたいことも忘れられません。&lt;/p&gt;
+   &lt;p&gt;しかし、年をとると大事なことから順番に忘れていくようになります。&lt;/p&gt;
+   &lt;p&gt;そして、もっと年をとると、<span class="red">&lt;br /&gt;</span>
+   何が大事なことなのかが判断できなくなってしまいます。&lt;/p&gt;</pre>
+<p>これは、ブラウザでは以下のように表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<p>若い時は誰でも記憶力が良いものです。忘れたいことも忘れられません。</p>
+<p>しかし、年をとると大事なことから順番に忘れていくようになります。</p>
+<p>そして、もっと年をとると、<br />何が大事なことなのかが判断できなくなってしまいます。</p>
+</div>
+<h5 id="emel">em要素</h5>
+<p>テキストの特定の部分を強調<span class="en">emphasis</span>するのが「em要素」である。</p>
+<p>〈em要素〉は以下のように記述する（強調したい部分をタグで挟む）。</p>
+<pre>汚れたときは、<span class="red">&lt;em&gt;</span>柔らかい布で軽く<span class="red">&lt;/em&gt;</span>こすってください。</pre>
+<h5 id="strng">strong要素</h5>
+<p>テキストの特定の部分を強調するときには〈em要素〉を用いるが、より強い<span class="en">strong</span>強調を示すのが「strong要素」である。</p>
+<p>〈strong要素〉は以下のように記述する（強調したい部分をタグで挟む）。</p>
+<pre>究極的には、生きることに<span class="red">&lt;strong&gt;</span>意味などない<span class="red">&lt;/strong&gt;</span>のである。</pre>
+<h5>sup要素</h5>
+<p>テキストを上付き文字<span class="en">superscript</span>にする場合には〈sup要素〉を用いる。〈sup要素〉は、以下のように記述する。</p>
+<pre>テキストを<span class="red">&lt;sup&gt;</span>上付き文字<span class="red">&lt;/sup&gt;</span>にします</pre>
+<p>これは、ブラウザでは以下のように表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+テキストを<sup>上付き文字</sup>にします。
+</div>
+<h5>sub要素</h5>
+<p>テキストを下付き文字<span class="en">subscript</span>にする場合には〈sub要素〉を用いる。〈sub要素〉は、以下のように記述する。</p>
+<pre>テキストを<span class="red">&lt;sub&gt;</span>下付き文字<span class="red">&lt;/sub&gt;</span>にします</pre>
+<p>これは、ブラウザでは以下のように表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+テキストを<sub>下付き文字</sub>にします。
+</div>
+</div>
+<div class="link">
+→ <a href="009.html">head要素の構造</a>&nbsp;〔<a href="009.html" title="戻る">prev</a>〕<br />
+→ <a href="011.html">ウェブページ作成に必要なもの</a>&nbsp;〔<a href="011.html" title="次へ">next</a>〕<br />
+→ <a href="012.html">ファイルの作成</a>
+</div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/010.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:27 GMT -->
+</html>

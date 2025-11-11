@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/016.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:30 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="017.html" />
+	<link rel="prev" href="015.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>箇条書きにする</h3>
+<div class="main">
+<div class="sect">
+<p><ruby><rb>箇条書</rb><rp>(</rp><rt>かじょうが</rt><rp>)</rp></ruby>きは、ポイントを効率的に伝えることができる手段である。ここでは、内容を箇条書きにして示す方法を学ぶ。</p>
+<h4>説明つきの箇条書きにする</h4>
+<p class="try">苗栗縣の情報を、説明付きの箇条書きにしてみよう。</p>
+<p>説明つきの箇条書きには〈<a href="010.html#dl">dl要素</a>〉を用いる。〈dl要素〉では〈dt要素〉<span class="en">definition term</span>が見出しの項目となり、〈dd要素〉<span class="en">definition description</span>が項目の説明となる。</p>
+<p>ここでは、苗栗縣の位置・地形・人々に関する情報を箇条書きで示すことにする。以下のように記述すれば、「位置」「地形」「人々」の項目にそれぞれの説明がついた箇条書きにすることができる。「index.html」ファイルに〈dl要素〉を追加し、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<p>なお、ここで示した例では、行の先頭に１つまたは２つのタブ<span class="en">tab</span>を挿入している。これは、しばしば行なわれるもので、<abbr title="HyperText Markup Language">HTML</abbr>を書いているときに文字列を見やすくするための工夫である。ブラウザで表示される時には、これらのタブは無視される。タブは、キーボードの［tab］キーを押すことで入力することができる。</p>
+<pre onmousedown="alert('自分で入力しよう！')" onmouseup="alert('自分で入力しよう！')" onkeydown="alert('自分で入力しよう！')" onkeyup="alert('自分で入力しよう！')"><span class="syatai">...都市化はあまり進んでいません。&lt;/p&gt;</span>
+<span class="red">&lt;h2&gt;土地と人間&lt;/h2&gt;
+&lt;dl&gt;
+  &lt;dt&gt;位置&lt;/dt&gt;
+    &lt;dd&gt;台湾の中北部にある。東は山だが、西は海に面している。&lt;/dd&gt;
+  &lt;dt&gt;地形&lt;/dt&gt;
+    &lt;dd&gt;平地はごく少ない。面積の８割以上が山である。&lt;/dd&gt;
+  &lt;dt&gt;人々&lt;/dt&gt;
+    &lt;dd&gt;素朴で親切な人が多いと言われている。&lt;/dd&gt;
+&lt;/dl&gt;</span></pre>
+<div class="hint">
+とちとにんげん／いち／たいわんのちゅうほくぶにある。ひがしはやまだが、にしはうみにめんしている。／ちけい／へいちはごくすくない。めんせきの８わりいじょうがやまである。／ひとびと／そぼくでしんせつなひとがおおいといわれている。
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>順序ありの箇条書きにする</h4>
+<p class="try">苗栗縣の観光名所を順序ありの箇条書きにしてみよう。</p>
+<p>項目の順序に意味のある場合は〈<a href="010.html#ol">ol要素</a>〉を用いる。ここでは、苗栗縣の観光名所を箇条書きにして示すことにする。各自でおすすめの観光名所を３つ考え、次の例のように記述する（※人名、地名は中国語で入力してよい）。「index.html」ファイルに〈dl要素〉の後ろに〈ol要素〉を追加し、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre><span class="syatai">...言われている。&lt;/dd&gt;</span>
+&lt;/dl&gt;
+&lt;h2&gt;苗栗縣の観光名所ベスト３&lt;/h2&gt;
+<span class="red">&lt;ol&gt;</span>
+  <span class="red">&lt;li&gt;</span>観光名所 No.１<span class="red">&lt;/li&gt;</span>
+  <span class="red">&lt;li&gt;</span>観光名所 No.２<span class="red">&lt;/li&gt;</span>
+  <span class="red">&lt;li&gt;</span>観光名所 No.３<span class="red">&lt;/li&gt;</span>
+<span class="red">&lt;/ol&gt;</span></pre>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>順序なしの箇条書きにする</h4>
+<p class="try">苗栗縣の名産品を順序なしの箇条書きにしてみよう。</p>
+<p>項目に順序のない箇条書きには〈<a href="010.html#ul">ul要素</a>〉を用いる。ここでは、苗栗縣の名産品を箇条書きにして示すことにする。次の例のように記述する（※項目の内容を変えても良い）。「index.html」ファイルの〈ol要素〉の後ろに〈ul要素〉を追加し、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre><span class="syatai">...&lt;/ol&gt;</span>
+&lt;h2&gt;苗栗縣の名産品&lt;/h2&gt;
+<span class="red">&lt;ul&gt;</span>
+  <span class="red">&lt;li&gt;</span>イチゴ<span class="red">&lt;/li&gt;</span>
+  <span class="red">&lt;li&gt;</span>チョコレート牛乳<span class="red">&lt;/li&gt;</span>
+  <span class="red">&lt;li&gt;</span>文旦<span class="red">&lt;/li&gt;</span>
+<span class="red">&lt;/ul&gt;</span></pre>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>箇条書きをブラウザで表示する</h4>
+<p class="try">箇条書きがどのように表示されるのか、ブラウザで確認してみよう。</p>
+<p>保存したファイルをブラウザで開いてみる。ブラウザで開く操作は、<a href="014.html#flop">ファイルをブラウザで開く</a>を参照せよ。</p>
+<p>ファイルを開くと、次のように表示されるだろう（Macintosh; Firefoxの場合）。</p>
+<div class="center">
+<img src="016.png" width="560" height="510" alt="" />
+</div>
+</div>
+<div class="link">
+→ <a href="015.html">画像を表示する</a>&nbsp;〔<a href="015.html" title="戻る">prev</a>〕<br />
+→ <a href="017.html">簡単な表をつくる</a>&nbsp;〔<a href="017.html" title="次へ">next</a>〕<br />
+→ <a href="018.html">別のファイルにハイパーリンクする</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/016.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:31 GMT -->
+</html>

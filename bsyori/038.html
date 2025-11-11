@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/038.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:41 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="039.html" />
+	<link rel="prev" href="037.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<link rel="stylesheet" type="text/css" href="procc_8.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>全体をいくつかのブロックにわける</h3>
+<div class="main">
+<div class="sect">
+<p>ここでは、〈body要素〉に含まれる複数の<a href="010.html#blltxl" title="ブロックレベル要素">ブロックレベル要素</a>をグループ化して、〈body要素〉をいくつかブロックにわける方法を学ぶ。</p>
+<h4>ブロックレベル要素をグループ化する</h4>
+<p>〈段落要素〉などのブロックレベル要素を、ひとつのブロックレベル要素にグループ化する（まとめる）には、「div要素」を使う。</p>
+<p>たとえば、〈div要素〉を使って〈段落要素〉をグループ化するには、次のように記述すればよい。</p>
+<pre><span class="red">&lt;div&gt;</span>
+  &lt;p&gt;ぜんまいの&lt;/p&gt;
+  &lt;p&gt;のの字ばかりの&lt;/p&gt;
+  &lt;p&gt;寂光土&lt;/p&gt;
+<span class="red">&lt;/div&gt;
+&lt;div&gt;</span>
+  &lt;p&gt;広島や&lt;/p&gt;
+  &lt;p&gt;卵食ふ時&lt;/p&gt;
+  &lt;p&gt;口ひらく&lt;/p&gt;
+<span class="red">&lt;/div&gt;</span></pre>
+<h5>〈div要素〉について</h5>
+<p>〈div要素〉は、<a href="010.html#blltxl" title="ブロックレベル要素">ブロックレベル要素</a>なので、その中に<a href="010.html#blltxl" title="インライン要素">インライン要素</a>を直接書くことができる。例えば、次のようにインライン要素である〈cite要素〉を記述することができる。</p>
+<pre><span class="red">&lt;div&gt;</span>
+  &lt;p&gt;ぜんまいの&lt;/p&gt;
+  &lt;p&gt;のの字ばかりの&lt;/p&gt;
+  &lt;p&gt;寂光土&lt;/p&gt;
+  <span class="red">&lt;cite&gt;川端茅舎の俳句&lt;/cite&gt;</span>
+<span class="red">&lt;/div&gt;
+&lt;div&gt;</span>
+  &lt;p&gt;広島や&lt;/p&gt;
+  &lt;p&gt;卵食ふ時&lt;/p&gt;
+  &lt;p&gt;口ひらく&lt;/p&gt;
+ <span class="red"> &lt;cite&gt;西東三鬼の俳句&lt;/cite&gt;</span>
+<span class="red">&lt;/div&gt;</span></pre>
+<p>また、〈div要素〉は〈段落要素〉（→<a href="014.html">見出しと段落をつくる</a>）とは異なり、</p>
+<pre><span class="red">&lt;div&gt;</span>
+  <span class="red">&lt;ol&gt;</span>
+    &lt;li&gt;〜〜〜&lt;/li&gt;
+    &lt;li&gt;〜〜〜&lt;/li&gt;
+  <span class="red">&lt;/ol&gt;</span>
+ <span class="red">&lt;/div&gt;</span></pre>
+<p>のようにブロックレベル要素を<a href="008.html#prtch" title="子要素">子要素</a>にしたり、</p>
+<pre><span class="red">&lt;div&gt;</span>
+  &lt;p&gt;段落&lt;/p&gt;
+  <span class="red">&lt;div&gt;</span>〜〜<span class="red">&lt;/div&gt;</span>
+  &lt;p&gt;段落&lt;/p&gt;
+<span class="red">&lt;/div&gt;</span></pre>
+<p class="none">のように〈div要素〉と〈div要素〉を<a href="008.html#prtch" title="入れ子">入れ子</a>にすることができる。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>クラス属性を記述する</h4>
+<p>〈div要素〉は、〈span要素〉（→<a href="037.html">テキストの一部の表示を変更する</a>）と同じく、それだけでは意味を持たない。〈div要素〉は、《クラス属性》<span class="en">class attribute</span>や《id属性》<span class="en">id attribute</span>と組み合わせて使われることが多い。たとえば、〈div要素〉に《クラス属性》を指定すると、次のようになる。</p>
+<pre>&lt;div <span class="red">class=&quot;part&quot;</span>&gt;
+  &lt;p&gt;ぜんまいの&lt;/p&gt;
+  &lt;p&gt;のの字ばかりの&lt;/p&gt;
+  &lt;p&gt;寂光土&lt;/p&gt;
+  &lt;cite&gt;川端茅舎の俳句&lt;/cite&gt;
+&lt;/div&gt;
+&lt;div <span class="red">class=&quot;part&quot;</span>&gt;
+  &lt;p&gt;広島や&lt;/p&gt;
+  &lt;p&gt;卵食ふ時&lt;/p&gt;
+  &lt;p&gt;口ひらく&lt;/p&gt;
+  &lt;cite&gt;西東三鬼の俳句&lt;/cite&gt;
+&lt;/div&gt;</pre>
+<p>〈div要素〉の《クラス属性》に対して、スタイルシート<span class="en">style sheet</span>でスタイルを指定すれば、そのブロックの表示を変更することができる。たとえば、スタイルシートに</p>
+<pre><span class="red">div.part</span> {
+    border: thin dotted blue ;
+    margin-bottom: 1em ;}</pre>
+<p class="none">のように書けば、ブロックの外側に青い色の点線の枠が表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<div class="part">
+  <p>ぜんまいの</p>
+  <p>のの字ばかりの</p>
+  <p>寂光土</p>
+  <cite>川端茅舎の俳句</cite>
+</div>
+<div class="part">
+  <p>広島や</p>
+  <p>卵食ふ時</p>
+  <p>口ひらく</p>
+  <cite>西東三鬼の俳句</cite>
+</div>
+</div>
+</div>
+<div class="link">
+→ <a href="037.html">テキストの一部の表示を変更する</a>&nbsp;〔<a href="037.html" title="戻る">prev</a>〕<br />
+→ <a href="039.html">連絡先の表示を変更する</a>&nbsp;〔<a href="039.html" title="次へ">next</a>〕<br />
+→ <a href="040.html">背景画像を設定する</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/038.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:42 GMT -->
+</html>

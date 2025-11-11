@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/017.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:31 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="018.html" />
+	<link rel="prev" href="016.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>簡単な表をつくる</h3>
+<div class="main">
+<div class="sect">
+<p>表は、まとまりのある多くの情報<span class="small">（項目とデータの組として記述することができる情報）</span>を示すときに効果的な視覚的な表現手段である。ここでは、<abbr title="Hyper Text Markup Language">HTML</abbr>での表の作り方について学ぶ。具体的には、「index.html」とは別の新しいファイルで、簡単な形の表をつくってみることにする。</p>
+<p>ここでつくりたいのは、次の表である。</p>
+<div class="samp">
+<table summary="苗栗縣の面積・人口・行政の情報をまとめて示す。">
+	<caption>苗栗縣の情報</caption>
+	<thead>
+		<tr><th scope="col">項目</th><th scope="col">データ</th></tr>
+	</thead>
+	<tfoot>
+		<tr><td></td><td>※2004年５月現在</td></tr>
+	</tfoot>
+	<tbody>
+		<tr><th scope="row">面積</th><td>約1820平方キロメートル</td></tr>
+		<tr><th scope="row">人口</th><td>約560,000人</td></tr>
+		<tr><th scope="row" abbr="tel">電話番号</th><td>037</td></tr>
+		<tr><th scope="row">鎮</th><td>６（竹南鎮、後龍鎮など）</td></tr>
+		<tr><th scope="row">郷</th><td>11（造橋郷、三義郷など）</td></tr>
+	</tbody>
+</table>
+</div>
+<h4>新しいファイルをつくる</h4>
+<p class="try">まず、表をつくるための新しいファイルをつくってみよう。</p>
+<p>「<a href="012.html">ファイルの作成</a>」と同じ手順で「data.html」という名前（<span xml:lang="zh-tw">檔名</span>）のファイル（<span xml:lang="zh-tw">檔案</span>）を作成し、ページのタイトルを「苗栗縣の基本情報」とする【→<a href="013.html">ページにタイトルをつける</a>】。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>table要素について</h4>
+<p>表（テーブル）<span class="en">table</span>をつくるときには「table要素」を用いる。〈table要素〉は、<a href="010.html#blltxl" title="ブロックレベル要素">ブロックレベル要素</a>であり、一般に、「caption要素」、「thead要素」、「tbody要素」、「tfoot要素」を直接の<a href="008.html#prtch">子要素</a>として持つ。</p>
+<div class="rimg">
+<img src="017_1.png" width="400" height="300" alt="" />
+</div>
+<p>〈caption要素〉は、表（テーブル）の説明文・表題を示す。〈caption要素〉は〈table要素〉の中で１回しか使えない。〈caption要素〉は〈table要素〉に必須のものではない（なくても良い）。</p>
+<p>〈thead要素〉は、表の見出し（ヘッダ）<span class="en">header</span>を示し、〈tfoot要素〉は、表のフッタ<span class="en">footer</span>を示す。〈thead要素〉と〈tfoot要素〉は〈table要素〉の中で１回ずつしか使えない。〈thead要素〉と〈tfoot要素〉は〈table要素〉に必須のものではない（なくても良い）。</p>
+<p>〈tbody要素〉は、表の本体を示す。〈tbody要素〉は〈table要素〉の中で複数回繰り返して使うことができる。</p>
+<h5 class="cl">tr要素、td要素、th要素について</h5>
+<p>〈thead要素〉、〈tbody要素〉、〈tfoot要素〉は、それぞれ「tr要素」を直接の<a href="008.html#prtch">子要素</a>とする。〈tr要素〉はテーブルの行<span class="en">table row</span>を示す要素である。</p>
+<div class="limg">
+<img src="017_2.png" width="400" height="300" alt="［thead［tr［th］］］、［tbody［tr［td］［th］］］、［tfoot［tr［td］］］" />
+</div>
+<p>〈tr要素〉は、「td要素」または「th要素」を直接の子要素とする。</p>
+<p>〈td要素〉はテーブルのデータ<span class="en">table data</span>を示し、〈th要素〉はテーブルの見出し<span class="en">table headding</span>を示す。「約1820平方キロメートル」や「約560,000人」のように、単なるデータを示す場合は〈td要素〉を使い、「項目」や「面積」のように下や右に続くデータの見出しとなるものには〈th要素〉を使うようにする。</p>
+<h5 class="cl">table要素の内容の構造</h5>
+<div class="rimg">
+<img src="017_3.png" width="269" height="338" alt="" />
+</div>
+<p>〈table要素〉は、〈caption要素〉及び〈thead要素〉、〈tbody要素〉、〈tfoot要素〉を直接の<a href="008.html#prtch">子要素</a>とし、〈thead要素〉、〈tbody要素〉、〈tfoot要素〉の中に〈tr要素〉を子要素として、〈tr要素〉の中に〈td要素〉と〈th要素〉を子要素として持つことになる。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>table要素の記述</h4>
+<p>〈table要素〉は、</p>
+<pre><span class="red">&lt;table summary=&quot;〜&quot;&gt;&lt;/table&gt;</span></pre>
+<p class="none">と書く。〈table要素〉には「summary属性」が必須である。〈summary属性〉に表（テーブル）の概要・要約を指定することで、ユーザ<span class="en">user</span>が表（テーブル）が表示できない場合にも情報を伝えることができるようになる。</p>
+<h5>caption要素の記述</h5>
+<p>〈caption要素〉は、〈table要素〉の開始タグの直後に、</p>
+<pre>&lt;table summary=&quot;〜&quot;&gt;
+    <span class="red">&lt;caption&gt;〜&lt;/caption&gt;</span>
+&lt;/table&gt;</pre>
+<p class="none">と書く。〈caption要素〉の内容は、通常のテキストなど<a href="010.html#blltxl" title="インライン要素">インライン要素</a>でなければならない。</p>
+<h5>thead要素、tbody要素、tfoot要素の記述</h5>
+<p>〈thead要素〉、〈tbody要素〉、〈tfoot要素〉は、それぞれ</p>
+<pre>&lt;table&gt;
+    &lt;caption&gt;〜&lt;/caption&gt;
+  <span class="red">&lt;thead&gt;&lt;/thead&gt;</span>
+  <span class="red">&lt;tfoot&gt;&lt;/tfoot&gt;</span>
+  <span class="red">&lt;tbody&gt;&lt;/tbody&gt;</span>
+&lt;/table&gt;</pre>
+<p class="none">と書く。ここで注意しなければならないのは、ブラウザでの表示の順序と異なり、〈thead要素〉&rarr;<span class="kasen">〈tfoot要素〉</span>&rarr;<span class="kasen">〈tbody要素〉</span>の順番で記述することである。また、行頭のタブ<span class="en">tab</span>は文字列を見やすくするためのものである。</p>
+<h5>tr要素の記述</h5>
+<p>〈tr要素〉は、</p>
+<pre>&lt;table&gt;
+    &lt;caption&gt;〜&lt;/caption&gt;
+  &lt;thead&gt;
+    <span class="red">&lt;tr&gt;&lt;/tr&gt;</span>
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    <span class="red">&lt;tr&gt;&lt;/tr&gt;</span>
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    <span class="red">&lt;tr&gt;&lt;/tr&gt;</span>
+    <span class="red">&lt;tr&gt;&lt;/tr&gt;</span>
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+<p class="none">と書く。</p>
+<h5>th要素記述</h5>
+<p>〈th要素〉は、</p>
+<pre>&lt;table&gt;
+    &lt;caption&gt;〜&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;<span class="red">&lt;th&gt;&lt;/th&gt;&lt;th&gt;&lt;/th&gt;</span>&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;<span class="red">&lt;th&gt;&lt;/th&gt;</span>&lt;/tr&gt;
+    &lt;tr&gt;<span class="red">&lt;th&gt;&lt;/th&gt;</span>&lt;/tr&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+<p class="none">と書く。〈th要素〉は、任意の内容を持つことができる。</p>
+<h5>td要素の記述</h5>
+<p>〈td要素〉は、</p>
+<pre>&lt;table&gt;
+    &lt;caption&gt;〜&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;<span class="red">&lt;td&gt;&lt;/td&gt;</span><span class="red">&lt;td&gt;&lt;/td&gt;</span>&lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;th&gt;&lt;/th&gt;<span class="red">&lt;td&gt;&lt;/td&gt;</span>&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;&lt;/th&gt;<span class="red">&lt;td&gt;&lt;/td&gt;</span>&lt;/tr&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+<p class="none">と書く。〈td要素〉は、任意の内容を持つことができる。〈td要素〉に入力するデータがない場合には、タグの間に何も書かなくてよい（ブラウザでは空欄として表示される）。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>表（テーブル）の作成</h4>
+<p class="try">実際に、表をつくってみよう。</p>
+<p>以下に、ここで作成したい表（テーブル）を再掲する。</p>
+<div class="samp">
+<table summary="苗栗縣の面積・人口・行政の情報をまとめて示す。">
+	<caption>苗栗縣の情報</caption>
+	<thead>
+		<tr><th scope="col">項目</th><th scope="col">データ</th></tr>
+	</thead>
+	<tfoot>
+		<tr><td></td><td>※2004年５月現在</td></tr>
+	</tfoot>
+	<tbody>
+		<tr><th scope="row">面積</th><td>約1820平方キロメートル</td></tr>
+		<tr><th scope="row">人口</th><td>約560,000人</td></tr>
+		<tr><th scope="row">電話番号</th><td>037</td></tr>
+		<tr><th scope="row">鎮</th><td>６（竹南鎮、後龍鎮など）</td></tr>
+		<tr><th scope="row">郷</th><td>11（造橋郷、三義郷など）</td></tr>
+	</tbody>
+</table>
+</div>
+<p>この表（テーブル）のコードは、以下に示す通りである。</p>
+<pre onmousedown="alert('自分で入力しよう！')" onmouseup="alert('自分で入力しよう！')" onkeydown="alert('自分で入力しよう！')" onkeyup="alert('自分で入力しよう！')">&lt;table summary=&quot;苗栗縣の面積・人口・行政の情報をまとめて示す。&quot;&gt;
+    &lt;caption&gt;苗栗縣の情報&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;項目&lt;/th&gt;&lt;th&gt;データ&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;※2004年５月現在&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;th&gt;面積&lt;/th&gt;&lt;td&gt;約1820平方キロメートル&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;人口&lt;/th&gt;&lt;td&gt;約560,000人&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;電話番号&lt;/th&gt;&lt;td&gt;037&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;鎮&lt;/th&gt;&lt;td&gt;６（竹南鎮、後龍鎮など）&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;郷&lt;/th&gt;&lt;td&gt;11（造橋郷、三義郷など）&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+<p>エディタで入力し、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）したあと、ブラウザで表示を確認する。【→<a href="014.html#flop">ファイルをブラウザで開く</a>】</p>
+<p>次のように表示されるだろう（Macintosh; Firefoxの場合）。</p>
+<div class="center">
+<img src="017_4.png" width="560" height="270" alt="" /></div>
+</div>
+<div class="link">
+→ <a href="016.html">箇条書きにする</a>&nbsp;〔<a href="016.html" title="戻る">prev</a>〕<br />
+→ <a href="018.html">別のファイルにハイパーリンクする</a>&nbsp;〔<a href="018.html" title="次へ">next</a>〕<br />
+→ <a href="019.html">特定の場所にハイパーリンクする</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/017.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:32 GMT -->
+</html>

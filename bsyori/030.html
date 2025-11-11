@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/030.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:35 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="031.html" />
+	<link rel="prev" href="029.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<link rel="stylesheet" type="text/css" href="procc_3.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>body要素の表示を変更する</h3>
+<div class="main">
+<div class="sect">
+<p>ここでは、本文を見やすくするために〈body要素〉の表示<span class="en">presentation</span>を変更する方法を学ぶ。具体的には、以下のことを目的にする。</p>
+<ol>
+	<li>文字の色<span class="en">font color</span>と背景の色<span class="en">background color</span>を指定する（→「<a href="#fbcolor">文字の色と背景の色を指定する</a>」）</li>
+	<li>文字のサイズ<span class="en">font size</span>やフォントの種類<span class="en">font family</span>、行間<span class="en">line height</span>を指定する（→「<a href="#sizefont">文字のサイズやフォントの種類を指定する</a>」）</li>
+	<li>テキストの装飾<span class="en">decoration</span>や整列<span class="en">align</span>、字間<span class="en">letter spacing</span>の大きさを指定する（→「<a href="#decspa">テキストの装飾、整列、字間を指定する</a>」）</li>
+	<li>余白<span class="en">margin</span>を設定する（→「<a href="#margin">余白（マージン）を設定する</a>」）</li>
+</ol>
+<h4>プロパティ名と値</h4>
+<p><abbr title="Cascading Style Sheet">CSS</abbr>は、</p>
+<p>要素名 {プロパティ名 : 値 ;}</p>
+<p class="none">という形式で記述する。例えば、以下のようになる。</p>
+<pre>body {
+  color: black ;
+  background-color: white ;}</pre>
+<h5>要素名</h5>
+<p>「要素名」とは、&quot;body&quot;、&quot;p&quot;、&quot;h2&quot;などのものである【参考→<a href="006.html">ＨＴＭＬのマークアップの基本</a>】。たとえば、「要素名」に&quot;<span class="red">body</span>&quot;と記述すれば〈body要素〉の表示を変更（指定）することができる。</p>
+<pre><span class="big">※この例では「body」が要素名である</span>
+<span class="red">body</span> {
+  color: black ;
+  background-color: white ;}</pre>
+<h5>プロパティ名</h5>
+<p>「プロパティ名」<span class="en">property neme</span>とは、〈要素〉の表示方法<span class="en">presentation</span>のどの部分の性質<span class="en">property</span>を変更（指定）するかを示すものである。</p>
+<pre><span class="big">※この例では「color」「background-color」がプロパティ名である</span>
+body {
+  <span class="red">color</span>: black ;
+  <span class="red">background-color</span>: white ;}</pre>
+<p>たとえば、「プロパティ名」に&quot;<span class="red">color</span>&quot;と指定すれば『文字の色』<span class="en">color</span>を変更（指定）することができ、&quot;<span class="red">background-color</span>&quot;と指定すれば『背景の色』<span class="en">background-color</span>を変更（指定）することができる。なお、<abbr title="Cascading Style Sheet">CSS</abbr>のプロパティ名は、あらかじめ決められているものを使う必要がある<span class="small">（たとえば、〈要素〉の『文字の色』に関する性質を変更する場合には、必ず&quot;color&quot;と指定しなければいけない）</span>。プロパティ名の一覧は、以下のページを参照せよ。</p>
+<div class="hint">
+<ul>
+	<li><a href="http://www.htmq.com/style/index.shtml">スタイルシートリファレンス（目的別）</a>（by <a href="http://www.htmq.com/index.htm">HTMLクイックリファレンス</a>）</li>
+	<li><a href="http://www.htmq.com/style/indexa.shtml">スタイルシートリファレンス（ABC順）</a>（by <a href="http://www.htmq.com/index.htm">HTMLクイックリファレンス</a>）</li>
+	<li><a href="http://hp.vector.co.jp/authors/VA022006/css/propindex.html">プロパティ一覧表</a>（by <a href="http://hp.vector.co.jp/authors/VA022006/index.html">Cascading Style Sheets Reference</a>）</li>
+</ul>
+</div>
+<h5>プロパティの値</h5>
+<p>「値」とは、「プロパティ名」で指定したプロパティ（〈要素〉の特定の性質）<span class="en">property</span>を具体的に指定するものである。</p>
+<pre><span class="big">※この例では「black」「white」が値である</span>
+body {
+  color: <span class="red">black</span> ;
+  background-color: <span class="red">white</span> ;}</pre>
+<p>たとえば、ある〈要素〉の「『文字の色』の性質」を指すプロパティ（&quot;colorプロパティ&quot;）に&quot;<span class="red">black</span>&quot;と指定すれば、その〈要素〉が黒<span class="en">black</span>の性質を持つことになる（つまり、文字の色が黒で表示される）。</p>
+<h6 id="hex">色の値の指定方法</h6>
+<p>なお、色の値の指定には、いくつかの方法がある。</p>
+<ol>
+	<li>色の名前<span class="en">color term</span>で指定する</li>
+	<li><abbr title="Red-Green-Blue">RGB</abbr><span class="en">RGB color model</span>で指定する
+		<ol>
+			<li>３桁の16進数<span class="en">hexadecimal number</span>（0-9,A,B,C,D,E,F）で指定する</li>
+			<li>６桁の16進数で指定する</li>
+			<li>10進数<span class="en">decimal number</span>（0-255）で指定する</li>
+			<li>パーセント値（0-100％）で指定する</li>
+		</ol>
+	</li>
+</ol>
+<p>このうち、よく利用されているのは「色の名前で指定する」方法と「６桁の16進数で指定する」方法である。「色の名前」や「16進数」の詳細は、下記のページを参照せよ。</p>
+<div class="hint">
+<ul>
+	<li><a href="http://www.htmq.com/color/index.shtml">WEBカラーリファレンス</a>（by <a href="http://www.htmq.com/index.htm">HTMLクイックリファレンス</a>）</li>
+	<li><a href="http://noz.day-break.net/webcolor/webcolor216.html">Web Color 216 色データ</a>（by <a href="http://noz.day-break.net/webcolor/">WEB COLOR 216</a>）</li>
+	<li><a href="http://noz.day-break.net/webcolor/colorname.html">Web Color 以外の色</a>（by <a href="http://noz.day-break.net/webcolor/">WEB COLOR 216</a>）</li>
+</ul>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 id="fbcolor">文字の色と背景の色を指定する</h4>
+<p class="try">「index.html」ファイルの本文の「文字の色」と「背景の色」を、それぞれ「黒」と「白」に設定してみよう。</p>
+<p>「<a href="029.html">スタイルシートファイルの作成</a>」で作成した「nomal.css」を開き、次にように入力する（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）。</p>
+<pre class="big">body {
+  color: black ;
+  background-color: white ;}</pre>
+<p>「nomal.css」ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）し、「index.html」ファイルをブラウザで開く【参考→<a href="014.html#flop">ファイルをブラウザで開く</a>】。ページが表示されることを確認する。</p>
+<h5>文字の色と背景の色を変更する</h5>
+<p class="try">「index.html」を表示するときの『文字の色』と『背景の色』を自由に変更してみよう。</p>
+<p>「normal.css」のファイルに入力した「black」と「white」の部分を好きな色に変更し、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre><span class="big">もとの指定</span>
+body {
+  color: <span class="red">black</span> ;
+  background-color: <span class="red">white</span> ;}
+<span class="big">変更例：</span>
+body {
+  color: <span class="red">#333333</span> ;
+  background-color: <span class="red">#F8F8FF</span> ;}</pre>
+<p>「index.html」ファイルをブラウザで開き、文字の色と背景の色が変更されていることを確認する。</p>
+<div class="center">
+<img src="030_4.jpg" width="500" height="213" alt="" /><br />
+<span class="small">↑&nbsp;背景色を指定しない場合（#FFFFFF）と#F8F8FFに指定した場合の表示例</span>
+</div>
+<div class="rimg">
+<img src="030_3.png" width="300" height="100" alt="" />
+</div>
+<p>なお、すでに「index.html」がブラウザで表示されている場合は、リロードボタン<span class="en">reload button</span>（<span xml:lang="zh-tw">重新載入最新的網頁内容</span>）を押せば表示が更新される。</p>
+<p>ページがうまく表示されない場合は「normal.css」の内容に誤りがあると思われる。「normal.css」を開いて、内容に誤りがないか確認すること。</p>
+<h5 class="cl" id="clrcntr">文字の色と背景の色を変更に関する注意</h5>
+<p>文字の色と背景の色の組み合わせには、『見やすい組み合わせ』と『見にくい組み合わせ』とがある。文字の色と背景の色を『見にくい組み合わせ』にしてしまうと、ユーザ<span class="en">user</span>やユーザエージェント<span class="en">user agent</span>によっては、ページがまったく読めなくなる可能性があるので注意が必要である。</p>
+<table class="clcont" summary="文字色と背景色の「見やすい組み合わせ」および「見にくい組み合わせ」を実例として示した表。">
+	<caption>色の『見やすい組み合わせ』と『見にくい組み合わせ』</caption>
+	<thead>
+	<tr><th scope="col" abbr="文字">文字の色（16進）</th><th scope="col" abbr="背景">背景の色（16進）</th><th scope="col" abbr="表示">表示例</th></tr>
+	</thead>
+	<tbody>
+	<tr><th scope="row" colspan="3">○&nbsp;見やすい組み合わせの例</th></tr>
+	<tr><td>#000000</td><td>#FFFFFF</td><td>ページは白い背景に黒い文字が基本となる</td></tr>
+	<tr><td>#000000</td><td>#CCCCCC</td><td class="gray">灰色の背景に黒い文字でもよい</td></tr>
+	<tr><td>#0000FF</td><td>#FFFFFF</td><td class="blue">白い背景に青い文字も見やすい</td></tr>
+	<tr><td>#0000FF</td><td>#FFFF99</td><td class="gdca">黄色い背景に青い文字でもよい</td></tr>
+	</tbody>
+	<tbody>
+	<tr><th scope="row" colspan="3">×&nbsp;見にくい組み合わせの例</th></tr>
+	<tr><td>#0000FF</td><td>#FF0000</td><td class="bdcb" title="赤と青の組み合わせは見にくい">赤と青の組み合わせは見にくい</td></tr>
+	<tr><td>#FF00FF</td><td>#000000</td><td class="bgred" title="赤と黒の組み合わせは見にくい">赤と黒の組み合わせは見にくい</td></tr>
+	<tr><td>#0000FF</td><td>#00FF00</td><td class="bdcd" title="緑と青の組み合わせは見にくい">緑と青の組み合わせは見にくい</td></tr>
+	<tr><td>#FFFF00</td><td>#FFFFFF</td><td class="yellow" title="白い背景に黄色い文字は読みにくい">白い背景に黄色い文字は読みにくい</td></tr>
+	<tr><td>#FF0000</td><td>#FF99CC</td><td class="bdca" title="似た色の組み合わせは見にくい">似た色の組み合わせは見にくい</td></tr>
+	<tr><td>#666666</td><td>#CCCCFF</td><td class="bdcc" title="文字の色が薄いと見にくい">文字の色が薄いと見にくい</td></tr>
+	</tbody>
+</table>
+<p>文字の色と背景の色の組み合わせは、「<a href="http://www.i-create.jp/accessibility/color-checker.shtml">カラーコントラストチェッカー V2.0</a>」（by <a href="http://www.i-create.jp/index.html">有限会社アイクリエイツ</a>）などで確認できる。</p>
+<p class="try">自分が指定した「文字の色」と「背景の色」の組み合わせが見やすいかどうかをチェックし、もし『見にくい組み合わせ』であれば『見やすい組み合わせ』になるように変更しよう。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 id="sizefont">文字のサイズやフォントの種類を指定する</h4>
+<p>ページの本文に使う文字は、大きすぎても小さすぎても見にくい（読みにくい）と思われる。また、文字が細すぎたり、行の間隔が狭すぎたりしても見にくい（読みにくい）であろう。ここでは、ページの本文の文字に対して、以下のプロパティを設定する。</p>
+<ol>
+	<li><a href="#ftsize">font-size</a>（文字の大きさ）</li>
+	<li><a href="#lnhgt">line-height</a>（行の高さ）</li>
+	<li><a href="#ftfmly">font-family</a>（フォントの種類）</li>
+	<li><a href="#ftstyl">font-style</a>（文字のスタイル）</li>
+	<li><a href="#ftwegt">font-weight</a>（文字の太さ）</li>
+</ol>
+<h5 id="unit">値の一般的な単位</h5>
+<p>横幅や高さなど、具体的な『大きさ』を指すプロパティの値は、「単位」とともに指定する必要がある。<abbr title="Cascading Style Sheet">CSS</abbr>でプロパティに共通して使われる一般的な単位には、以下のようなものがある。</p>
+<table class="unit" summary="CSSで使われる値の大きさの共通単位をまとめて示した表。">
+	<caption>CSSにおける一般的な単位</caption>
+<thead>
+	<tr><th scope="col" abbr="単位">値の単位</th><th scope="col">読み</th><th scope="col">大きさ</th></tr>
+</thead>
+<tbody>
+	<tr><th scope="col" colspan="3">絶対的な単位（どの環境でも同じ大きさ）</th></tr>
+	<tr><th scope="row">mm</th><td>ミリメートル</td><td>1/10センチ</td></tr>
+	<tr><th scope="row">cm</th><td>センチメートル</td><td>10ミリ</td></tr>
+	<tr><th scope="row">in</th><td>インチ</td><td>25.45ミリ</td></tr>
+	<tr><th scope="row">pt</th><td>ポイント</td><td>1/72インチ</td></tr>
+	<tr><th scope="row">pc</th><td>パイカ</td><td>12ポイント</td></tr>
+</tbody>
+<tbody>
+	<tr><th scope="col" colspan="3">相対的な単位（環境によって大きさが変化）</th></tr>
+	<tr><th scope="row">px</th><td>ピクセル</td><td>画面表示の最小単位</td></tr>
+	<tr><th scope="row">ex</th><td>エックス</td><td>アルファベットの&quot;x&quot;の文字の高さ</td></tr>
+	<tr><th scope="row">em</th><td>エム</td><td>アルファベットの&quot;M&quot;の文字の高さ</td></tr>
+</tbody>
+<tbody>
+	<tr><th scope="col" colspan="3">割合・比率（状況によって大きさが変化）</th></tr>
+	<tr><th scope="row">%</th><td>パーセント</td><td><a href="008.html#prtch" title="親要素">親要素</a>への割合などを示す</td></tr>
+</tbody>
+</table>
+<p>なお、日本語の場合は、すべての文字が同じ大きさの正方形の中にデザインされているので、『em』は「１文字の高さ」でもあり「１文字の横幅」でもある。</p>
+<h5 id="ftsize">文字の大きさを指定する</h5>
+<p>文字の大きさは、&quot;font-sizeプロパティ&quot;によって指定する。&quot;font-sizeプロパティ&quot;は、</p>
+<p>font-size: [指定する値] ;</p>
+<p class="none">と記述する。例えば、〈body要素〉の文字の大きさを「12pt」にする場合、&quot;font-sizeプロパティ&quot;の記述は、次のようになる。</p>
+<pre>body {
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="red">font-size: 12pt ;</span>&nbsp;<span class="syatai">}</span></pre>
+<h6 id="fntstm">文字の大きさの指定に使われる値</h6>
+<p>文字の大きさの指定には、<a href="#unit">値の一般的な単位</a>の他に、次のキーワードで指定することもできる。具体的にどのような大きさで表示されるかは、ブラウザ<span class="en">browser</span>によって異なる。</p>
+<table class="funit" summary="font-sizeプロパティで文字の大きさを指定するキーワードをまとめて示した表。">
+	<caption>文字の大きさを指定するキーワード</caption>
+	<thead>
+	<tr><th scope="col">キーワード</th><th scope="col" abbr="表示">表示の具体例</th></tr>
+	</thead>
+	<tfoot>
+	<tr><td class="small" colspan="2">&quot;medium&quot;が標準サイズ。&quot;smaller&quot;, &quot;larger&quot;は<a href="008.html#prtch" title="親要素">親要素</a>のサイズより１段階小さく／大きくする。</td></tr>
+	</tfoot>
+	<tbody>
+	<tr><th>xx-small</th><td class="xxss">font-size: xx-small ;</td></tr>
+	<tr><th>x-small</th><td class="xs">font-size: x-small ;</td></tr>
+	<tr><th>small</th><td class="ss">font-size: small ;</td></tr>
+	<tr><th>medium</th><td>font-size: medium ;</td></tr>
+	<tr><th>large</th><td class="ll">font-size: large ;</td></tr>
+	<tr><th>x-large</th><td class="xl">font-size: x-large ;</td></tr>
+	<tr><th>xx-large</th><td class="xxll">font-size: xx-large ;</td></tr>
+	<tr><th>smaller</th><td class="small">font-size: smaller ;</td></tr>
+	<tr><th>larger</th><td class="big">font-size: larger ;</td></tr>
+	</tbody>
+</table>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+medium（font-size: medium ;）<br />
+<span class="em2">２em</span>（font-size: 2em ;）<br />
+<span class="per60">60%</span>（font-size: 60% ;）<br />
+<span class="pt18">18pt</span>（font-size: 18pt ;）
+</div>
+<h6>本文の文字の大きさを指定する</h6>
+<p class="try">本文の文字のサイズを指定してみよう。</p>
+<p>本文の文字のサイズは、大きすぎても小さすぎても見にくい（読みにくい）ので、できるだけ一般的な（標準的な）サイズに指定する方が良いだろう。ここでは、本文の文字のサイズをキーワードによって「medium」と指定することにする。</p>
+<p>「nomal.css」のファイルに、次にように入力し（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre class="big"><span class="syatai">body {</span>
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="red">font-size: medium ;</span>&nbsp;<span class="syatai">}</span></pre>
+<h5 id="lnhgt">行の高さを指定する</h5>
+<p>行の高さは、&quot;line-heightプロパティ&quot;によって指定する。&quot;line-heightプロパティ&quot;は、</p>
+<p>line-height: [指定する値] ;</p>
+<p class="none">と記述する。</p>
+<p class="cl">例えば、〈body要素〉の行の高さを「18pt」にする場合、&quot;line-heightプロパティ&quot;の記述は、</p>
+<pre>body {
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="red">line-height: 18pt ;</span>}</pre>
+<p class="none">のようになる。</p>
+<div class="limg">
+<img src="030_5.png" width="275" height="170" alt="" />
+</div>
+<p>&quot;line-heightプロパティ&quot;の値は、文字を含んだ行全体の高さを指定するものである。</p>
+<p>例えば、文字のサイズ<span class="small">（font-size）</span>が12ptで、行の高さ<span class="small">（line-height）</span>が18ptの場合、文字の上に3pt、文字の下に3ptが追加され、文字と合わせて全体で18ptになる（文字の高さ<span class="small">[12pt]</span>＋上に追加<span class="small">[3pt]</span>＋下に追加<span class="small">[3pt]</span>＝行全体の高さ<span class="small">[18pt]</span>）。</p>
+<h6 class="cl">行の高さの指定に使われる値</h6>
+<p>行の高さの指定には、<a href="#unit">値の一般的な単位</a>の他に、倍数を使うこともできる。倍数は、何も単位をつけずに、数字だけの形で指定する。</p>
+<p>例えば、「line-height: <span class="red">1.2</span> ;」と指定すれば、文字のサイズの1.2倍になり、「line-height: <span class="red">2.0</span> ;」と指定すれば、文字のサイズの２倍になる。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<p class="lh12">1.2倍の行の高さ（line-height: 1.2 ;）1.2倍の行の高さ（line-height: 1.2 ;）1.2倍の行の高さ（line-height: 1.2 ;）1.2倍の行の高さ（line-height: 1.2 ;）1.2倍の行の高さ（line-height: 1.2 ;）</p>
+<p>２倍の行の高さ（line-height: 2.0 ;）２倍の行の高さ（line-height: 2.0 ;）２倍の行の高さ（line-height: 2.0 ;）２倍の行の高さ（line-height: 2.0 ;）２倍の行の高さ（line-height: 2.0 ;）</p>
+</div>
+<h6>本文の行の高さを指定する</h6>
+<p class="try">本文の行の高さを指定してみよう。</p>
+<p>行の高さの値が小さいと、テキストの行と行とがくっついてしまい、見にくく（読みにくく）なる。一般に、行の高さは、文字のサイズの1.4倍〜２倍程度が読みやすい。ここでは、倍数を用いて「1.8」と指定することにする。</p>
+<p>「nomal.css」のファイルに、次にように入力し（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre class="big"><span class="syatai">body {</span>
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="syatai">font-size: medium ;</span>
+  <span class="red">line-height: 1.8 ;</span>&nbsp;<span class="syatai">}</span></pre>
+<p>「index.html」ファイルをブラウザで表示し、行の高さが変更されていることを確認する。</p>
+<h5 id="ftfmly">フォントの種類を指定する</h5>
+<p>画面に表示したり紙に印刷したりするときの文字のセット（漢字、ひらがな、カタカナなど）のデザイン<span class="en">design</span>を「フォント」<span class="en">font</span>という。日本語のフォントには、ゴシック体<span class="en">Gothic</span>、明朝体、楷書体などのグループがあり、それぞれのグループには少しずつデザインの異なる多くのフォントが含まれる。例えば、ゴシック体のグループには、「ヒラギノ角ゴシック」、「平成角ゴシック」、「HG平成丸ゴシック体」、「中ゴシック」、「Osaka」などの多くのフォントが含まれる。</p>
+<p>ページを表示するフォントの種類は&quot;font-familyプロパティ&quot;で指定する。&quot;font-familyプロパティ&quot;は、</p>
+<p>font-family: [指定する値] ;</p>
+<p class="none">と記述する。</p>
+<h6>フォントの種類の指定に使われる値</h6>
+<p>&quot;line-heightプロパティ&quot;の値は、</p>
+<ol>
+	<li>フォントの名前</li>
+	<li>フォントのグループの名前</li>
+</ol>
+<p class="none">のいずれかで指定する。ここでは、「フォントのグループの名前」で指定することにする。</p>
+<p>フォントのグループの名前は、次のように指定すればよい。</p>
+<dl>
+	<dt>ゴシック体のグループを指定する場合</dt>
+	<dd>font-family: sans-serif ;</dd>
+	<dt>明朝体のグループを指定する場合</dt>
+	<dd>font-family: serif ;</dd>
+</dl>
+<p>フォントのグループで指定した場合、具体的にどのようなフォントで表示されるかはブラウザに依存する。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<span class="goth">ゴシック体のグループを指定した場合</span>（font-family: sans-serif ;）<br />
+<span class="min">明朝体のグループを指定した場合</span>（font-family: serif ;）
+</div>
+<h6>本文のフォントの種類を指定する</h6>
+<p class="try">本文のフォントの種類を指定してみよう。</p>
+<p>本文を表示する日本語のフォントは、ゴシック体か明朝体が一般的である。ここでは、本文の読みやすさを考えて、ゴシック体に指定することにする。</p>
+<p>「nomal.css」のファイルに、次にように入力し（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre class="big"><span class="syatai">body {</span>
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="syatai">font-size: medium ;</span>
+  <span class="syatai">line-height: 1.8 ;</span>
+  <span class="red">font-family: sans-serif ;</span>&nbsp;<span class="syatai">}</span></pre>
+<h5 id="ftstyl">文字のスタイルを指定する</h5>
+<p>&quot;font-styleプロパティ&quot;は、文字のスタイルをしている。文字のスタイルでは、文字を斜体<span class="en">oblique</span>やイタリック<span class="en">italic</span>にするかどうかを指定することになる。&quot;font-styleプロパティ&quot;は、それぞれ次のように記述する。</p>
+<dl>
+	<dt>文字を斜体にする場合</dt>
+	<dd>font-style: oblique ;</dd>
+	<dt>文字をイタリックにする場合</dt>
+	<dd>font-style: italic ;</dd>
+	<dt>文字を斜体やイタリックにしない場合</dt>
+	<dd>font-style: normal ;</dd>
+</dl>
+<p>なお、日本語のフォントでは、「oblique」と「italic」のどちらを指定しても同じ形<span class="small">（文字を斜めに倒したような形）</span>になる<span class="small">（アルファベットの場合は、表示の結果が異なる）</span>。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+スタイルのない文字（font-style: normal ;）<br />
+<span class="syatai">スタイルに斜体を指定した文字</span>（font-style: oblique ;）
+</div>
+<h6>本文の文字のスタイルを指定する</h6>
+<p class="try">本文の文字のスタイルを指定してみよう。</p>
+<p>ここでは、本文の文字のスタイルを斜体やイタリックにせず、「normal」に指定することにする。</p>
+<p>「nomal.css」のファイルに、次にように入力し（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre class="big"><span class="syatai">body {</span>
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="syatai">font-size: medium ;</span>
+  <span class="syatai">line-height: 1.8 ;</span>
+  <span class="syatai">font-family: sans-serif ;</span>
+  <span class="red">font-style: normal ;</span>&nbsp;<span class="syatai">}</span></pre>
+<h5 id="ftwegt">文字の太さを指定する</h5>
+<p>文字の太さは、&quot;font-weightプロパティ&quot;を用いて指定する。&quot;line-heightプロパティ&quot;は、</p>
+<p>font-weight: [指定する値] ;</p>
+<p class="none">と記述する。</p>
+<h6>文字の太さの指定に使われる値</h6>
+<p>&quot;font-weightプロパティ&quot;の値は、次のどれかでなければならない。</p>
+<div class="hint">
+100, 200, 300, 400, 500, 600, 700, 800, 900, normal,  bold, bolder, lighter
+</div>
+<p>数値では「100」が最も細く「900」が最も太い。キーワードの「normal」は「400」、「bold」は「700」に相当する。「bolder」は「１段階太くする」、「lighter」は「１段階細くする」という意味である。</p>
+<p>ただし、実際にどのくらいの太さで表示されるかはフォントの種類とブラウザに依存する。</p>
+<p>日本語のフォントの場合、文字の太さは『ふつう』と『太い』の２段階しかないことがほとんどである。そのため、「normal」と「bold」または「normal」と「bolder」の値を指定する程度で十分である。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+ふつうの太さの文字（font-weight: normal ;）<br />
+<span class="bold">太さの太い文字</span>（font-weight: bolder ;）
+</div>
+<h6>本文の文字の太さを指定する</h6>
+<p class="try">本文の文字の太さを指定してみよう。</p>
+<p>ここでは、本文の文字の太さを「normal」に指定することにする。</p>
+<p>「nomal.css」のファイルに、次にように入力し（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre class="big"><span class="syatai">body {</span>
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="syatai">font-size: medium ;</span>
+  <span class="syatai">line-height: 1.8 ;</span>
+  <span class="syatai">font-family: sans-serif ;</span>
+  <span class="syatai">font-style: normal ;</span>
+  <span class="red">font-weight: normal ;</span>&nbsp;<span class="syatai">}</span></pre>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 id="decspa">テキストの装飾、整列、字間を指定する</h4>
+<p>「<a href="#sizefont">文字のサイズやフォントの種類を指定する</a>」では、ページの本文の『文字』の大きさや種類に関する設定を行なった。ここでは、ページ本文の『テキスト』に対して、以下のプロパティを設定する。</p>
+<ol>
+	<li><a href="#txtalgn">text-align</a>（テキストの整列位置）</li>
+	<li><a href="#txtdec">text-decoration</a>（テキストの装飾）</li>
+	<li><a href="#lttrspg">letter-spacing</a>（テキストの中での文字と文字の間隔）</li>
+</ol>
+<h5 id="txtalgn">テキストの整列位置を指定する</h5>
+<p>&quot;text-alignプロパティ&quot;は、水平方向のテキストの整列位置を指定する。</p>
+<div class="hint">
+<dl>
+	<dt>ブロックの枠線の左端に寄せて整列する場合</dt>
+	<dd>text-align: left ;</dd>
+	<dt>ブロックの枠線の右端に寄せて整列する場合</dt>
+	<dd>text-align: right ;</dd>
+	<dt>ブロックの横幅の中央に寄せて整列する場合</dt>
+	<dd>text-align: center ;</dd>
+</dl>
+</div>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<p>ブロックの枠線の左端に寄せて整列する</p>
+<p class="right">ブロックの枠線の右端に寄せて整列する</p>
+<p class="center">ブロックの横幅の中央に寄せて整列する</p>
+</div>
+<h6>本文のテキストの整列位置を指定する</h6>
+<p class="try">本文のテキストの整列位置を指定してみよう。</p>
+<p>日本語の横書きは〈左→右〉の方向に書くので、本文のテキストは左端に寄せて表示するのが自然である。ここでは、&quot;text-alignプロパティ&quot;に「left」を指定する。</p>
+<p>「nomal.css」のファイルに、次にように入力し（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre class="big"><span class="syatai">body {</span>
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="syatai">font-size: medium ;</span>
+  <span class="syatai">line-height: 1.8 ;</span>
+  <span class="syatai">font-family: sans-serif ;</span>
+  <span class="syatai">font-style: normal ;</span>
+  <span class="syatai">font-weight: normal ;</span>
+  <span class="red">text-align: left ;</span>&nbsp;<span class="syatai">}</span></pre>
+<h5 id="txtdec">テキストの装飾を指定する</h5>
+<p>&quot;text-decorationプロパティ&quot;は、テキストへの装飾の有無を指定する。テキストの装飾では、「下線」<span class="en">underline</span>、「上線」<span class="en">overline</span>、「字消し線」<span class="en">line trough</span>が指定できる。</p>
+<div class="hint">
+<dl>
+	<dt>テキストに下線をつける場合</dt>
+	<dd>text-decoration: underline ;</dd>
+	<dt>テキストに上線をつける場合</dt>
+	<dd>text-decoration: overline ;</dd>
+	<dt>テキストに字消し線を引く場合</dt>
+	<dd>text-decoration: line-through ;</dd>
+	<dt>テキストに装飾をしない場合</dt>
+	<dd>text-decoration: none ;</dd>
+</dl>
+</div>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<span class="kasen">テキストに下線をつける</span>。<span class="uesen">テキストに上線をつける</span>。<span class="keshi">テキストに字消し線を引く</span>。テキストに装飾をしない。
+</div>
+<h6>本文のテキストの装飾を指定する</h6>
+<p class="try">本文のテキストの装飾を指定してみよう。</p>
+<p>テキストの本文には、特に装飾を加える必要はないだろう。ここでは&quot;text-decorationプロパティ&quot;に「none」を指定する。</p>
+<p>「nomal.css」のファイルに、次にように入力し（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre class="big"><span class="syatai">body {</span>
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="syatai">font-size: medium ;</span>
+  <span class="syatai">line-height: 1.8 ;</span>
+  <span class="syatai">font-family: sans-serif ;</span>
+  <span class="syatai">font-style: normal ;</span>
+  <span class="syatai">font-weight: normal ;</span>
+  <span class="syatai">text-align: left ;</span>
+  <span class="red">text-decoration: none ;</span>&nbsp;<span class="syatai">}</span></pre>
+<h5 id="lttrspg">文字間隔を指定する</h5>
+<p>&quot;letter-spacingプロパティ&quot;は、テキストの中での文字と文字との間隔を指定する。&quot;letter-spacingプロパティ&quot;は、</p>
+<p>letter-spacing: [指定する値] ;</p>
+<p class="none">と記述する。</p>
+<p>&quot;letter-spacingプロパティ&quot;の値は、標準の文字間隔に追加する大きさを指定するものである。</p>
+<h6>文字間隔の指定に使われる値</h6>
+<p>文字間隔の指定には、<a href="#unit">値の一般的な単位</a>の他にキーワードとして「normal」（標準の文字間隔）を指定することができる。なお、&quot;letter-spacingプロパティ&quot;の値にマイナスの数値を指定すると文字が重なって表示される。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<span class="wide">文字間隔を広くする</span>（letter-spacing: 1em ;）<br />
+<span class="narrow">文字間隔を狭くする</span>（letter-spacing: - 2px ;）
+</div>
+<h6>本文の文字間隔を指定する</h6>
+<p class="try">本文の文字の間隔を指定してみよう。</p>
+<p>テキストの文字間隔は広すぎても狭すぎても読みにくいので、ここでは、キーワードを使って「normal」と指定する。</p>
+<p>「nomal.css」のファイルに、次にように入力し（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre class="big"><span class="syatai">body {</span>
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="syatai">font-size: medium ;</span>
+  <span class="syatai">line-height: 1.8 ;</span>
+  <span class="syatai">font-family: sans-serif ;</span>
+  <span class="syatai">font-style: normal ;</span>
+  <span class="syatai">font-weight: normal ;</span>
+  <span class="syatai">text-align: left ;</span>
+  <span class="syatai">text-decoration: none ;</span>
+  <span class="red">letter-spacing: normal ;</span>&nbsp;<span class="syatai">}</span></pre>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 id="margin">余白（マージン）を設定する</h4>
+<p>余白<span class="en">margin</span>の大きさを変更（指定）するには、「marginプロパティ」に適当な値を指定すればよい。&quot;marginプロパティ&quot;は、</p>
+<p>margin: [指定する値] ;</p>
+<p class="none">のように記述する。</p>
+<h5 id="menmrg">余白（マージン）の意味</h5>
+<div class="limg">
+<img src="030_1.png" width="265" height="494" alt="" />
+</div>
+<p>&quot;marginプロパティ&quot;は、<a href="010.html#blltxl">ブロックレベル要素</a>に対して、<a href="008.html#prtch" title="親要素">親要素</a>のブロックの枠線<span class="en">border line</span>または前後にあるブロックの枠線からの距離を指定するものである。</p>
+<p>&quot;marginプロパティ&quot;の値が「０」ならば、<a href="008.html#prtch" title="子要素">子要素</a>のブロックは<a href="008.html#prtch" title="親要素">親要素</a>のブロックの枠線および前後にあるブロックの枠線に密着して表示される。</p>
+<p>&quot;marginプロパティ&quot;の値に正の数値<span class="en">positive quantity</span>を指定すれば、子要素のブロックは親要素のブロックおよび前後にあるブロックから、指定した距離だけ離れて表示される。</p>
+<h5 class="cl">余白の指定に使われる値</h5>
+<p>&quot;marginプロパティ&quot;の値は、<a href="#unit">値の一般的な単位</a>を用いて、具体的な大きさで指定する。なお、&quot;marginプロパティ&quot;の値には、『em』を使うのが一般的である。『em』を使うことによって、ページを表示する画面の大きさ<span class="en">display size</span>やウインドウの大きさ<span class="en">window size</span>に影響されない指定が可能になるからである。</p>
+<h5 id="marikb">余白（マージン）の一括指定と個別指定</h5>
+<div class="rimg">
+<img src="030_2.png" width="320" height="271" alt="" />
+</div>
+<p>余白（マージン）には、上下左右の区別があり、すべて同じ値に指定することもできるし、それぞれに異なる値を指定することもできる。</p>
+<p>すべてのマージンを同じ値にする場合は、</p>
+<p>margin: [指定する値] ;</p>
+<p class="none">と書けばよい。例えば、「margin: 1em ;」と書けば、上下左右に１emずつの余白が設定される。</p>
+<p>上下左右に異なる値を指定する場合には、それぞれのプロパティに対して個別に指定する方法と、一括して指定する方法とがある。</p>
+<p>例えば、〈body要素〉の余白を個別に指定する場合には、次のようになる。</p>
+<pre>body {
+  <span class="red">margin-top:</span> [上の余白に指定する値] ;
+  <span class="red">margin-right:</span> [右の余白に指定する値] ;
+  <span class="red">margin-bottom:</span> [下の余白に指定する値] ;
+  <span class="red">margin-left:</span> [左の余白に指定する値] ;}</pre>
+<p>個別の指定では、例えば、「margin-top」だけを指定したり（他は３つは記述しない）、「margin-bottom」と「margin-right」だけを指定したり（他の２つは記述しない）してもよい。</p>
+<p>例えば、〈body要素〉の余白を一括して指定する場合には、次のようになる。</p>
+<pre>body {
+  <span class="red">margin:</span> [上に指定する値 右に指定する値 下に指定する値 左に指定する値] ;}</pre>
+<p>マージンを一括して指定する場合の値の指定順序は次のようになる。</p>
+<div class="rimg">
+<img src="030_6.png" width="370" height="420" alt="指定する値の順序は、［上］から時計回りに［上→右→下→左］の順となる。" />
+</div>
+<ul>
+	<li>４つの値を指定：［上・右・下・左］の順にスペースで区切って記述する</li>
+	<li>３つの値を指定：［上・左右<span class="small">（左右の余白は同じ大きさ）</span>・下］の順にスペースで区切って記述する</li>
+	<li>２つの値を指定：［上下<span class="small">（上下の余白は同じ大きさ）</span>・左右<span class="small">（左右の余白は同じ大きさ）</span>］の順にスペースで区切って記述する</li>
+	<li>１つの値を指定：上下左右の余白が同じ大きさになる</li>
+</ul>
+<p>なお、「0」と指定すれば、『余白なし』になる（「0」の場合、「em」などの単位は不要である）。</p>
+<h5 class="cl">本文の余白（マージン）を設定する</h5>
+<p class="try">本文の余白を指定してみよう。</p>
+<p>本文に余白がないと、テキスト<span class="en">text</span>がブラウザ<span class="en">browser</span>のウインドウ<span class="en">window</span>とくっついてしまい、読みにくくなる。ここでは、上下左右に「1.5em」の余白を設定することにする。</p>
+<p>「nomal.css」のファイルに、次にように入力し（コロン「：」<span class="en">colon</span>とセミコロン「；」<span class="en">semi colon</span>の違いに注意すること）、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<pre class="big"><span class="syatai">body {</span>
+  <span class="syatai">color: black ;</span>
+  <span class="syatai">background-color: white ;</span>
+  <span class="syatai">font-size: medium ;</span>
+  <span class="syatai">line-height: 1.8 ;</span>
+  <span class="syatai">font-family: sans-serif ;</span>
+  <span class="syatai">font-style: normal ;</span>
+  <span class="syatai">font-weight: normal ;</span>
+  <span class="syatai">text-align: left ;</span>
+  <span class="syatai">text-decoration: none ;</span>
+  <span class="syatai">letter-spacing: normal ;</span>
+  <span class="red">margin: 1.5em ;</span>&nbsp;<span class="syatai">}</span></pre>
+<p>「index.html」ファイルをブラウザで表示し、ページの余白が変更されていることを確認する。</p>
+<div class="center">
+<img src="030_7.png" width="600" height="315" alt="周囲の余白と文字間隔を変更し、フォントをゴシック体にすることで、全体が見やすくなっているのがわかるだろう。" />
+</div>
+</div>
+<div class="link">
+→ <a href="029.html">スタイルシートファイルの作成</a>&nbsp;〔<a href="029.html" title="戻る">prev</a>〕<br />
+→ <a href="031.html">見出し要素の表示を変更する</a>&nbsp;〔<a href="031.html" title="次へ">next</a>〕<br />
+→ <a href="032.html">段落要素の表示を変更する</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/030.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:37 GMT -->
+</html>

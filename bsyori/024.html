@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/024.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:33 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="025.html" />
+	<link rel="prev" href="023.html" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>連絡先を書き込む</h3>
+<div class="main">
+<div class="sect">
+<p>一般的な書籍では、その書籍の発行所や著者の連絡先が末尾<span class="small">（洋書では先頭）</span>に明記されている。<abbr title="HyperText Markup Language">HTML</abbr>では、「address要素」を用いることによって作者や責任者の連絡先を明示することができる。</p>
+<h4>address要素について</h4>
+<p>〈address要素〉は、ページの中で何回でも使うことができるが、ページの末尾でページ全体の連絡先を示すのに使われることが多い。</p>
+<p>例えば、連絡先の情報として『作者の名前』と『電子メールアドレス<span class="en"> e-mail address</span>』を示す場合には、次のように記述すればよいだろう。</p>
+<pre><span class="red">&lt;address&gt;</span>育逹アキラ（e-mail:xxx@xxx.xx）<span class="red">&lt;/address&gt;</span></pre>
+<p>また、次のように書けばメーラ<span class="en">mailer software</span>が起動するリンクを表示することができる。</p>
+<pre>&lt;address&gt;育逹アキラ（e-mail:<span class="red">&lt;a mailto=&quot;xxx@xxx.xx&quot;&gt;</span>xxx@xxx.xx<span class="red">&lt;/a&gt;</span>）&lt;/address&gt;</pre>
+<p>名前は、必ずしも本名である必要はない。ハンドル<span class="en">handle</span>やニックネーム<span class="en">nickname</span>でもよい<span class="small">（ただし、他人の名前を騙ってはいけない）</span>。また、電子メールアドレスをウェブ上に公開する場合は十分な注意が必要である<span class="small">（大量のスパムメール<span class="en">spam</span>が届いたりする可能性がある）</span>。</p>
+<h5>address要素に関する注意</h5>
+<p>〈address要素〉は<a href="010.html#blltxl" title="ブロックレベル要素">ブロックレベル要素</a>で、内容には<a href="010.html#blltxl" title="インライン要素">インライン要素</a>しか含むことができない。以下のような書き方は誤りである。</p>
+<pre><span class="big">※誤った記述の例</span>［ブロックレベル要素を含む］
+<span class="red">&lt;address&gt;</span>
+  <span class="red">&lt;p&gt;</span>Mieko Ikutatsu（育逹みえこ）<span class="red">&lt;p&gt;</span>
+  <span class="red">&lt;p&gt;</span>メール：xx@xx.xx.xx<span class="red">&lt;p&gt;</span>
+<span class="red">&lt;address&gt;</span></pre>
+<p>どうしても〈address要素〉の中でテキストを改行したい場合には〈<a href="010.html#brk">br要素</a>〉を用いることになる。</p>
+<pre>&lt;address&gt;Mieko Ikutatsu（育逹みえこ）<span class="red">&lt;br /&gt;</span>
+メール：xx@xx.xx.xx&lt;address&gt;</pre>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>ページの連絡先を記述する</h4>
+<p class="try">自分でつくったページの連絡先を書いてみよう。</p>
+<p>ここでは「index.html」ファイルの一番下に連絡先を記述する。電子メールアドレスは書かずに、名前を漢字と平仮名で書くことにする。以下の例のように書けばよい。</p>
+<pre><span class="syatai">&lt;p&gt;↑&lt;a href=&quot;#pagetop&quot;&gt;ページの先頭&lt;/a&gt;&lt;/p&gt;</span>
+<span class="red">&lt;hr /&gt;</span>
+<span class="red">&lt;address&gt;黄其正（こう・きせい）&lt;/address&gt;</span></pre>
+<p>「&lt;hr /&gt;」は、「hr要素」<span class="en">hr element</span>を示すもので、水平方向の<ruby><rb>罫線</rb><rp>(</rp><rt>けいせん</rt><rp>)</rp></ruby><span class="en">horizontal rule</span>を表わす。〈hr要素〉は〈<a href="010.html#brk">br要素</a>〉などと同じく空要素<span class="en">empty element</span>であり、内容を持たない。ここでは、本文の記述と連絡先の記述とを区別するために罫線を引いている。</p>
+<p>自分の名前（ニックネームでもよい）を記述して、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>連絡先をブラウザで表示する</h4>
+<p>保存したファイルをブラウザで開いてみる。ブラウザで開く操作は、<a href="014.html#flop">ファイルをブラウザで開く</a>を参照せよ。</p>
+<p>ファイルを開くと、次のように表示されるだろう（Macintosh; Firefoxの場合）。</p>
+<div class="center">
+<img src="024.png" width="560" height="230" alt="多くのブラウザでは、斜体で表示される。右寄せされることもある。" />
+</div>
+</div>
+<div class="link">
+→ <a href="023.html">特殊な文字や記号を入力する</a>&nbsp;〔<a href="023.html" title="戻る">prev</a>〕<br />
+→ <a href="025.html">その他の要素について</a>&nbsp;〔<a href="025.html" title="次へ">next</a>〕<br />
+→ <a href="026.html">サーバにアップロードする</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/024.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:33 GMT -->
+</html>

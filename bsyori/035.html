@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/035.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:40 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="036.html" />
+	<link rel="prev" href="034.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<link rel="stylesheet" type="text/css" href="procc_6.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>ハイパーリンク（アンカーテキスト）の表示を変更する</h3>
+<div class="main">
+<div class="sect">
+<p>ハイパーリンクを示す〈アンカー要素〉には、『まだ利用していないリンク』や『すでに利用したリンク』などの性質の違いがある。このような性質の違いをアンカーテキスト<span class="en">anchor text</span>の表示に反映させるためには、「疑似クラス」<span class="en">pseudo-class</span>を用いる必要がある。</p>
+<h4>アンカー要素に対する疑似要素</h4>
+<p>疑似クラスは、<abbr title="HyperText Markup Language">HTML</abbr>文書の論理構造には存在せず、文書の利用状態の中に存在するものである。</p>
+<p>〈アンカー要素〉に対しては、以下のような疑似クラスが利用される。</p>
+<dl>
+	<dt>:link</dt>
+	<dd>ユーザエージェント<span class="en">user agent</span>の履歴<span class="en">history</span>にない<abbr title="Uniform Resource Locator">URL</abbr>を指すアンカー要素</dd>
+	<dt>:visited</dt>
+	<dd>ユーザエージェントの履歴にある<abbr title="Uniform Resource Locator">URL</abbr>を指すアンカー要素</dd>
+	<dt>:active</dt>
+	<dd>ユーザ<span class="en">user</span>が選択している要素</dd>
+	<dt>:hover</dt>
+	<dd>マウスポインタ<span class="en">mouse pointer</span>などがそのうえにある要素</dd>
+	<dt>:focus</dt>
+	<dd>キーボードの［tabキー］などでフォーカス<span class="en">focus</span>が与えられた要素</dd>
+</dl>
+<p>このうち、「:link」「:visited」以外の疑似要素は、〈アンカー要素〉以外にも利用できる。</p>
+<h4>疑似クラスへのスタイルの指定</h4>
+<p>疑似クラスへのスタイルの指定は、次のようになる。</p>
+<p><span class="red">要素名:疑似クラス名</span> {プロパティ名: 値 ;}</p>
+<p>〈アンカー要素〉のうち「ユーザが選択している要素」の表示を変更するには、次のように書く。</p>
+<p><span class="red">a:active</span> {color: red ;}</p>
+<p>この例では、アンカーテキストをクリックしたときなどにテキストが赤色になる。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<a href="#top" class="samp1">ページの先頭にジャンプ</a>
+</div>
+<p><span class="red">a:hover</span> {background-color: yellow ;}</p>
+<p>この例では、アンカーテキストのうえにマウスポインタをのせたときなどにテキストの背景色が黄色になる。</p>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<a href="#top" class="samp2">ページの先頭にジャンプ</a>
+</div>
+<h4>実際にアンカー要素の表示を変更する</h4>
+<p class="try">疑似クラスを利用して〈アンカー要素〉の表示を自由に変更してみよう。</p>
+<p>〈アンカー要素〉の表示を変更するときには、次の点に注意する。</p>
+<ol>
+	<li>背景色を指定する場合は、文字色との組み合わせに注意する（→<a href="030.html#clrcntr">文字の色と背景の色を変更に関する注意</a>）</li>
+	<li>「:link」と「:visited」には異なる文字色を指定する方が良い</li>
+	<li>アンカーテキストには下線をつける方が良い（→<a href="030.html#txtdec">テキストの装飾を指定する</a>）</li>
+</ol>
+<div class="center hint">
+<img src="035_1.png" width="509" height="251" alt="" />
+<p class="none small">a {text-decoration: underline ;}<br />a:link {color: blue ;}<br />a:visited {color: purple ;}<br />a:active {color: red ;}<br />a:hover {border: thin solid red ;}</p>
+</div>
+</div>
+<div class="link">
+→ <a href="034.html">箇条書きの表示を変更する</a>&nbsp;〔<a href="034.html" title="戻る">prev</a>〕<br />
+→ <a href="036.html">表の表示を変更する</a>&nbsp;〔<a href="036.html" title="次へ">next</a>〕<br />
+→ <a href="037.html">テキストの一部の表示を変更する</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/035.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:40 GMT -->
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/028.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:35 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="029.html" />
+	<link rel="prev" href="027.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>スタイルシートを指定する</h3>
+<div class="main">
+<div class="sect">
+<p><abbr title="HyperText Markup Language">HTML</abbr>文書<span class="en">HTML Document</span>にスタイルシート<span class="en">style sheet</span>を適用するには、スタイルシート（<abbr title="Cascading Style Sheet">CSS</abbr>）を記述したファイル（外部スタイルシートファイル）を作成して、HTML文書から参照させればよい。</p>
+<h4>link要素を用いたスタイルシートの指定</h4>
+<p>スタイルシートへの参照は、〈head要素〉の中の「link要素」を用いて記述すればよい。HTML文書にスタイルシートを適用するための〈link要素〉は、次のように記述すればよいだろう。</p>
+<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot;&quot;http://www.w3.org/TR/
+xhtml11/DTD/xhtml11.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+  <span class="red">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;CSSファイルの場所&quot; /&gt;</span>
+  &lt;title&gt;ページのタイトル&lt;/title&gt;
+&lt;/head&gt;</pre>
+<p>ここで、「CSSファイルの場所」は、〈アンカー要素〉の<a href="018.html#href">href属性の指定</a>と同様に指定すばよい。例えば、<abbr title="Cascading Style Sheet">CSS</abbr>ファイルのファイル名が&quot;normal.css&quot;だとすると、「normal.css」とか「../xxx/normal.css」のように指定することになるだろう。</p>
+<p class="try">〈リンク要素〉を用いて「index.html」に「normal.css」への参照を記述しよう。</p>
+</div>
+<div class="link">
+→ <a href="027.html">スタイルシートとは？</a>&nbsp;〔<a href="027.html" title="戻る">prev</a>〕<br />
+→ <a href="029.html">スタイルシートファイルの作成</a>&nbsp;〔<a href="029.html" title="次へ">next</a>〕<br />
+→ <a href="030.html">body要素の表示を変更する</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/028.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:35 GMT -->
+</html>

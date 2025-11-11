@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/026.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:33 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="027.html" />
+	<link rel="prev" href="025.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>サーバにアップロードする</h3>
+<div class="main">
+<div class="sect">
+<p>作成したウェブページを、インターネット上で公開するには、サーバ<span class="en">server</span>アップロード<span class="en">upload</span>する必要がある。</p>
+<h4>ファイルのアップロード</h4>
+<p>育逹商業技術學院の学生は、学校のサーバで１人につき20<abbr title="Mega Byte">MB</abbr>のスペースを利用することができる。</p>
+<p>サーバへのファイルのアップロードについては「<span xml:lang="zh-tw"><a href="http://www.ydu.edu.tw/WebMail/stu_ftp.htm" hreflang="zh-tw">育達商業技術學院電算中心 學生網頁暨檔案伺服器使用說明</a></span>」を参照せよ。</p>
+<h4>ファイルのアップロード</h4>
+<p class="try">実際にファイルをサーバにアップロードしてみよう。</p>
+<p>次の手順で、ファイルをサーバにアップロードする。</p>
+<ol>
+	<li>「<span xml:lang="zh-tw"><a href="http://www.ydu.edu.tw/WebMail/stu_ftp.htm" hreflang="zh-tw">育達商業技術學院電算中心 學生網頁暨檔案伺服器使用說明</a></span>」を参考にして、<abbr title="File Transfer Protocol">FTP</abbr>サーバにアクセスする</li>
+	<li>ホームディレクトリ<span class="en">home directory</span>が表示されるので、「index.html」、「data.html」、「image.jpg」の３つのファイルをアップロードする<span class="small">（デスクトップ上のファイルのアイコンをホームディレクトリのウインドウにドラッグ＆ドロップ<span class="en">drag and drop</span>すればよい）</span></li>
+	<li>ホームディレクトリのウインドウ<span class="en">window</span>を閉じる</li>
+</ol>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>.htaccessファイル</h4>
+<p class="try">『文字化け』を防ぐための設定をしよう。</p>
+<p>学校のサーバで、日本語を文字化け<span class="en">garble</span>せずに表示するには、「.htaccess」ファイルをつかう必要がある。</p>
+<ol>
+	<li>エディタ<span class="en">editor</span>（例：<span xml:lang="zh-tw">記事本</span>で新規ファイル<span class="en">New File</span>（<span xml:lang="zh-tw">檔案</span>）を作成する【参考→<a href="012.html">ファイルの作成</a>】）</li>
+	<li>ファイルに以下のように入力する（&crarr;&nbsp;は［enter/return］キーを押すことを示す）
+		<pre>AddType &quot;text/html; charset=UTF-8&quot; html&crarr;</pre></li>
+	<li>ファイルを&quot;htaccess.txt&quot;という名前（<span xml:lang="zh-tw">檔名</span>）で（windowsの場合は、Cドライブ<span class="en">(:c)</span>の直下などの分かりやすい場所に）「別名で保存／新規保存」<span class="en">Save as...</span>する【参考→<a href="012.html">ファイルの作成</a>】</li>
+	<li><abbr title="File Transprt protocol">FTP</abbr>クライアントソフト<span class="en">FTP Client</span>などを使って、<acronym title="American Standard Code for Information Interchange">ASCII</acronym>モードで、サーバのホームディレクトリに「別名でアップロード」<span class="en">upload as...</span>する（&quot;htaccess.txt&quot;から&quot;.htaccess&quot;に名前を変える）</li>
+</ol>
+<p>windowsのFTPクライアントソフトとしては、電脳教室のコンピュータに<a href="http://www2.biglobe.ne.jp/~sota/ffftp.html">FFFTP</a>がインストールされている。FFFTPの使い方は、授業の中で説明する（日本語での詳しいマニュアルがある<a href="http://ftp.hm/ffftp/">サポートページ</a>も参照せよ）。</p>
+<p>「.htaccess」については「<a href="http://mikeneko.creator.club.ne.jp/~lab/web/htaccess/">ミケネコの htaccess リファレンス</a>」<span class="small">（by <a href="http://mikeneko.creator.club.ne.jp/~lab/">ミケネコ研究所</a>）</span>に詳しく説明されている。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>ブラウザでの表示の確認</h4>
+<p class="try">自分でつくったページをインターネットで見てみよう。</p>
+<p>インターネット<span class="en">inter net</span>を通じてブラウザ<span class="en">browser</span>で表示できることを確認する。</p>
+<p>ブラウザのロケーションバー<span class="en">location bar</span>に</p>
+<p>『http://stweb.ydu.edu.tw/~<span class="red">あなたの学生番号</span>』</p>
+<p class="none">と入力しキーボードの［enter］キーを押せば、ページが表示されるはずである。</p>
+<h5>うまくいかない場合</h5>
+<dl>
+	<dt>『500 Internal Server Error』と表示される</dt>
+	<dd>&quot;.htaccess&quot;ファイルの内容に誤りがある<br />
+	&nbsp;&rArr;&nbsp;&quot;.htaccess&quot;のファイルをつくりなおす</dd>
+	<dt>文字化けして韓国語のようになる</dt>
+	<dd>&quot;.htaccess&quot;ファイルをバイナリモード<span class="en">binary mode</span>で転送している<br />
+	&nbsp;&rArr;&nbsp;&quot;.htaccess&quot;をASCIIモードで転送しなおす</dd>
+	<dt>『404 Not Found』と表示される</dt>
+	<dd>ファイルのアップロードがうまくいっていない<br />
+	&nbsp;&rArr;&nbsp;ファイルをアップロードしなおす</dd>
+	<dt>ページのソース（の一部）がテキストとして表示される</dt>
+	<dd><abbr title="HyperText Mark-up Languege">html</abbr>ファイルの〈head要素〉の記述が正しくない<br />
+	&nbsp;&rArr;&nbsp;head要素の記述を修正する（→<a href="012.html">ファイルの作成</a>）</dd>
+</dl>
+</div>
+<div class="link">
+→ <a href="025.html">その他の要素について</a>&nbsp;〔<a href="024.html" title="戻る">prev</a>〕<br />
+→ <a href="027.html">スタイルシートとは？</a>&nbsp;〔<a href="027.html" title="次へ">next</a>〕<br />
+→ <a href="028.html">スタイルシートを指定する</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/026.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:33 GMT -->
+</html>

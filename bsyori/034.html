@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/034.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:39 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="035.html" />
+	<link rel="prev" href="033.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<link rel="stylesheet" type="text/css" href="procc_5.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>箇条書きの表示を変更する</h3>
+<div class="main">
+<div class="sect">
+<p>ここでは、箇条書きの表示を変更してみる。具体的には</p>
+<ol>
+	<li>〈dl要素〉の文字サイズと表示位置を調整する（→<a href="#dl">dl要素の表示を変更する</a>）</li>
+	<li>〈ol要素〉の数字の部分の表示を変更し、表示位置を調整する（→<a href="#ol">ol要素の表示を変更する</a>）</li>
+	<li>〈ul要素〉のマーカーの形を変更し、表示位置を調整する（→<a href="#ul">ul要素の表示を変更する</a>）</li>
+</ol>
+<p class="none">ことを目的にする。</p>
+<h4 id="dl">dl要素の表示を変更する</h4>
+<p>まず、項目と説明との区別をはっきりさせるために、〈dl要素〉の項目部分（〈dt要素〉）の文字サイズを大きくし、太さも太くすることにする。</p>
+<p class="try">〈dt要素〉の文字サイズを適当なものに変更しよう。</p>
+<p>〈dt要素〉の文字サイズを変更するには、</p>
+<pre><span class="red">dt</span> {
+  font-size: [文字サイズ] ;
+  font-weight: [文字の太さ];}</pre>
+<p class="none">と書けば良い。</p>
+<div class="center">
+<img src="034_1.png" width="560" height="319" alt="" /><br />
+<span class="small">表示例：dt { font-size: larger ; font-weight: bolder ;}</span>
+</div>
+<p class="try">〈dt要素〉と〈dd要素〉の表示位置を変更しよう。</p>
+<h5>dl要素の表示位置を調整する</h5>
+<p>次に、テキストの表示位置を調整する。ここでは、〈h2要素〉にあわせて〈dt要素〉の左に「2em」のマージンを設定することにする。また、箇条書きの項目がくっつきすぎているように感じられるので、箇条書きの説明の部分（〈dd要素〉）の下にも「1em」のマージンを設定する。具体的には、次にように書けば良い【参考→<a href="030.html#margin">余白（マージン）を設定する</a>】。</p>
+<pre>dt {
+  <span class="syatai">font-size: [文字サイズ] ;</span>
+  <span class="syatai">font-weight: [文字の太さ];</span>
+  <span class="red">margin-left: 2em ;</span> }
+<span class="red">dd {</span>
+  <span class="red">margin-bottom: 1em ;}</span></pre>
+<h4 id="ol">ol要素の表示を変更する</h4>
+<p>〈ol要素〉の数字の部分の表示を算用数字以外のものに換えてみる。〈ol要素〉の数字の部分を変更するには、</p>
+<p><span class="red">ol</span> {<span class="red">list-style-type</span>: [数字の書式] ;}</p>
+<p class="none">と書けば良い。</p>
+<h5>数字の書式の指定</h5>
+<p>数字の書式は、以下のようなキーワードで指定する（ブラウザによっては表示できない場合もある）。</p>
+<ul>
+	<li>list-style-type: <span class="bold">upper-roman</span> ;（大文字のローマ数字）</li>
+	<li>list-style-type: <span class="bold">lower-roman</span> ;（小文字のローマ数字）</li>
+	<li>list-style-type: <span class="bold">upper-latin</span> ; / list-style-type: <span class="bold">upper-alpha</span> ;（大文字のアルファベット）</li>
+	<li>list-style-type: <span class="bold">lower-latin</span> ; / list-style-type: <span class="bold">lower-alpha</span> ;（小文字のアルファベット）</li>
+	<li>list-style-type: <span class="bold">decimal-leading-zero</span> ;（&quot;0&quot;のついた数字）</li>
+	<li>list-style-type: <span class="bold">cjk-ideographic</span> ;（漢字の数字）</li>
+	<li>list-style-type: <span class="bold">hiragana</span> ;（あいうえお...）</li>
+	<li>list-style-type: <span class="bold">katakana</span> ; （アイウエオ...）</li>
+	<li>list-style-type: <span class="bold">hiragana-iroha</span> ;（いろは...）</li>
+	<li>list-style-type: <span class="bold">katakana-iroha</span> ;（イロハ...）</li>
+	<li>list-style-type: <span class="bold">lower-greek</span> ;（ギリシア文字）</li>
+</ul>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<ol id="samp1">
+	<li>大文字のローマ数字（I、II、III、IV...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp2">
+	<li>小文字のローマ数字（i、ii、iii、iv...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp3">
+	<li>大文字のアルファベット（A、B、C、D...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp4">
+	<li>小文字のアルファベット（a、b、c、d...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp5">
+	<li>&quot;0&quot;のついた数字（01、02、03、04...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp6">
+	<li>漢字の数字（一、二、三、四...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp7">
+	<li>あいうえお（あ、い、う、え...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp8">
+	<li>アイウエオ（ア、イ、ウ、エ...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp9">
+	<li>いろは（い、ろ、は、に..）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp10">
+	<li>イロハ（イ、ロ、ハ、ニ...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+<ol id="samp11">
+	<li>ギリシア文字（α、β、γ、δ...）</li>
+	<li>真樹</li>
+	<li>寛之</li>
+	<li>孝高</li>
+</ol>
+</div>
+<h5>実際に数字部分の表示を変更する</h5>
+<p class="try">〈ol要素〉の数字の部分の表示を好みのものに変更してみよう。</p>
+<div class="center hint">
+<img src="034_2.png" width="560" height="227" alt="" /><br />
+<span class="small">表示例：ol { list-style-type: decimal-leading-zero ;}</span>
+</div>
+<h5>ol要素の表示位置の調整</h5>
+<p class="try">次に、テキストの表示位置を調整するため、〈h2要素〉にあわせて〈ol要素〉の左に「2em」のマージンを設定してみよう【参考→<a href="030.html#margin">余白（マージン）を設定する</a>】。</p>
+<h4 id="ul">ul要素の表示を変更する</h4>
+<p>〈ul要素〉のマーカーの形を変更してみる。〈ul要素〉のマーカーの形を変更するには、</p>
+<p><span class="red">ul</span> {<span class="red">list-style-type</span>: [マーカーの形] ;}</p>
+<p class="none">と書けば良い。</p>
+<h5>マーカーの形の指定</h5>
+<p>マーカーの形は、以下のようなキーワードで指定する（ブラウザによっては表示できない場合もある）。</p>
+<ul>
+	<li>list-style-type: none ;（なし）</li>
+	<li>list-style-type: disc ;（小さな黒い丸）</li>
+	<li>list-style-type: circle ;（小さな白い丸）</li>
+	<li>list-style-type: square ;（小さな黒い四角）</li>
+</ul>
+<div class="samp">
+<div class="smpnt">表示見本：</div>
+<ul id="samp12">
+	<li>マーカーなし</li>
+	<li>広島</li>
+	<li>長崎</li>
+</ul>
+<ul id="samp13">
+	<li>小さな黒い丸</li>
+	<li>広島</li>
+	<li>長崎</li>
+</ul>
+<ul id="samp14">
+	<li>小さな白い丸</li>
+	<li>広島</li>
+	<li>長崎</li>
+</ul>
+<ul id="samp15">
+	<li>小さな黒い四角</li>
+	<li>広島</li>
+	<li>長崎</li>
+</ul>
+</div>
+<h5>実際にマーカーの形を変更する</h5>
+<p class="try">〈ul要素〉のマーカーの表示を好みのものに変更してみよう。</p>
+<div class="center hint">
+<img src="034_3.png" width="560" height="201" alt="" /><br />
+<span class="small">表示例：ul { list-style-type: circle ;}</span>
+</div>
+<h5>ul要素の表示位置の調整</h5>
+<p class="try">次に、テキストの表示位置を調整するため、〈h2要素〉にあわせて〈ul要素〉の左に「1em」のマージンを設定してみよう【参考→<a href="030.html#margin">余白（マージン）を設定する</a>】。</p>
+</div>
+<div class="link">
+→ <a href="033.html">画像の表示を変更する</a>&nbsp;〔<a href="033.html" title="戻る">prev</a>〕<br />
+→ <a href="035.html">ハイパーリンク（アンカーテキスト）の表示を変更する</a>&nbsp;〔<a href="035.html" title="次へ">next</a>〕<br />
+→ <a href="036.html">表の表示を変更する</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/034.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:40 GMT -->
+</html>

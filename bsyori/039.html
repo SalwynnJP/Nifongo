@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/039.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:42 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="040.html" />
+	<link rel="prev" href="038.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>連絡先の表示を変更する</h3>
+<div class="main">
+<div class="sect">
+<p>ここでは、ページに関する問い合わせ先や作者の連絡先などを表示する〈address要素〉の表示を変更してみる。</p>
+<h4>要素を非表示にする</h4>
+<p><a href="024.html">連絡先を書き込む</a>では、〈address要素〉を使ってページの作者の名前を表示するようにした。そのとき、〈hr要素〉を使って、ページの本文と作者名との間に区切りの線（水平の罫線）を入れた。しかし、ここではスタイルシート<span class="en">style sheet</span>を使って本文との区切り線を表示したいので、〈hr要素〉は不要である。</p>
+<p>ただ、<abbr title="Hyper Text Markup Language">HTML</abbr>から〈hr要素〉を削除した場合、ブラウザ<span class="en">WWW browser</span>でスタイルシートが無効になっていたりすると、区切りの線が表示されなくなってしまう。スタイルシートを使って〈hr要素〉を非表示にすることができれば、HTMLから〈hr要素〉を削除するよりも便利である。</p>
+<p>スタイルシートを用いて、特定の要素の表示／非表示を切り替えるには、「displayプロパティ」を使う。&quot;displayプロパティ&quot;は、</p>
+<p>display: [指定する値] ;</p>
+<p class="none">と記述する。ここで、&quot;displayプロパティ&quot;の値に「none」を指定すると、その要素は表示されなくなる。たとえば、</p>
+<pre>hr {
+  <span class="red">display: none;</span>}</pre>
+<p class="none">と書けば、〈hr要素〉を非表示にすることができる。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>〈address要素〉の表示を変更する</h4>
+<p>〈address要素〉の表示を変更するには、スタイルシートを使ってスタイルを指定すれば良い。例えば、次のように書けば、ページとの区切り線を表示することができるだろう。</p>
+<pre>address {
+  <span class="red">border-top: thin solid black ;</span>}</pre>
+<p class="try">〈address要素〉の表示（border, background-color, color, text-alignなど）を好みのものに変更してみよう。その場合、ページの本文との間隔（margin-top）や区切り線との間隔（padding-top）にも注意すること。</p>
+</div>
+<div class="link">
+→ <a href="038.html">全体をいくつかのブロックにわける</a>&nbsp;〔<a href="038.html" title="戻る">prev</a>〕<br />
+→ <a href="040.html">背景画像を設定する</a>&nbsp;〔<a href="040.html" title="次へ">next</a>〕</div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/039.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:42 GMT -->
+</html>

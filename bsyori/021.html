@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/021.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:33 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="022.html" />
+	<link rel="prev" href="020.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>テキストを引用する</h3>
+<div class="main">
+<div class="sect">
+<p><abbr title="World Wide Web">WWW</abbr>でのハイパーリンク<span class="en">hyper link</span>は、基本的に、ある文書（データ）から別の文書（データ）への参照<span class="en">reference</span>を設定することである。一方、文書では、他の文書（データ）の一部を引用<span class="en">quotation</span>することがある。参照では、２つのデータは別々の場所にあるが、引用では、一方のデータ（のコピー）が他方のデータの一部として利用される。ここでは、<abbr title="HyperText Markup Language">HTML</abbr>での引用の示し方を学ぶ。</p>
+<h4>長い引用</h4>
+<p>複数の文や段落（文段）などの長い引用<span class="en">quotation</span>には「blockquote要素」を用いる。〈blockquote要素〉は、<a href="010.html#blltxl" title="ブロックレベル要素">ブロックレベル要素</a>である。また、〈blockquote要素〉の直接の<a href="008.html#prtch">子要素</a>もブロックレベル要素でなければならない。〈blockquote要素〉は以下のように記述する。</p>
+<pre><span class="red">&lt;blockquote&gt;&lt;p&gt;</span>引用する文章を書く<span class="red">&lt;/p&gt;&lt;/blockquote&gt;</span></pre>
+<p>〈blockquote要素〉の直接の子要素はブロックレベル要素でなければならないでの、直接引用する文章を書くのでなく、ここでは〈<a href="010.html#para">段落要素</a>〉の中に引用する文章を書いている。</p>
+<h5>引用の出典を明示する</h5>
+<h6>cite要素について</h6>
+<p>一般に、引用では、それがどこからの引用であるのか（＝出典）を明記する必要がある。〈blockquote要素〉では、引用の出典を「cite要素」によって示すことが望ましい。〈blockquote要素〉と〈cite要素〉は以下のように記述するのが良いだろう。</p>
+<pre><span class="red">&lt;blockquote&gt;</span>
+  &lt;p&gt;表現の静態は〈見えるもの〉であり、言い換えれば、すべてが表面である。この全面的
+  可視性の要求によって、言語表現はテクストの形をとるよう目指される。<span class="red">&lt;cite&gt;</span>内山和也
+ 『e-textの文体論』序論３節<span class="red">&lt;/cite&gt;</span>&lt;/p&gt;
+<span class="red">&lt;/blockquote&gt;</span></pre>
+<p>〈cite要素〉は<a href="010.html#blltxl" title="インライン要素">インライン要素</a>なので、〈blockquote要素〉の中に記述するときには〈段落タグ〉などの中に書かなければならない。また、〈cite要素〉は、以下の例のように〈blockquote要素〉の外に記述しても構わない。</p>
+<pre><span class="red">&lt;cite&gt;</span>ロラン・バルト『文学の記号論』<span class="red">&lt;/cite&gt;</span>は次のように述べる。
+<span class="red">&lt;blockquote&gt;</span>
+  &lt;p&gt;科学は粗雑であり、人生は微妙である。そしてこの両者の距離を埋めるからこそ、文
+  学はわれわれにとって重要なのである。&lt;/p&gt;
+<span class="red">&lt;/blockquote&gt;</span></pre>
+<h6>cite属性について</h6>
+<p>引用の出典がウェブ<span class="en">web</span>の上のテキストである場合には、「cite属性」を用いて<abbr title="Uniform Resource Locator">URL</abbr>を示すようにする。《cite属性》は以下のように記述する。</p>
+<pre>&lt;blockquote <span class="red">cite=&quot;http://xxx.xxx&quot;</span>&gt;&lt;p&gt;引用する文章を書く&lt;/p&gt;&lt;/blockquote&gt;</pre>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>短い引用</h4>
+<p>１文程度の短い引用<span class="en">quotation</span>には「q要素」を用いる。〈q要素〉は<a href="010.html#blltxl" title="インライン要素">インライン要素</a>なので、普通のテキストの中に引用を挿入することができる。〈q要素〉は、以下のように記述する。</p>
+<pre>&lt;cite&gt;Davidson（1978）&lt;/cite&gt;は、<span class="red">&lt;q&gt;隠喩の否定命題は、すべて潜在的に隠喩であ
+る&lt;/q&gt;</span>と指摘している。</pre>
+<p>〈q要素〉でも〈blockquote要素〉と同様に、引用の出典を〈cite要素〉で示すようにする。出典が、ウェブの上のテキストである場合に《cite属性》を用いることも同じである。</p>
+<p>また、〈q要素〉は、次のように<a href="008.html#prtch" title="入れ子">入れ子</a>にしても構わない。</p>
+<pre><span class="red">&lt;q&gt;</span>引用〜<span class="red">&lt;q&gt;</span>引用中の引用<span class="red">&lt;/q&gt;</span>〜です<span class="red">&lt;/q&gt;</span></pre>
+</div>
+<div class="link">
+→ <a href="020.html">別のサイトにハイパーリンクする</a>&nbsp;〔<a href="020.html" title="戻る">prev</a>〕<br />
+→ <a href="022.html">テキストを強調する</a>&nbsp;〔<a href="022.html" title="次へ">next</a>〕<br />
+→ <a href="023.html">特殊な文字や記号を入力する</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/021.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:33 GMT -->
+</html>

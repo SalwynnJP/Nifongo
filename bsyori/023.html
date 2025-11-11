@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/023.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:33 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="024.html" />
+	<link rel="prev" href="022.html" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<link rel="stylesheet" type="text/css" title="added_style" href="procc_2.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>特殊な文字や記号を入力する</h3>
+<div class="main">
+<div class="sect">
+<p><abbr title="HyperText Markup Language">HTML</abbr>では、「&lt;」「&gt;」「&quot;」など、タグ<span class="en">tag</span>の記述（マークアップ<span class="en">mark up</span>）に使われる文字をそのまま入力することはできない（そのまま入力するとタグの一部と誤認されてしまう）。このような文字を入力するには、実体参照<span class="en">entity reference</span>（文字実体参照<span class="en">character entity reference</span>）という方法を使う必要がある。</p>
+<h4>マークアップ記号の入力</h4>
+<p>文字実体参照は「<span class="red">&amp;quot;</span>」のように「&amp;」（アンパサンド<span class="en">ampersand</span>）と「;」（セミコロン<span class="en">semicolon</span>）の間に、文字の呼称（略称）を挟んで記述する。「<span class="red">&amp;quot;</span>」は、ブラウザでは「&quot;」と表示される。HTMLのマークアップに使われる記号の文字実体参照は以下の表のようになる。</p>
+<table class="enty" summary="HTMLのマークアップ記号の文字実体参照を示した表。">
+	<caption>マークアップ記号の文字実体参照</caption>
+<thead>
+	<tr><th scope="col" abbr="実体参照">文字実体参照</th><th scope="col" abbr="文字">表示される文字</th><th scope="col" abbr="呼称">文字の呼称</th></tr>
+</thead>
+<tbody>
+	<tr><td class="c1">&amp;nbsp;</td><td class="c2">&nbsp;<span class="syatai">[空白文字]</span></td><td class="c3"><span class="bold">n</span>one-<span class="bold">b</span>rake <span class="bold">sp</span>ace</td></tr>
+	<tr><td class="c1">&amp;quot;</td><td class="c2">&quot;</td><td class="c3"><span class="bold">quot</span>ation mark</td></tr>
+	<tr><td class="c1">&amp;lt;</td><td class="c2">&lt;</td><td class="c3"><span class="bold">l</span>ess-<span class="bold">t</span>han sign</td></tr>
+	<tr><td class="c1">&amp;gt;</td><td class="c2">&gt;</td><td class="c3"><span class="bold">g</span>reater-<span class="bold">t</span>han sign</td></tr>
+	<tr><td class="c1">&amp;amp;</td><td class="c2">&amp;</td><td class="c3"><span class="bold">amp</span>ersand</td></tr>
+</tbody>
+</table>
+<h4>その他の特殊文字の入力</h4>
+<p>また、文字実体参照では、アクセント記号付きのアルファベットや絵文字なども表わすことができる。以下に、代表的なものを示しておく。</p>
+<table class="enty" summary="代表的と思われる文字実体参照を示した表。">
+	<caption>その他の文字実体参照の例</caption>
+<thead>
+	<tr><th scope="col" abbr="実体参照">文字実体参照</th><th scope="col" abbr="文字">表示される文字</th><th scope="col" abbr="呼称">文字の呼称</th></tr>
+</thead>
+<tbody>
+	<tr class="head"><th colspan="3" scope="col">アクセント記号つきアルファベット</th></tr>
+	<tr><td class="c1">&amp;aacute;</td><td class="c2">&aacute;</td><td class="c3">small <span class="bold">a acute</span></td></tr>
+	<tr><td class="c1">&amp;agrave;</td><td class="c2">&agrave;</td><td class="c3">small <span class="bold">a grave</span> </td></tr>
+	<tr><td class="c1">&amp;acirc;</td><td class="c2">&acirc;</td><td class="c3">small <span class="bold">a circ</span>umflex</td></tr>
+	<tr><td class="c1">&amp;auml;</td><td class="c2">&auml;</td><td class="c3">small <span class="bold">a uml</span>aut </td></tr>
+	<tr><td class="c1">&amp;atilde;</td><td class="c2">&atilde;</td><td class="c3">small <span class="bold">a tilde</span></td></tr>
+	<tr><td class="c1">&amp;aring;</td><td class="c2">&aring;</td><td class="c3">small <span class="bold">a ring</span></td></tr>
+	<tr><td class="c1">&amp;Aacute;</td><td class="c2">&Aacute;</td><td class="c3">capital <span class="bold">A acute</span></td></tr>
+	<tr><td class="c1">&amp;Agrave;</td><td class="c2">&Agrave;</td><td class="c3">capital <span class="bold">A grave</span> </td></tr>
+	<tr><td class="c1">&amp;Acirc;</td><td class="c2">&Acirc;</td><td class="c3">capital <span class="bold">A circ</span>umflex</td></tr>
+	<tr><td class="c1">&amp;Auml;</td><td class="c2">&Auml;</td><td class="c3">capital <span class="bold">A uml</span>aut </td></tr>
+	<tr><td class="c1">&amp;Atilde;</td><td class="c2">&Atilde;</td><td class="c3">capital <span class="bold">A tilde</span></td></tr>
+	<tr><td class="c1">&amp;Aring;</td><td class="c2">&Aring;</td><td class="c3">capital <span class="bold">A ring</span></td></tr>
+</tbody>
+<tbody>
+	<tr class="head"><th colspan="3" scope="col">矢印</th></tr>
+	<tr><td class="c1">&amp;laar</td><td class="c2">&larr;</td><td class="c3"><span class="bold">l</span>eftwards <span class="bold">arr</span>ow</td></tr>
+	<tr><td class="c1">&amp;uarr</td><td class="c2">&uarr;</td><td class="c3"><span class="bold">u</span>pwards <span class="bold">arr</span>ow</td></tr>
+	<tr><td class="c1">&amp;rarr</td><td class="c2">&larr;</td><td class="c3"><span class="bold">r</span>ightwards <span class="bold">arr</span>ow</td></tr>
+	<tr><td class="c1">&amp;darr</td><td class="c2">&darr;</td><td class="c3"><span class="bold">d</span>ownwards <span class="bold">arr</span>ow</td></tr>
+</tbody>
+<tbody>
+	<tr class="head"><th colspan="3" scope="col">数学記号</th></tr>
+	<tr><td class="c1">&amp;plusmn;</td><td class="c2">&plusmn;</td><td class="c3"><span class="bold">plus</span> or <span class="bold">m</span>i<span class="bold">n</span>us sign</td></tr>
+	<tr><td class="c1">&amp;ne;</td><td class="c2">&ne;</td><td class="c3"><span class="bold">n</span>ot <span class="bold">e</span>qual to</td></tr>
+	<tr><td class="c1">&amp;le;</td><td class="c2">&le;</td><td class="c3"><span class="bold">l</span>ess-than or <span class="bold">e</span>qual to</td></tr>
+	<tr><td class="c1">&amp;ge;</td><td class="c2">&ge;</td><td class="c3"><span class="bold">g</span>reater-than or <span class="bold">e</span>qual to</td></tr>
+	<tr><td class="c1">&amp;not;</td><td class="c2">&not;</td><td class="c3"><span class="bold">not</span> sign</td></tr>
+</tbody>
+<tbody>
+	<tr class="head"><th colspan="3" scope="col">権利記号</th></tr>
+	<tr><td class="c1">&amp;copy;</td><td class="c2">&copy;</td><td class="c3"><span class="bold">copy</span>right sign</td></tr>
+	<tr><td class="c1">&amp;reg;</td><td class="c2">&reg;</td><td class="c3"><span class="bold">reg</span>istered sign</td></tr>
+	<tr><td class="c1">&amp;trade;</td><td class="c2">&trade;</td><td class="c3"><span class="bold">trade</span> mark sign</td></tr>
+</tbody>
+<tbody>
+	<tr class="head"><th colspan="3" scope="col">絵文字</th></tr>
+	<tr><td class="c1">&amp;spades;</td><td class="c2">&spades;</td><td class="c3"><span class="bold">spade s</span>uit</td></tr>
+	<tr><td class="c1">&amp;diams;</td><td class="c2">&diams;</td><td class="c3"><span class="bold">diamond s</span>uit</td></tr>
+	<tr><td class="c1">&amp;hearts;</td><td class="c2">&hearts;</td><td class="c3"><span class="bold">heart s</span>uit</td></tr>
+	<tr><td class="c1">&amp;clubs;</td><td class="c2">&clubs;</td><td class="c3"><span class="bold">club s</span>uit</td></tr>
+</tbody>
+</table>
+<p>実体参照のリストは、以下のページなどを参照すること。</p>
+<ul>
+	<li><a href="http://www.htmq.com/text/index.shtml">特殊文字レファレンス</a>（by <a href="http://www.htmq.com/index.htm">HTML クイックリファレンス</a>）</li>
+	<li><a href="http://bakera.jp/html/reference/charref.html">HTMLで使える文字実体参照</a>（by 水無月ばけら）</li>
+</ul>
+</div>
+<div class="link">
+→ <a href="022.html">テキストを強調する</a>&nbsp;〔<a href="022.html" title="戻る">prev</a>〕<br />
+→ <a href="024.html">連絡先を書き込む</a>&nbsp;〔<a href="024.html" title="次へ">next</a>〕<br />
+→ <a href="025.html">その他の要素について</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/023.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:33 GMT -->
+</html>

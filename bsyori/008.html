@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/008.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:26 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="009.html" />
+	<link rel="prev" href="007.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>ＨＴＭＬ文書の基本構造</h3>
+<div class="main">
+<div class="sect">
+<p>HTML文書の基本構造は次のようになる。</p>
+<pre><span class="big">※HTML文書の基本構造</span>
+   &lt;html&gt;
+     &lt;head&gt;
+       head要素の内容（HTML文書に関する情報が書かれる）
+     &lt;/head&gt;
+     &lt;body&gt;
+       body要素の内容（本文として表示される情報が書かれる）
+     &lt;/body&gt;
+   &lt;/html&gt;</pre>
+<p>HTML文書<span class="en">HTML document</span>は、１つの〈html要素〉<span class="en">html element</span>によって構成される。</p>
+<p>〈html要素〉は、１つの〈head要素〉<span class="en">head element</span>と１つの〈body要素〉<span class="en">body element</span>によって構成される。</p>
+<p><em>〈html要素〉、〈head要素〉、〈body要素〉は、同じHTML文書中で繰り返して使うことはできない（１回だけしか使えない）。</em></p>
+<p>一般に、〈head要素〉の内容は、HTML文書のタイトルなどのHTML文書そのものに関する様々な情報を含む。〈body要素〉の内容は、ユーザエージェントを介してユーザに本文として表示される様々な情報を含む。</p>
+<p>また、〈head要素〉と〈body要素〉は、必ず『〈head要素〉→〈body要素〉』の順番で記述する。</p>
+</div>
+<div class="sect">
+<h4 id="prtch">親要素と子要素</h4>
+<p>ある要素と別の要素とは、一方が上位で他方が下位という上下関係を作る。この上下関係を「入れ子（ネスト）<span class="en">nest</span>」という。このとき、上位の要素を「親要素<span class="en">parent element / containing element</span>」、下位の要素を「子要素<span class="en">child element</span>」という。</p>
+<pre>   &lt;html&gt;
+     &lt;head&gt;
+       〜〜〜〜〜 HTML文書に関する情報が書かれる 〜〜〜〜〜
+     &lt;/head&gt;
+     &lt;body&gt;
+       〜〜〜〜〜 本文として表示される情報が書かれる 〜〜〜〜
+     &lt;/body&gt;
+   &lt;/html&gt;</pre>
+<div class="limg">
+<img src="008.png" width="318" height="202" alt="［html要素［head要素］［body要素］］" />
+</div>
+<p>サンプルの「入れ子」は図で示したようになっている。ここでは、〈html要素〉が〈head要素〉と〈body要素〉の親要素であり、〈head要素〉と〈body〉要素は〈html要素〉の子要素である。</p>
+<p class="cl">どの要素がどの要素の親要素になるか、どの要素がどの要素の子要素になるかについては、<abbr title="HyperText Markup Language">HTML</abbr><span class="en">HyperText Markup Language</span>で定められている。例えば、〈body要素〉と〈head要素〉は必ず〈html要素〉の子要素にならなければならない。逆に、〈html要素〉は、〈head要素〉と〈body要素〉の親要素になるが、子要素にはならない。また、〈body要素〉は〈head要素〉の子要素にはならず、〈head要素〉は〈body要素〉の子要素にはならない。</p>
+<pre><span class="big">※誤った記述の例：〈body要素〉が〈head要素〉の子要素になっている</span>
+   &lt;html&gt;
+     <span class="red">&lt;head&gt;</span>
+       〜〜〜〜〜〜〜〜〜〜
+        <span class="red">&lt;body&gt;</span>
+       〜〜〜〜〜〜〜〜〜
+        <span class="red">&lt;/body&gt;</span>
+     <span class="red">&lt;/head&gt;</span>
+   &lt;/html&gt;<br />
+<span class="big">※誤った記述の例：〈body要素〉が〈html要素〉の子要素になっていない</span>
+   <span class="red">&lt;html&gt;</span>
+     &lt;head&gt;
+       〜〜〜〜〜〜〜〜〜〜
+     &lt;/head&gt;
+   <span class="red">&lt;/html&gt;</span>
+   <span class="red">&lt;body&gt;</span>
+       〜〜〜〜〜〜〜〜〜
+   <span class="red">&lt;/body&gt;</span></pre>
+<p>したがって、〈html要素〉と〈head要素〉と〈body要素〉の関係は、必ず次のようになる。</p>
+<pre><span class="big">※HTML文書の基本構造（正しい「入れ子」）</span>
+   &lt;html&gt;
+     &lt;head&gt;
+       head要素の内容（HTML文書に関する情報が書かれる）
+     &lt;/head&gt;
+     &lt;body&gt;
+       body要素の内容（本文として表示される情報が書かれる）
+     &lt;/body&gt;
+   &lt;/html&gt;</pre>
+</div>
+<div class="link">
+→ <a href="007.html">ＨＴＭＬからＸＨＴＭＬへ</a>&nbsp;〔<a href="007.html" title="戻る">prev</a>〕<br />
+→ <a href="009.html">head要素の構造</a>&nbsp;〔<a href="009.html" title="次へ">next</a>〕<br />
+→ <a href="010.html">body要素の構造</a>
+</div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/008.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:26 GMT -->
+</html>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/015.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:29 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="016.html" />
+	<link rel="prev" href="014.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>画像を表示する</h3>
+<div class="main">
+<div class="sect">
+<p>ここでは、ページに写真やイラストなどの画像<span class="en">image</span>を表示する方法を学ぶ。</p>
+<h4>サンプル画像のダウンロード</h4>
+<p class="try">まず、以下の手順でサンプル画像<span class="small">（獅頭山の写真）</span>をデスクトップ<span class="en">desktop</span>（<span xml:lang="zh-tw">桌面</span>）にダウンロード<span class="en">download</span>（<span xml:lang="zh-tw">下載</span>）する。</p>
+<ul>
+	<li>Macintoshの場合
+		<ol>
+			<li>［control］キーを押しながらリンク<span class="small">（下の『サンプル画像をダウンロードする』の部分）</span>をクリックする</li>
+			<li>「リンク先を名前をつけて保存／リンクされたファイルをデスクトップに保存」を選ぶ</li>
+			<li>場所に「デスクトップ」を選ぶ</li>
+		</ol>
+	</li>
+	<li>MS Windowsの場合
+		<ol>
+			<li>リンク<span class="small">（下の『サンプル画像をダウンロードする』の部分）</span>を右クリック</li>
+			<li>「<span xml:lang="zh-tw">鏈結另存檔案(K)</span>」を選ぶ</li>
+			<li><span xml:lang="zh-tw">儲存於(I):&rarr;桌面</span>を選ぶ</li>
+		</ol>
+	</li>
+</ul>
+<p class="center">→→&nbsp;<a href="image.jpg" title="この画像をダウンロードする">サンプル画像をダウンロードする</a>&nbsp;←←</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>img要素について</h4>
+<p>画像を表示するには「img要素」を用いて、ページの中で画像を表示させたい位置に以下のように記述すればよい。</p>
+<pre>&lt;img src=&quot;〜&quot; width=&quot;〜&quot; height=&quot;〜&quot; alt=&quot;〜&quot; title=&quot;〜&quot; /&gt;</pre>
+<h5>画像のある場所</h5>
+<p>「src=&quot;<span class="red">〜</span>&quot;」の部分は、表示させたい画像の存在する場所を指示するもので、画像を表示させるときには必須である。ここでは</p>
+<pre>&lt;img src=&quot;<span class="red">./image.jpg</span>&quot; width=&quot;〜&quot; height=...</pre>
+<p class="none">とする。</p>
+<h5>画像の大きさ</h5>
+<p>「width=&quot;<span class="red">〜</span>&quot; height=&quot;<span class="red">〜</span>&quot; 」の部分には、画像を表示する大きさ<span class="en">size</span>を指示するもので、できるだけ記述した方がよい。サンプル画像はヨコ320×タテ240のサイズなので、ここでは</p>
+<pre>&lt;img src=&quot;./image.jpg&quot; width=&quot;<span class="red">320</span>&quot; height=&quot;<span class="red">240</span>&quot; alt=...</pre>
+<p class="none">とする。</p>
+<h5>画像の代替テキスト</h5>
+<p>「alt=&quot;〜&quot;」の部分には代替テキストを指示する。代替テキストとは、画像を表示しないブラウザ<span class="en">browser</span>が画像の代わりに表示するテキストのことであり、<em>省略することはできない</em>。〈img要素〉は、画像を表示するブラウザでは「src=&quot;〜&quot;」で指示した画像が表示され、画像を表示しないブラウザでは「alt=&quot;〜&quot;」の内容が表示される。ここでは</p>
+<pre>&lt;img src=&quot;./image.jpg ... <span class="red">alt=&quot;「苗栗の紹介」のページへようこそ&quot;</span> title=...</pre>
+<p class="none">とする。</p>
+<div class="rimg">
+<img src="015_1.png" width="300" height="186" alt="画像を表示する場合は、［顔写真］の画像が表示される" /><br />
+<span class="small">&nbsp;↑&nbsp;画像を表示する場合</span><br />
+<img src="015_2.png" width="300" height="186" alt="画像を表示しない場合は、「山口先生の写真」というテキスト表示される" /><br />
+<span class="small">&nbsp;↑&nbsp;画像を表示しない場合</span></div>
+<p>代替テキストが必要になるのは、すべてのブラウザが画像を表示するわけではないからである。例えば、テキストブラウザ<span class="en">Text based browser</span>と呼ばれるブラウザは、一般に、テキストのみを表示するようになっている。画像を表示するブラウザでも、環境設定を変更することで画像を表示しないようにすることができる。また、ユーザ<span class="en">user</span>が利用しているディスプレイ<span class="en">display</span>の性能によって、画像を十分に表示できないかもしれない。ユーザに視覚障害があるなどの理由で、音声読み上げソフトを利用しているかもしれない。</p>
+<p>ここでは、ブラウザで画像を表示する場合と、表示しない設定にした場合のブラウザでの表示例を示している。画像を表示しない設定にした場合は、画像のアイコン<span class="en">icon</span>とともに代替テキスト（山口先生の写真）が表示されている。この例では、「&lt;img src= ... <span class="red">alt=&quot;山口先生の写真&quot;</span> ... /&gt;」と指定しているわけである。</p>
+<p>しかし、この例のように代替テキストで画像の内容を説明しても、画像を表示できない環境ではあまり意味のないものと言えるかもしれない。顔写真の画像を見せることこそが、画像を表示する目的だからである。</p>
+<p class="cl">このように、代替テキストを指定することに重要な意味がないと考えられる場合や適当な代替テキストがないと考えられる場合には</p>
+<pre>alt=<span class="red">&quot;&quot;</span></pre>
+<p class="none">のように、何も指定しないのが良いとされている。</p>
+<p>代替テキストでは、画像の内容を説明するよりも、そこに画像を表示する理由・意図を説明するようにする。そのため「苗栗の紹介」のページでは、『「苗栗の紹介」のページへようこそ』のように指定するのが良いだろう。</p>
+<h5>画像の付加情報</h5>
+<p>「title=&quot;〜&quot;」の部分には、必要に応じて、画像への付加情報を記述することができる。ここに書かれたテキストは、多くのブラウザで、画像にポインタ<span class="en">mouse pointer</span>（カーソル<span class="en">mouse cursor</span>）をあわせたときに小さなポップアップ<span class="en">pop-up message</span>（ツールチップ<span class="en">tool tip</span>）やステータスライン<span class="en">status line</span>などに表示される。なお、これは「title属性」と呼ばれるもので、〈head要素〉の中に記述する〈title要素〉とは異なるものである。【→<a href="013.html">ページにタイトルをつける</a>】</p>
+<div class="limg">
+<img src="015_4.png" width="424" height="299" alt="" /><br />
+<img src="015_5.png" width="425" height="299" alt="" />
+</div>
+<p>例えば、《title属性》に「title=&quot;苗栗縣の獅頭山風景区にある山で撮った写真です。&quot;」と指定すると、ポインタ<span class="small">（マウスで動く矢印）</span>を画像のうえにあわせたときに小さなポップアップ（ツールチップ）<span class="small">（画像上：Firefox）</span>やステータスライン<span class="small">（画像下：iCab）</span>に『苗栗縣の獅頭山風景区にある山で撮った写真です。』という文章が表示される。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 id="pic">ページにサンプル画像を入れる</h4>
+<p class="try">ページにダウンロードしたサンプル画像を表示するため、「index.html」ファイルに〈img要素〉を追加し、ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。ここでは、見出し<span class="small">〈h1要素〉</span>と本文<span class="small">〈段落要素〉</span>の間に画像を入れることにして、以下の例のように記述する。</p>
+<pre class="samp">...
+&lt;head&gt;
+&lt;title&gt;苗栗の紹介&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;苗栗の紹介&lt;/h1&gt;
+<span class="red">&lt;p&gt;&lt;img src=&quot;./image.jpg&quot; width=&quot;320&quot; height=&quot;240&quot; alt=&quot;「苗栗の紹介」のページへようこそ&quot; /&gt;&lt;/p&gt;</span>
+&lt;p&gt; 北東の...</pre>
+<p>なお、〈img要素〉はインライン要素<span class="en">Inline elements</span>なので〈body要素〉の直接の子要素<span class="en">child element</span>とすることはできない。したがって、&nbsp;&lt;p&gt;〜&lt;/p&gt;などのブロックレベル要素<span class="en">Block-level elements</span>の子要素として記述する必要がある。【→<a href="010.html#blltxl">ブロックレベル要素とインライン要素</a>】</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>画像のあるページをブラウザで表示する</h4>
+<p class="try">保存したファイルをブラウザで開いてみる。ファイルを開く操作は、<a href="014.html#flop">ファイルをブラウザで開く</a>を参照せよ。</p>
+<p>ファイルを開くと、次のように表示されるだろう（Macintosh; Firefoxの場合）。</p>
+<div class="center">
+<img src="015_3.png" width="580" height="400" alt="" />
+</div>
+<div class="link">
+→ <a href="014.html">見出しと段落をつくる</a>&nbsp;〔<a href="014.html" title="戻る">prev</a>〕<br />
+→ <a href="016.html">箇条書きにする</a>&nbsp;〔<a href="016.html" title="次へ">next</a>〕<br />
+→ <a href="017.html">簡単な表をつくる</a></div>
+</div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/015.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:30 GMT -->
+</html>

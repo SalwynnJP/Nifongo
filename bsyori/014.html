@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/014.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:28 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="015.html" />
+	<link rel="prev" href="013.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>見出しと段落をつくる</h3>
+<div class="main">
+<div class="sect">
+<p>「<a href="013.html">ページにタイトルをつける</a>」でタイトルを記入したファイルの&nbsp;&lt;body&gt;〜&lt;/body&gt;&nbsp;の間にページの本文を書いていく。ここでは、まず<a href="#midaxi">見出し</a>と<a href="#danrk">段落</a>について学ぶ。</p>
+<h4 id="midaxi">見出しをつくる</h4>
+<p class="try">『<ruby><rb>苗栗</rb><rp>(</rp><rt>みょうりつ</rt><rp>)</rp></ruby>の<ruby><rb>紹介</rb><rp>(</rp><rt>しょうかい</rt><rp>)</rp></ruby>』をページ全体の見出しにしてみよう。</p>
+<p>見出しには〈<a href="010.html#hdng">見出し要素</a>〉を用いる。ここでは、以下の例のように入力すればよい。</p>
+<pre>...
+&lt;head&gt;
+&lt;title&gt;苗栗の紹介&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+<span class="red">&nbsp;&lt;h1&gt;苗栗の紹介&lt;/h1&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>なお、<abbr title="Extensible HyperText Markup Language">XHTML</abbr>では、すべて小文字のアルファベット（◎ a,b,c,d...）でマークアップ<span class="en">mark-up</span>しなければならない。タグ<span class="en">tag</span>を大文字（× A,B,C,D...）で書いてはいけないので、注意すること。</p>
+<ul>
+	<li>誤ったタグの書き方：<span class="red">&lt;BODY&gt; &lt;H1&gt; &lt;/H1&gt;</span>... ×［正しくない］</li>
+	<li>正しいタグの書き方：&lt;body&gt; &lt;h1&gt; &lt;/h1&gt;... ○［正しい］</li>
+</ul>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 id="danrk">段落をつくる</h4>
+<p>次に、段落をつくって文章を入力することにする。段落を設定するには〈<a href="010.html#para">段落要素</a>〉を用いる。</p>
+<p class="try">以下の例のように入力して、保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。日本語の入力の方法は、「<a href="input.html">日本語入力について</a>」のページを参照せよ。</p>
+<div class="samp" onmousedown="alert('自分で入力しよう！')" onmouseup="alert('自分で入力しよう！')" onkeydown="alert('自分で入力しよう！')" onkeyup="alert('自分で入力しよう！')">
+		...<br />
+		&lt;head&gt;<br />
+		&nbsp;&lt;title&gt;苗栗の紹介&lt;/title&gt;<br />
+		&lt;/head&gt;<br />
+		&lt;body&gt;<br />
+		&nbsp;&lt;h1&gt;苗栗の紹介&lt;/h1&gt;<br />
+		<span class="red">&nbsp;&lt;p&gt; 北東の台北市から直線で約80キロ、南西の台中市から直線で約50キロの位置にあります。住民の多くが第一次産業に従事しており、都市化はあまり進んでいません。&lt;/p&gt;</span><br />
+		&lt;/body&gt;<br />
+		&lt;/html&gt;
+</div>
+<p>入力する文章の読み方と、キー入力の例を以下に示す。</p>
+<div class="hint">
+<p class="none">ほくとう の たいぺいし から ちょくせん で やく80きろ、なんせい の たいちゅうし から ちょくせん で やく50きろ の いち に あります。じゅうみん の おおく が だいいちじさんぎょう に じゅうじ しており、としか は あまり すすんで いません。</p>
+<p class="none">HOKUTOU NO TAIPEISI KARA TYOKUSENN DE YAKU80KIRO, NANNSEI NO TAITYUUSI KARA TYOKUSENN DE YAKU50KIRO NO ITI NI ARIMASU. JYUUMINN NO OOKU GA DAIITIJISANNGYOU NI JYUUJI SITEORI, TOSIKA HA AMARI SUSUNNDE IMASENN.</p>
+</div>
+<h5>段落要素に関する注意</h5>
+<p>〈段落要素〉の内容は、<a href="010.html#blltxl" title="インライン要素">インライン要素</a>でなければならない。したがって、〈段落要素〉を<a href="008.html#prtch">入れ子</a>にすることはできない。</p>
+<pre><span class="big">※誤った記述の例</span>［段落の入れ子］
+<span class="red">&lt;p&gt;</span>段落はブロックレベル要素です。
+  <span class="red">&lt;p&gt;</span>入れ子にしてはいけません。<span class="red">&lt;/p&gt;</span>
+<span class="red">&lt;/p&gt;</span></pre>
+<p>また、〈段落要素〉の中に〈<a href="010.html#ul">ul要素</a>〉や〈<a href="010.html#ol">ol要素</a>〉などの<a href="010.html#blltxl" title="ブロックレベル要素">ブロックレベル要素</a>を書くこともできない。</p>
+<pre><span class="big">※誤った記述の例</span>［ブロックレベル要素の記述］
+<span class="red">&lt;p&gt;</span>段落の中に、
+  <span class="red">&lt;ul&gt;</span>
+    &lt;li&gt;〈ol要素〉&lt;/li&gt;
+    &lt;li&gt;〈ul要素〉&lt;/li&gt;
+  <span class="red">&lt;/ul&gt;</span>
+などは書けません。<span class="red">&lt;/p&gt;</span></pre>
+<p>正しい書き方は、次の通りである。</p>
+<pre><span class="big">※正しい記述の例</span>
+<span class="red">&lt;p&gt;</span>段落はブロックレベル要素です。<span class="red">&lt;/p&gt;</span>
+<span class="red">&lt;p&gt;</span>入れ子にしてはいけません。<span class="red">&lt;/p&gt;</span><br />
+<span class="red">&lt;p&gt;</span>段落の中に、<span class="red">&lt;/p&gt;</span>
+  <span class="red">&lt;ul&gt;</span>
+    &lt;li&gt;〈ol要素〉&lt;/li&gt;
+    &lt;li&gt;〈ul要素〉&lt;/li&gt;
+  <span class="red">&lt;/ul&gt;</span>
+<span class="red">&lt;p&gt;</span>などは書けません。<span class="red">&lt;/p&gt;</span></pre>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 id="flop">ファイルをブラウザで開く</h4>
+<p class="try">保存したファイルをブラウザで開いてみよう。ファイルを開くには、次のようにする。</p>
+<ul>
+	<li>Macintoshの場合
+		<ol>
+			<li>「index.html」のファイルのアイコン<span class="en">icon</span>をブラウザのアイコンにドラッグ・アンド・ドロップ<span class="en">drag and drop</span>する
+				<div class="img">
+					<img src="014_2.png" width="42" height="42" alt="" />
+				</div>
+			</li>
+		</ol>
+	</li>
+	<li>MS Windowsの場合
+		<ol>
+			<li>ブラウザのアイコンをダブルクリック<span class="en">double click</span>して、ブラウザを起動する</li>
+			<li>ブラウザのメニューから「index.html」ファイルを開く<span class="small">（※ブラウザウインドウ上部のメニュー&gt;<span xml:lang="zh-tw">檔案(F)&gt;開啓檔案&gt;桌面&gt;index.html</span>を選択）</span></li>
+			<li>［開啓(O)］のボタンをクリックする</li>
+		</ol>
+	</li>
+</ul>
+<p>ファイルを開くと、次のように表示される（Macintoshの場合）。</p>
+<div class="center">
+<img src="014.png" width="580" height="230" alt="" />
+</div>
+</div>
+<div class="link">
+→ <a href="013.html">ページにタイトルをつける</a>&nbsp;〔<a href="013.html" title="戻る">prev</a>〕<br />
+→ <a href="015.html">画像を表示する</a>&nbsp;〔<a href="015.html" title="次へ">next</a>〕<br />
+→ <a href="016.html">箇条書きにする</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/014.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:29 GMT -->
+</html>

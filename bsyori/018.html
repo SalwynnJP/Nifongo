@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/018.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:32 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="019.html" />
+	<link rel="prev" href="017.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>別のファイルにハイパーリンクする</h3>
+<div class="main">
+<div class="sect">
+<p>ここでは、別のファイルへのハイパーリンクの方法について学ぶ。具体的には、これまでに作成した「index.html」ファイルから<a href="017.html">簡単な表をつくる</a>で作成した「data.html」ファイルへハイパーリンク<span class="en">hyperlink</span>してみる。</p>
+<h4>ファイルとディレクトリ</h4>
+<div class="rimg">
+<img src="018_1.png" width="370" height="360" alt="" />
+</div>
+<p>コンピュータでつくったデータは、MacOSやMS Windowsなどの<abbr title="operating system">OS</abbr>によって、ファイル<span class="en">file</span>（<span xml:lang="zh-tw">檔案</span>）という単位で管理される。</p>
+<p>また、ファイルはディレクトリ<span class="en">directory</span>と呼ばれる場所に、分類・整理されて保管・記録される。ディレクトリは、「フォルダ」<span class="en">folder</span>（<span xml:lang="zh-tw">資料夾</span>）ともいう。</p>
+<p>ディレクトリは、上位のディレクトリが下位のディレクトリを包含する〈入れ子型の階層構造〉になっている。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4 class="cl" id="href">href属性の指定</h4>
+<p>ハイパーリンクには〈<a href="010.html#anchor">アンカー要素</a>〉を用いる。リンク元（リンクの起点）の「index.html」ファイルとリンク先（リンクの終点）の「data.html」ファイルが同じディレクトリに保存されている場合<span class="small">（※例えば、両方が「デスクトップ」<span class="en">desktop</span>［<span xml:lang="zh-tw">桌面</span>］にあれば、同じディレクトリである）</span>、《href属性》<span class="en">hyper reference attribute</span>を次の例のように指定すれば良い。</p>
+<pre>&lt;a href=&quot;<span class="red">data.html</span>&quot;&gt;苗栗縣の基本情報&lt;/a&gt;</pre>
+<div class="rimg">
+<img src="018_2.png" width="317" height="612" alt="" />
+</div>
+<p>このように、リンク先（リンクの終点）のファイルがリンク元（リンクの起点）のファイルと同じディレクトリにあれば、「<span class="red">ファイル名</span>」とするだけでよい。また、リンク先（リンクの終点）のファイルが、リンク元（リンクの起点）のファイルと異なるディレクトリにある場合、《href属性》への指定は次のようになる。</p>
+<ul>
+	<li>リンク先のファイルが、ひとつ上のディレクトリにある場合は、「<span class="red">../ファイル名</span>」となる</li>
+	<li>リンク先のファイルが、ひとつ下のディレクトリにある場合は、「<span class="red">./ディレクトリ名/ファイル名</span>」となる</li>
+	<li>リンク先のファイルが、リンク元のファイルを含んでいない１階層上のディレクトリにある場合は、「<span class="red">../../ディレクトリ名/ファイル名</span>」となる</li>
+	<li>リンク先のファイルが、リンク元のファイルを含んでいない同じ階層のディレクトリにある場合は、「<span class="red">../ディレクトリ名/ファイル名</span>」となる</li>
+</ul>
+<div class="cl">
+<div class="center">
+<img src="018_3.png" width="461" height="204" alt="" />
+</div>
+</div>
+<p>「../」はひとつ上のディレクトリに移動することを示し、「./」はそれ自身を含むディレクトリを示している。また、「/」は、斜線の右側のものが左側のものに含まれるという意味をあらわす。例えば、「a/b」は、『aディレクトリの中のb』という意味になる。</p>
+<p>上の例では、「../」とすると［リンク元のファイル］を含む〔PPP〕ディレクトリから、ひとつ上の〔XXX〕ディレクトリに移動することを示す。したがって、「../aaa.html」と書けば『〔XXX〕ディレクトリの中のaaa.htmlファイル』を指すことになる。また、同じく上の例で「./」とすると［リンク元のファイル］自体を含む〔PPP〕ディレクトリを示す。したがって、「./TTT/ccc.html」と書けば『〔PPP〕ディレクトリの中の〔TTT〕デイレクトリの中のccc.htmlファイル』を指すことになる。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>別のファイルへのハイパーリンクを記述する</h4>
+<p class="try">「index.html」から「data.html」へのハイパーリンクを記述してみよう。</p>
+<p>「index.html」ファイルを開き、適当な場所に「data.html」へのハイパーリンクを記述する。下の例では、冒頭の紹介文と箇条書きの間にハイパーリンクを記述している。また〈アンカー要素〉は<a href="010.html#blltxl">インライン要素</a>なので、ここでは〈<a href="010.html#para">段落要素</a>〉の<a href="008.html#prtch">子要素</a>として記述している。</p>
+<pre><span class="syatai">...都市化はあまり進んでいません。&lt;/p&gt;</span>
+<span class="red">&lt;p&gt;→&lt;a href=&quot;data.html&quot;&gt;苗栗縣の基本情報&lt;/a&gt;&lt;/p&gt;</span>
+<span class="syatai">&lt;h2&gt;土地と人間&lt;/h2&gt;</span></pre>
+<p>一般のブラウザでは、アンカーテキスト<span class="en">anchor text</span><span class="small">（ここでは「苗栗縣の基本情報」というテキスト）</span>が、他のテキストと違う色や装飾（例：下線つき）で表示されるようになっている。そして、その部分をマウスなどでクリックすると、ハイパーリンクされたファイルを表示することができる。</p>
+<h5>ハイパーリンクの記述で注意すること</h5>
+<p>ハイパーリンクを記述するときには、以下のことに注意する。</p>
+<ol>
+	<li>〈アンカー要素〉にはアンカーテキストを記述する</li>
+	<li>〈アンカー要素〉は入れ子にできない
+	<pre><span class="big">※誤った記述の例</span>
+<span class="red">&lt;a href=&quot;top.html&quot;&gt;</span>トップページ（<span class="red">&lt;a href=&quot;menu.html&quot;&gt;</span>目次<span class="red">&lt;/a&gt;</span>）へ移動<span class="red">&lt;/a&gt;</span></pre>
+	</li>
+	<li>〈アンカー要素〉を連続させるのは良くない
+	<pre><span class="big">※好ましくない記述の例</span>
+<span class="red">&lt;a href=&quot;top.html&quot;&gt;</span>トップページ<span class="red">&lt;/a&gt;</span><span class="red">&lt;a href=&quot;menu.html&quot;&gt;</span>目次<span class="red">&lt;/a&gt;</span>
+</pre>
+	〈アンカー要素〉の間には区切りを入れるようにする（例では改行で区切っている）
+	<pre><span class="big">※望ましい記述の例</span>
+<span class="red">&lt;a href=&quot;top.html&quot;&gt;</span>トップページ<span class="red">&lt;/a&gt;</span>
+<span class="red">&lt;a href=&quot;menu.html&quot;&gt;</span>目次<span class="red">&lt;/a&gt;</span>
+</pre>
+	</li>
+</ol>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<h4>ハイパーリンクでページを移動する</h4>
+<p class="try">実際に、ハイパーリンクでページを移動してみよう。</p>
+<p>「index.html」ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）してからブラウザで開き、ハイパーリンクでページが移動することを確認する。【→<a href="014.html#flop">ファイルをブラウザで開く</a>】</p>
+</div>
+<div class="link">
+→ <a href="017.html">簡単な表をつくる</a>&nbsp;〔<a href="017.html" title="戻る">prev</a>〕<br />
+→ <a href="019.html">特定の場所にハイパーリンクする</a>&nbsp;〔<a href="019.html" title="次へ">next</a>〕<br />
+→ <a href="020.html">別のサイトにハイパーリンクする</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/018.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:33 GMT -->
+</html>

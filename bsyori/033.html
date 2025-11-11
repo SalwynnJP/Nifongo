@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/033.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:38 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rel="home" href="../index-2.html" />
+	<link rel="contents" href="index.html" />
+	<link rel="start" href="001.html" />
+	<link rel="next" href="034.html" />
+	<link rel="prev" href="032.html" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="procc.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2>ウェブページの作成</h2>
+<h3>画像の表示を変更する</h3>
+<div class="main">
+<div class="sect">
+<p>ここでは、〈img要素〉の表示を調整することにする。具体的には、画像の表示位置をウインドウの横幅の中央に合わせ、画像全体に枠線をつけてみる。</p>
+<h4>画像の表示位置を中央揃えにする</h4>
+<p>「index.html」ファイルで、〈img要素〉は〈段落要素〉の子要素になっている。〈img要素〉はインライン要素であるため、〈body要素〉の直接の子要素になることができない。そこで、〈img要素〉をブロックレベル要素である〈段落要素〉の子要素として記述したわけである【参考→<a href="015.html#pic">ページにサンプル画像を入れる</a>】。</p>
+<p>インライン要素である〈img要素〉は、ふつうのテキストと同様に処理される。したがって、〈img要素〉の親要素である〈段落要素〉の&quot;text-alignプロパティ&quot;に「中央に寄せて整列」を指定すれば、画像をウインドウの横幅に中央部分に表示させることができる【参考→<a href="030.html#txtalgn">テキストの整列位置を指定する</a>】。</p>
+<p>ただ、〈段落要素〉に「text-align: center ;」を指定すると、画像だけでなく、〈段落要素〉に含まれるすべてのテキストやインライン要素が「中央に寄せて整列」になってしまう。</p>
+<p>同じ〈要素〉の中で、特定のものにだけスタイルを指定するには、<abbr title="HyperText Markup Language">HTML</abbr>文書で〈要素〉に「クラス属性」<span class="en">class attribute</span>を付与してスタイル指定の対象を特定する必要がある。</p>
+<h5>クラス属性とクラス名によるスタイルの指定</h5>
+<p><abbr title="HyperText Markup Language">HTML</abbr>のクラス属性は、〈要素〉にグループの名前を付けて区別するものである。クラス属性は以下のように、開始タグの中に書く。</p>
+<p>&lt;要素名 <span class="red">class=&quot;クラス名&quot;</span>&gt;内容&lt;/要素名&gt;</p>
+<p><abbr title="HyperText Markup Language">HTML</abbr>文書で特定のクラス名を持つ〈要素〉の表示を変更するには、次のように書けば良い。</p>
+<p>要素名.クラス名 {プロパティ名 : 値 ;}</p>
+<h5>実際にクラス属性を定義する</h5>
+<p class="try">「index.html」の内容を書き換え、画像を中央に寄せて表示させよう。</p>
+<p>「index.html」ファイルをエディタ<span class="en">editor</span>で開き、〈img要素〉を含む〈段落要素〉の記述を、次のように書き換える。</p>
+<pre>&lt;p <span class="red">class=&quot;img&quot;</span>&gt;&lt;img src=&quot;./image.jpg&quot;...</pre>
+<p>ここでは、〈img要素〉を含む〈段落要素〉に『img』という「クラス名」を与えて他の〈段落要素〉から区別していることになる。</p>
+<p>「index.html」ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）し、次に「normal.css」ファイルを開き、次のように記述する。</p>
+<pre><span class="syatai">p {</span>
+  <span class="syatai">text-indent: 1em ;}</span>
+<span class="red">p.img {</span>
+  <span class="red">text-align: center ;</span>
+  <span class="red">text-indent: 0 ;}</span>
+</pre>
+<p>ここで「text-indent: 0 ;」を指定しているのは、画像を正確に中央に配置するためである。</p>
+<p class="small"><a href="032.html">段落要素の表示を変更する</a>において〈段落要素〉に「1em」の字下げを設定したので、この指定を省略すると、画像も「1em」右側に寄って表示されてしまう。画像をちょうど真ん中に表示させるためには、すべての〈段落要素〉に対する「text-indent: 1em ;」の指定より後ろで、クラス名「img」の〈段落要素〉に対して「text-indent: 0 ;」を指定すれば、クラス名「img」の〈段落要素〉に対しては「text-indent: 0 ;」の方が有効になる【参考→<a href="032.html#double">プロパティの指定の重複</a>】。</p>
+<pre>p {
+  text-indent: 1em ;} <span class="red kasen">←すべての〈段落要素〉に1emの字下げを指定</span>
+p.img {
+  text-align: center ;
+  text-indent: 0 ;} <span class="red kasen">←クラス名「img」のものだけ字下げなしに変更</span>
+</pre>
+<p>「normal.css」ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）する。</p>
+<h4>画像に枠線をつける</h4>
+<p>画像に装飾的な枠線をつけることにする。例えば、「normal.css」ファイルに以下のように記述すればよい。</p>
+<pre>img {
+  border: 1em inset #DEB887 ;} </pre>
+<p class="try">好きな色、線の種類、太さで画像に装飾的な枠線をつけてみよう【参考→<a href="031.html#h1border">枠線（ボーダーライン）を引く</a>、<a href="031.html#h2bor">〈h2要素〉の一部に枠線をつける</a>】。</p>
+<p>「normal.css」ファイルを保存<span class="en">save</span>（<span xml:lang="zh-tw">儲存檔案</span>）してから、「index.html」ファイルをブラウザで開いて表示を確認しよう。</p>
+<div class="center">
+<img src="33.png" width="560" height="395" alt="" /><br />
+〈img要素〉の表示例
+</div>
+</div>
+<div class="link">
+→ <a href="032.html">段落要素の表示を変更する</a>&nbsp;〔<a href="032.html" title="戻る">prev</a>〕<br />
+→ <a href="034.html">箇条書きの表示を変更する</a>&nbsp;〔<a href="034.html" title="次へ">next</a>〕<br />
+→ <a href="035.html">ハイパーリンク（アンカーテキスト）の表示を変更する</a></div>
+</div>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/033.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:39 GMT -->
+</html>
