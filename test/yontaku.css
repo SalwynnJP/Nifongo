@@ -1,0 +1,103 @@
+body {
+	color: black ;
+	background: #F5F5F5 url(../image/bg_vl.png)  ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: bold ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 1em 2em ;
+	padding: 1em ;
+	outline: none ;
+	font-family: "Arial", sans-serif ;
+	line-height: 1.7 ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0000FF ;
+	text-decoration: underline ;}
+a:visited {
+	color: #00008B ;
+	text-decoration: none ;}
+a:active {
+	color: #FF0033 ;
+	text-decoration: none ;}
+a:hover { 
+	position: relative ;
+	top: 1px ;
+	left: 1px ;}
+a:focus {
+	color: black ;
+	text-decoration: none ;
+	outline: 1px red ;}
+p {
+	text-indent: 1em ;}
+td.CtrlPanel {
+	background-color: #000000;
+	color: #FFFFFF ;
+	font-size: larger ;
+	font-weight: bold ;
+	text-align: left ;
+	border: medium inset ;
+	width: 94% ;
+	padding: 1px 0.5em ;}
+td.WriteArea {
+	height: 100px ;
+	vertical-align: top ;}
+div.ctrp {
+	font-size: larger ;
+	width: 100% ;}
+div.ctrp2 {
+	margin: 0.5em 0 0 3em ;}
+span.CtrlPanel {
+	text-align: right ;
+	font-size: larger ;
+	font-weight: bold ;}
+table.main {
+	width: 94% ;}
+img {
+	border-style: none ; 
+	vertical-align: middle ;
+	display: block ;}
+.right {
+	text-align: right ;}
+.left {
+	text-align: left ;}
+.center {
+	text-align: center ;}
+div.back {
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 2em ;
+	padding-top: 1em ;}
+.kasen {
+	text-decoration: underline;
+	letter-spacing : 0.1em ;}
+.italic {
+	font-style: italic ;}
+.syatai {
+	font-style: oblique ;}
+.cursive {
+	font-family: cursive ;}
+.large {
+	font-size: larger ;}
+.small {
+	font-size: smaller ;}
+.mini {
+	font-size: small ;}
+.red {
+	color: red ;}
+.kesi {
+	text-decoration: line-through ;}
+.uesen {
+	text-decoration: overline ;}
+.big {
+	font-size: larger ;
+	font-weight: bolder ;}
+.en {
+	font-family: "Courier", "Courier New", monospace ;}
+.goth {
+	font-family: "Arial", sans-serif ;}
+.times {
+	font-family: "Times Roman", "Times New Roman", "Times", serif ;}

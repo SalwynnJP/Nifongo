@@ -1,0 +1,173 @@
+body {
+	color: #000000 ;
+	line-height: 2.0 ;
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;	
+	margin: 1em 0 ;
+	padding: 0 1em ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0033CC ;
+	text-decoration: underline ;}
+h2 a:link {
+	color: #483D8B ;
+	text-decoration: none ;}
+h2 a:hover {
+	position: relative ;
+	top: 1px ;
+	left: 1px ;
+	color: #4169E1 ;
+	text-decoration: none ;}
+a:visited {
+	color: #330066 ;
+	text-decoration: none ;}
+a:active {
+	color: #FF0033 ;
+	text-decoration: none ;}
+a:focus {
+	color: black ;
+	text-decoration: none ;
+	outline: 1px red ;}
+a img {
+	border-style: none ;}
+img {
+	margin: 0 ;
+	display: inline ;
+	border-style: none ; 
+	vertical-align: bottom ;}
+div.navi {
+	background: url('midbar.png') #FFFFFF ;
+	letter-spacing: 0 ;
+	vertical-align: bottom ;}
+div.mid {
+	line-height: 0.0 ;
+	background: url('mid.png') #F5F5F5 ;
+	margin-top: 0 ;}
+div.main {
+	margin-bottom: 1em ;
+	padding: 0.5em 1.5em ;
+	background: url('bar.png') #FAFAFA ;
+	background-repeat: repeat-x ;
+	border-left: medium solid #DCDCDC ;
+	border-bottom: medium solid #DCDCDC ;}
+h1 {
+	line-height: 1.2 ;
+	font-size: small ;
+	font-weight: 900 ;
+	font-family: sans-serif ;
+	color: #FFFFFF ;
+	background: #191970 ;
+	width: 8em ;
+	vertical-align: text-bottom ;
+	padding: 0.2em 1em ;
+	margin-bottom: 1.5em ;}
+h2,h4 {
+	font-size: large ;
+	font-weight: 700 ;
+	line-height: 1.0 ;}
+h2.title {
+	color: #333333 ;
+	font-size: small ;
+	font-weight: 400 ;
+	text-align: right ;}	
+h3 {
+	color: #000080 ;
+	font-size: larger ;
+	font-weight: 700 ;
+	line-height: 1.0 ;}
+h4 {
+	display: inline ;}
+p {
+	font-size: small ;
+	margin-left: 2em ;}
+div.back {
+	font-size: smaller ;
+	background: #FAFAFA ;
+	text-align: right ;
+	border-top: thin dashed navy ;
+	border-bottom: thin dashed navy ;
+	margin: 1.5em 1px ;
+	padding: 0.5em 1em 0 0 ;}
+.cite {
+	border-top: thin solid gray ;
+	border-left: 3px solid silver ;
+	border-bottom: thin solid gray ;
+	border-right: 3px solid silver ;
+	padding: 0 1em ;
+	margin: 0 10em 1em 1em ;
+	font-size: small ;}
+ul {
+	margin-top: 0 ;}
+ul li {
+	list-style-type: none ;
+	line-height: 1.5 ;}
+ul li a:link {
+	text-decoration: none ;}
+.red {
+	color: red ;}
+.bold {
+	font-weight: bolder ;}
+.small {
+	font-size: smaller ;}
+.mini {
+	font-size: x-small ;}
+dl {
+	margin: 0 0 0 1.5em ;
+	padding: 0 0 0 0.5em ;} 	
+dt {
+	font-weight: normal ;}
+dd {
+	margin: 0 0 0 1em ;}
+dd a {
+	font-weight: bolder ;
+	background: white ;
+	color: inherit ;
+	border: thin solid #999999 ;
+	padding: 1px ;}
+dd a:link {
+	text-decoration: none ;}
+dd a:hover { 
+	background: #333333 ;
+	color: white ;
+	border: thin solid #000000 ;}
+div.google {
+	font-size: smaller ;
+	text-align: right ;
+	margin-bottom: 1em ;}
+div.input {
+	display: inline ;}
+form {
+	display: inline ;}
+span.g1 {
+	font-family: sans-serif ;
+	font-size: larger;
+	color: #0033cc;}
+span.o1 {
+	font-family: sans-serif ;
+	color: #cc0000 ;}
+span.o2 {
+	font-family: sans-serif ;
+	color: #cc9900 ;}
+span.g2 {
+	font-family: sans-serif ;
+	color: #0033cc ;}
+span.l {
+	font-family: sans-serif ;
+	color: #009900 ;}
+span.e {
+	font-family: sans-serif ; 
+	color: #cc3300 ;}
+span.togmenu {
+	margin-left: 1em ;
+	font-size: small;}
+span.togmenu a {
+	text-decoration: none;}
+span.togmenu a:hover {
+	color: black ;
+	text-decoration: underline;}
+#chap1, #close1,#chap2, #close2,#chap3, #close3 {
+	display: none ;}
