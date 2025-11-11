@@ -1,0 +1,238 @@
+body {
+	color: black ;
+	background: white ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 1em 2em 1em 2em ;
+	padding: 1em ;
+	outline: none ;}
+body {
+	font-family: "New York", "Georgia", serif ;
+	line-height: 170% ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0033cc ;
+	background: inherit ; 	
+	text-decoration: underline ;}
+a:visited {
+	color: #330066 ;
+	background: inherit ; 	
+	text-decoration: none ;}
+a:active {
+	color: #FF0033 ;
+	background: inherit ; 	
+	text-decoration: none ;}
+a:hover { 
+	position: relative ;
+	top: 1px ;
+	left: 1px ;}
+a:focus {
+	color: black ;
+	background: inherit ; 	
+	text-decoration: none ;
+	outline: 1px gray ;}
+p {
+	text-indent: 1em ;}
+h1,h2,h3,h4 {
+	font-family: sans-serif ;}
+h1 {
+	font-size: xx-large ;
+	font-style : normal ;
+	text-align: center ;}
+h2 {
+	color: black ;
+	background: #F5F5F5 ;
+	font-size: large ;
+	font-style: normal ;
+	text-align: left ;
+	margin: 2.5em 0 1em 0 ; 
+	border-top: 2px solid gray ;
+	border-left: 0.5em solid silver ;
+	border-bottom: 2px solid silver ;
+	padding: 3px 0 5px 0.5em ;
+	letter-spacing: 0.1em ;}
+h3 {
+	color: black ;
+	background: #FAFAFA ;
+	font-size: large ;
+	font-style: normal ;
+	text-align: left ;
+	border-left: 1em solid #3399ff ;
+	border-right: 1em solid #3399ff ;
+	border-top: thin solid #3399cc ;	
+	border-bottom: thin solid #3399cc ;	
+	padding: 0 0.3em 3px 0.3em ;}
+h4 {
+	font-size: medium ;
+	font-weight: bold ;
+	font-style: normal ;
+	text-align: left ;
+	border-left: 0.5em solid #ffcc99 ;
+	border-bottom: thin solid #ff9933 ;	
+	letter-spacing: 0.2em ;
+	padding: 0 0 2px 0.5em ;}
+img {
+	border-style: none ; 
+	vertical-align: middle ;}
+strong {
+	font-weight: bolder ;
+	font-style: normal ;}
+em {
+	font-weight: normal ;
+	font-style: italic ;}
+dfn {
+	font-weight: normal ;
+	font-style: normal ;
+	text-decoration: none ;
+	border-bottom: thin dotted navy ;
+	cursor: help ;}
+abbr,acronym {
+	border-bottom: 1px dotted #333333 ;
+	cursor: help ;}
+cite {
+	font-style: normal ;}
+var {
+	font-style: oblique ;
+	font-family: "Times", "Times Roman", "Times New Roman", serif ;}
+sup {
+	color: #cc0000 ;
+	background: inherit ; 	
+	font-weight: bold ;}
+q:before {content: open-quote; }
+q:after {content: close-quote; }
+blockquote {
+	border-left : solid silver ;
+	padding-left : 0.5em ; }
+li a {
+	text-decoration: none ;}
+dl {
+	border: thin solid gray ;}
+dt,dd {
+	margin-top: 0.5em ;}
+dt,dd {
+	font-family: sans-serif ;}
+ul,ol li {
+	margin: 0.5em 0 ;}
+li.ex {
+	list-style-type: none ;
+	margin: 0.5em 0 0.5em 1.5em ;
+	border: thin dotted #DC143C ;
+	color: black ;
+	background-color: #FFFAFA ;}
+ul li.cir {
+	list-style-type: circle ;}	
+ul li.sec {
+	list-style-type: disc ;}
+ul li.none {
+	list-style-type: none ;}
+ul.ref {
+	margin: 0.5em 0 ;
+	border: thin dashed gray ;
+	list-style-type: none ;}	
+ol.uab {
+	list-style-type: upper-alpha ;}
+ol.lab {
+	list-style-type: lower-alpha ;}
+table,td,th {
+	table-layout: auto ;
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	text-align: center ;}
+table td {
+	text-align: left ;
+	padding: 0 0.5em ;}
+table th {
+	text-align: center ;}
+.c1 {
+	color: black ;
+	background: #FFF0F5 ;}
+.c2 {
+	color: black ;
+	background: #E6E6FA ;}
+.c3 {
+	color: black ;
+	background: #FAFAD2 ;}
+.c4 {
+	color: black ;
+	background: #FFE4E1 ;}
+.c5 {
+	color: black ;
+	background: #ADD8E6 ;}
+.c6 {
+	color: black ;
+	background: #98FB98 ;}
+table th {
+	font-family: sans-serif ;}
+caption {
+	caption-side: top ;
+	font-family: sans-serif ;
+	font-weight: bolder ;
+	font-size: larger ;
+	letter-spacing: 0.1em ;}
+address {
+	font-size : medium ;
+	font-style : oblique ;
+	text-align: right ;
+	border-top : thin solid gray ;
+	margin-top : 1em ;
+	padding-top: 1em ;
+	color: black ;
+	background-color: #e6e6fa ;}
+pre {
+	display: inline ;
+	overflow: auto ;}
+div.refex {
+	color: black ;
+	background: #F5F5F5 ;
+	border: thin solid black ;
+	margin: 0.5em ;
+	text-indent: 2em ;}	
+div.back {
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 0 ;
+	padding-top: 1em ;}
+div.totop {
+	text-align: right ;
+	margin: 2.5em 1em 1em 0 ;
+	color: black ;	
+	background-color: #DCDCDC ;}
+span.kasen {
+	text-decoration: underline;
+	letter-spacing : 0.1em ;}
+span.italic {
+	font-style: italic ;}
+span.syatai {
+	font-style: oblique ;}
+span.cursive {
+	font-family: cursive ;}
+span.bold {
+	font-weight: bolder ;}
+span.large {
+	font-size: larger ;}
+span.small {
+	font-size: smaller ;}
+span.red {
+	color: red ;
+	background: inherit ; }
+span.kesi {
+	text-decoration: line-through ;}
+span.uesen {
+	text-decoration: overline ;}
+.big {
+	font-size: larger ;
+	font-weight: bolder ;}
+.en {
+	font-family: "Courier", "Courier New", monospace ;}
+span.goth {
+	font-family: "Osaka", "Arial", sans-serif ;}
+span.times {
+	font-family: "Times Roman", "Times New Roman", "Times", serif ;}
+hr { 
+	display: none ;}
