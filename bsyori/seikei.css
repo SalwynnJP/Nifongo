@@ -1,0 +1,36 @@
+@import url(work.css);
+pre {
+	font-size: 1em ;
+	font-family: monospace ;	
+	border: thin dotted #333333 ;
+	padding: 1em ;
+	margin: 1em ;
+	overflow: auto ;}
+h5 {
+	background: #F8F8FF ;
+	border-top: thin solid #191970 ;
+	border-left: 3px solid #191970 ;
+	border-bottom: thin dotted #191970 ;
+	font-size: large ;
+	font-weight: 700 ;
+	margin: 3em 0 1em 1.5em ;
+	padding: 0 1.5em ;
+	letter-spacing: 0.2em ;}
+h6 {
+	background: #FFFAFA ;
+	font-size: large ;
+	font-weight: 700 ;
+	text-align: center ;
+	border-top: thin solid #333333 ;
+	border-left: 2px solid #999999 ;
+	border-bottom: thin solid #DCDCDC ;
+	margin: 3.5em 2.5em 1.5em ;
+	letter-spacing: 0.1em ;}
+.s12 {
+	font-size: 12pt ;}
+.s14 {
+	font-size: 14pt ;}
+.s18 {
+	font-size: 18pt ;}
+.s16 {
+	font-size: 16pt ;}

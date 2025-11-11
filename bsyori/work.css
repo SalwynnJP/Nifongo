@@ -1,0 +1,9 @@
+@import url(../normal.css);
+.try {
+	text-indent: 0em ;
+	padding: 1em ;
+	margin-top: 1em ; 
+	margin-bottom: 1em ;
+	background: #E6E6FA ;}
+.try:before {
+	content: url(../image/keijiban.png) ;}
