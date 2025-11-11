@@ -1,0 +1,223 @@
+body {
+	color: black ;
+	background-color: white ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 1em 2em 1em 2em ;
+	padding: 1em ;
+	outline: none ;
+	font-family: "New York", Georgia, serif ;
+	line-height: 2.0 ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0033cc ;
+	text-decoration: underline ;}
+a:visited {
+	color: #330066 ;
+	text-decoration: none ;}
+a:active {
+	color: #FF0033 ;
+	text-decoration: none ;}
+a:hover { 
+	position: relative ;
+	top: 1px ;
+	left: 1px ;}
+a:focus {
+	color: black ;
+	text-decoration: none ;
+	outline: 1px red ;}
+a ruby {
+	text-decoration: none ;}
+p {
+	text-indent: 1em ;
+	line-height: 2.0 ; }
+p.none {
+	text-indent: 0 ;}
+p.ch {
+	text-indent: 0 ;
+	margin: 1em ;
+	padding: 0.5em ;
+	font-family: serif ;
+	border: thin dotted #333333 ;
+	background: #FFF5F5 ;}
+h1,h2,h3,h4 {
+	font-family: sans-serif ;}
+h1 {
+	font-size: xx-large ;
+	font-style : normal ;
+	text-align: center ;}
+h2 {
+	background-color: #F5F5F5 ;
+	font-size: large ;
+	font-style: normal ;
+	text-align: left ;
+	margin: 2.5em 0 1em 0 ; 
+	border-top: 2px solid gray ;
+	border-left: 0.5em solid silver ;
+	border-bottom: 2px solid silver ;
+	padding: 3px 0 5px 0.5em ;
+	letter-spacing: 0.1em ;}
+h3 {
+	font-size: large ;
+	font-style: normal ;
+	text-align: left ;
+	border-left: 1em solid #3399ff ;
+	border-bottom: thin solid #3399cc ;	
+	margin: 1.5em 0 0.5em 1em ;
+	padding: 0 0 3px 0.3em ;}
+h4 {
+	font-size: medium ;
+	font-weight: bold ;
+	font-style: normal ;
+	text-align: left ;
+	border-left: 0.5em solid #ffcc99 ;
+	border-bottom: thin solid #ff9933 ;	
+	letter-spacing: 0.2em ;
+	padding: 0 0 2px 0.5em ;}
+img {
+	border-style: none ; 
+	vertical-align: middle ;
+	display: block ;}
+strong {
+	font-weight: bolder ;
+	font-style: normal ;}
+em {
+	font-weight: normal ;
+	font-style: italic ;}
+ul li {
+	line-height: 1.7 ; 
+	padding-top: 0.5em ;
+	padding-bottom: 0.5em ;}
+li a {
+	text-decoration: none ;}
+ul li.cir {
+	list-style-type: circle ;}	
+.ex {
+	border: medium ridge #DC143C ;
+	background-color: #FFFAFA ;
+	margin: 1em 0 ;}
+.ex ul {
+	line-height: 2.0 ; 
+	list-style-type: circle ; 
+	padding-right: 1em ;
+	padding-bottom: 1em ;
+	border-bottom: thin solid #CD5C5C ;}
+.ex ul.none {	
+	border: none ;}
+.ex ul li {
+	margin-top: 1em ;}
+div.ex ul li {
+	list-style-image: url('../image/no1.png');}
+div.ex ul li.sec {
+	list-style-image: url('../image/no2.png');
+	margin-left: 1em ;}
+table,td,th {
+	table-layout: auto ;
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	text-align: center ;}
+table td {
+	text-align: left ;
+	padding: 0 0.5em ;}
+table th {
+	text-align: center ;
+	font-family: sans-serif ;}
+caption {
+	caption-side: top ;
+	font-weight: bolder ;
+	font-size: larger ;
+	font-family: sans-serif ;
+	letter-spacing: 0.1em ;}
+.right {
+	text-align: right ;}
+.left {
+	text-align: left ;}
+.center {
+	text-align: center ;}
+.c1 {
+	background-color: #FFCCCC ;}
+.c2 {
+	background-color: #E6E6FA ;}
+.c3 {
+	background-color: #FAFAD2 ;}
+.c4 {
+	background-color: #FFE4E1 ;}
+.c5 {
+	background-color: #ADD8E6 ;}
+.c6 {
+	background-color: #98FB98 ;}
+.c7 {
+	background-color: #FF9999 ;}
+.c8 {
+	background-color: #F0FFFF ;}
+.c9 {
+	background-color: #B0C4DE ;}
+.c0 {
+	background-color: #F8F8FF ;}	
+div.sect {
+	margin-top: 1.5em ;
+	border-top: 2px solid gray ;}
+div.back {
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 2em ;
+	padding-top: 1em ;}
+div.totop {
+	text-align: right ;
+	margin: 1em 1em 1em 0 ;
+	background-color: #DCDCDC ;}
+div.close {
+	font-family: sans-serif ;
+	text-align: center ;
+	border: thin double gray ;
+	background: #F5F5F5 ;}
+div.close a {
+	display: block ;
+	width: 100% ;
+	text-decoration: none ;}
+.kasen {
+	text-decoration: underline;
+	letter-spacing : 0.1em ;}
+.small {
+	font-size: smaller ;}
+.red {
+	color: red ;}
+.big {
+	font-size: larger ;
+	font-weight: bolder ;}
+.ch {
+	font-family: serif ;
+	color: #333333 ;
+	font-size: 90% ;}
+.en {
+	font-family: "Courier", "Courier New", monospace ;}
+address {
+	font-size : medium ;
+	font-style : oblique ;
+	text-align: right ;
+	border-top : thin solid gray ;
+	margin : 2em 122px 0 0 ;
+	padding: 1em 0.5em 0.5em 0 ;
+	background-color: #e6e6fa ;
+	line-height: 1.8 ;}
+div.logo img {
+	display: inline ;
+	margin: 15px 15px 8px 15px ;}
+div.logo {
+	position:relative;
+	bottom: 46px ;
+	text-align: right;}
+div.mom {
+	font-size: small ;
+	color: #333333 ;}
+div.note {
+	text-align: right ;
+	font-size: x-small ;
+	color: #708090 ;
+	margin-bottom: 1em ;}
