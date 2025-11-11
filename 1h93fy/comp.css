@@ -1,0 +1,81 @@
+ul a:link, a:visited {
+	background: inherit ;
+	color: black ;}
+ol a:link, a:visited {
+	background: inherit ;
+	color: black ;
+	text-decoration: none ;}
+a.lk:link {
+	background: inherit ;
+	color: #0033cc ;
+	text-decoration: underline ;}
+a.lk:visited {
+	background: inherit ;
+	color: #330066 ;
+	text-decoration: none ;}
+h5 {
+	font-size: medium ;
+	font-style: normal ;
+	font-family: sans-serif ;
+	text-align: center ;
+	border-left: 0.5em solid #FF9999 ;
+	border-right: 0.5em solid #FF9999 ;
+	border-top: thin solid #FF9999 ;	
+	border-bottom: thin solid #FF9999 ;
+	margin: 2em 0 ;
+	padding: 0.2em ;}	
+h6 {
+	font-size: medium ;
+	font-style: normal ;
+	font-family: sans-serif ;
+	text-align: center ;
+	border-top: medium double #B0C4DE ;	
+	border-bottom: medium double #B0C4DE ;
+	margin: 2em 0 ;
+	padding: 0.2em ;}	
+table {
+	margin: 1em 0 ;}
+tbody {
+	border: medium solid #333333 ;}
+table th {
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	text-align: center ;}
+table td {
+	font-size: smaller ; 
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	text-align: left ;
+	padding: 1px 0.5em ;}
+caption {
+	caption-side: top ;
+	padding: 0.5em ;
+	text-align: left ;
+	font-weight: bolder ;
+	font-size: medium ;}
+.hide {
+	font-size: larger ;
+	color: #DCDCDC ;
+	background: #DCDCDC ;}
+.hide:hover {
+	color: #000000 ;
+	background: #FFE4E1 ;}
+li.good {
+	list-style-type: none;
+	margin-left: 0.5em ;}
+li.pnt {
+	list-style-type: none;
+	text-align: right ;
+	padding-right: 2.5em ;}
+li.pnt a {
+	font-family: sans-serif ;
+	padding: 2px 3px ;
+	border: medium outset gray ;
+	text-decoration: none ;
+	color: inherit ;
+	background: #FAFAFA ;}	
+body.fm ul{
+	border: thin dotted #666666 ;
+	margin: 1.5em 0 ;}

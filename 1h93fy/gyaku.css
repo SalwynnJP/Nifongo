@@ -1,0 +1,24 @@
+table {
+	width: 90% ;
+	margin: 1em 0 2em 1em ;
+	padding: 0.5em ;}
+table,td,th {
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	text-align: center ;}
+table td {
+	text-align: center ;
+	padding: 1px 0.5em ;}
+.c1 {
+	background-color: #FFF0F5 ;}
+.c2 {
+	background-color: #E6E6FA ;}
+.c3 {
+	background-color: #FAFAD2 ;}
+caption {
+	caption-side: top ;
+	padding: 0.5em ;
+	text-align: left ;
+	font-weight: bolder ;
+	font-size: medium ;}
