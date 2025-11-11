@@ -1,0 +1,117 @@
+body {
+	color: black ;
+	background-color: #FAFAFA ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 1em ;
+	padding: 1em ;
+	outline: none ;
+	font-family: "New York", Georgia, serif ;
+	line-height: 1.7 ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0033cc ;
+	background: inherit ;
+	text-decoration: underline ;}
+a:visited {
+	color: #330066 ;
+	background: inherit ;
+	text-decoration: none ;}
+a:active {
+	color: #FF0033 ;
+	background: inherit ;
+	text-decoration: none ;}
+a:hover { 
+	position: relative ;
+	top: 1px ;
+	left: 1px ;}
+a:focus {
+	color: black ;
+	background: inherit ;
+	text-decoration: none ;
+	outline: 1px red ;}
+p {
+	text-indent: 1em ;}
+h1,h2,h3,h4,h5,h6 {
+	font-family: sans-serif ;}
+h1 {
+	font-size: xx-large ;
+	text-align: center ;
+	border-bottom: medium dotted #666666 ;
+	padding-bottom: 0.5em ;}
+h2 {
+	font-size: x-large ;
+	text-align: left ;
+	border-top: thin solid #666666 ;
+	border-left: 0.5em solid #666666 ;
+	padding-left: 0.5em ;}
+table {
+	table-layout: fixed ;
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	width: 100% ;
+	font-size: smaller ;
+	line-height: 1.4 ;
+	margin-top: 1em ;}
+td,th {
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;}
+table td {
+	text-align: left ;
+	padding: 3px 0.5em ;
+	vertical-align: top ;}
+table th {
+	background: #ECECE1 ;
+	text-align: center ;
+	font-size: medium ;
+	font-weight: bold ;
+	padding: 3px 0.5em ;
+	font-family: sans-serif ;}
+tfoot td {
+	background: #E6E6FA ;
+	color: inherit ;
+	padding: 0.5em ;
+	font-family: sans-serif ;
+	font-size: smaller ;
+	text-align: left ;}
+tfoot td.copy {
+	background: #C4C4E1 ;
+	color: inherit ;
+	text-align: right ;}
+tfoot td.copy img {
+	vertical-align: text-top ;
+	margin-right: 2px ;}
+caption {
+	caption-side: top ;
+	font-weight: bolder ;
+	font-size: large ;
+	font-family: sans-serif ;
+	letter-spacing: 0.1em ;
+	margin-bottom: 0.5em ;}
+th {
+	background: #DCE0DC ;}
+th.no {
+	width: 5% ;}
+th.col1 {
+	width: 40% ;}
+th.col2 {
+	width: 55% ;}
+div.back {
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 2em ;
+	padding-top: 1em ;}
+div.totop {
+	text-align: right ;
+	margin: 1em 1em 1em 0 ;
+	color: inherit ;
+	background-color: #DCDCDC ;}
+.right {
+	text-align: right ;}

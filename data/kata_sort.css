@@ -1,0 +1,19 @@
+table {
+	font-size: smaller ;}
+dl {
+	background: white ;}
+table th:hover {
+	background: #191970 ;
+	color: #ffffff ;}
+div.sort {
+	font-size: small ;
+	font-family: sans-serif ;
+	text-align: right ;}
+table td.lnth {
+	border: thin solid black ; 
+	text-align: center ;
+	font-family: sans-serif ;
+	font-weight: bolder ;
+	padding: 2px 0 ;
+	color: inherit ;
+	background: #B8CCCE ;}	

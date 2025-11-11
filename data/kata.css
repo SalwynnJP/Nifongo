@@ -1,0 +1,140 @@
+body {
+	color: black ;
+	background: #FAFAFA ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 1em 2em ;
+	padding: 1em ;
+	outline: none ;
+	font-family: "New York", Georgia, serif ;
+	line-height: 1.8 ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0033cc ;
+	background: inherit ;
+	text-decoration: underline ;}
+a:visited {
+	color: #330066 ;
+	background: inherit ;
+	text-decoration: none ;}
+a:active {
+	color: #FF0033 ;
+	background: inherit ;
+	text-decoration: none ;}
+a:hover { 
+	position: relative ;
+	top: 1px ;
+	left: 1px ;}
+a:focus {
+	color: black ;
+	background: inherit ;
+	text-decoration: none ;
+	outline: 1px red ;}
+p {
+	text-align: right ;
+	margin: 1em ;
+	text-indent: 1em ;
+	line-height: 2.0 ; }
+h1 {
+	font-family: sans-serif ;
+	font-size: x-large ;
+	font-style : normal ;
+	text-align: center ;
+	margin: 1em 0 1.5em 0 ;
+	border-bottom: medium dotted #4D678C ;
+	padding-bottom: 0.5em ;}
+table {
+	table-layout: auto ;
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	line-height: 1.0 ;}
+table td {
+	border: thin solid black ; 
+	text-align: left ;
+	padding: 2px 0.5em ;}
+table td.kata {
+	color: inherit ;
+	background: #ECECE1 ;}
+table td.tw {
+	color: inherit ;
+	background: #ECECE1 ;}
+table td.part {
+	font-family: sans-serif ;
+	font-size: small ;
+	color: inherit ;
+	background: #ECECE1 ;}
+table td.alp {
+	font-family: "Times Roman", "Times New Roman", "Times", serif ;
+	color: inherit ;
+	background: #F5F5F5 ;}
+table td.lang {
+	font-size: small ;
+	text-align: center ;
+	color: inherit ;
+	background: #DCE0DC ;}
+table td.lev {
+	text-align: center ;
+	font-family: Courier, "Courier New", monospace ;
+	color: inherit ;
+	background: #DCE0DC ;}
+table td.num {
+	text-align: center ;
+	color: inherit ;
+	background: #F5F5F5 ;}
+table th {
+	border: thin solid black ; 
+	text-align: center ;
+	font-family: sans-serif ;
+	padding: 2px 0 ;
+	color: inherit ;
+	background: #B8CCCE ;}
+tfoot td {
+	background: #E6E6FA ;
+	color: inherit ;
+	padding: 0.5em ;
+	font-family: sans-serif ;
+	font-size: smaller ;
+	text-align: left ;}
+tfoot td.copy {
+	background: #C4C4E1 ;
+	color: inherit ;
+	text-align: right ;}
+tfoot td.copy img {
+	vertical-align: text-top ;
+	margin-right: 2px ;}
+caption {
+	caption-side: top ;
+	font-weight: bolder ;
+	font-size: larger ;
+	font-family: sans-serif ;
+	margin: 0.5em ;
+	letter-spacing: 0.1em ;}
+div.back {
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 2em ;
+	padding-top: 1em ;}
+div.totop {
+	text-align: right ;
+	margin: 1em 1em 1em 0 ;
+	color: inherit ;
+	background-color: #DCDCDC ;}
+div.tnote {
+	font-size: smaller ;
+	margin-bottom: 1.5em ;}
+div.zip {
+	font-size: small ;
+	border: thin solid gray ;
+	margin-top: -1em ;
+	margin-bottom: 1em ;}
+dl {
+	font-size: x-small ;
+	margin-left: 3em ;
+	border: thin dotted #333333 ;
+	padding: 0.5em ;}
