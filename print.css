@@ -1,0 +1,119 @@
+@page {
+	size: 21cm 29.7cm ;
+	margin: 1.5cm 2cm 2.5cm 2cm ;}
+@page :left {
+	margin: 1.5cm 3cm 2.5cm 2cm ;} 
+@page :right {
+	margin: 1.5cm 2cm 2.5cm 3cm ;} 
+body {
+	background: white ;
+	color: black ;
+	border-style: none ;
+	font-size: 10pt ;
+	font-family: "New York","Georgia", serif ;}
+h1, h2, h3,h4,h5,h6 {
+	font-weight: bolder ;
+	font-family: "Arial", sans-serif ;
+	border-left: 5px double black ;
+	padding-left: 5px ;}
+h1 {
+	font-size: 18pt ;}
+h2,h3 {
+	font-size: 14pt ;}
+h4,h5,h6 {
+	font-size: 12pt ;}
+a {
+	color: black ;
+	text-decoration: none ;}
+p {
+	text-indent: 1em ;}
+div.ex,ol.point {
+	border: thin solid black ;
+	margin: 1em ;
+	padding: 0.5em ;}
+div.word {
+	margin: 1em 0 1em 3em ;
+	border-left: thin solid black ;}
+div.border {
+	border: thin solid black ;
+	padding: 0.5em ;}
+ul li.cir {
+	list-style-type: circle ;}	
+ul li.sec {
+	list-style-type: disc ;
+	margin-left: 1em ;}
+ul li.none {
+	list-style-type: none ;}
+ol.uab {
+	list-style-type: upper-alpha ;}
+ol.lab {
+	list-style-type: lower-alpha ;}
+dl {
+	border: thin solid black ;
+	padding: 0.5em ;}
+strong {
+	font-weight: bold ;}
+em {
+	font-style: italic ;}
+blockquote {
+	padding-left : 2em ; }
+table,img {
+	page-break-inside: avoid ;}
+table,td,th {
+	border: thin solid black ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;}
+table {
+	margin: 0.5em auto ;}
+.kasen {
+	text-decoration: underline ;}
+.italic {
+	font-style: italic ;}
+.syatai {
+	font-style: oblique ;}
+.bold,.red,.big {
+	font-weight: bolder ;}
+.large,.big {
+	font-size: larger ;}
+.small {
+	font-size: smaller ;}
+.kesi {
+	text-decoration: line-through ;}
+.uesen {
+	text-decoration: overline ;}
+.goth {
+	font-family: sans-serif ;}
+.ch {
+	font-size: smaller ;}
+.right {
+	text-align: right ;}
+.center {
+	text-align: center ;}
+.left {
+	text-align: left ;}
+hr { 
+	visibility: hidden ;}
+address,div.back,div.totop,div.rubyyn {
+	display: none ;}
+div.sect div.img {
+	display: block ;
+	text-align: center ;}
+div.img,div.rimg,div.limg {
+	display: block ;
+	text-align: center ;
+	margin: 0.5em ;}
+div.mail,div.doc {
+	border: double black ;
+	padding: 0.5em ;
+	margin: 0.5em auto ;
+	page-break-inside: avoid ;}
+div.mail img {
+	visibility: hidden ;}
+div.mail table,div.mail td,div.mail th {
+	border-style: none ;}
+div.point {
+	border: thin dashed black ;}
+div.point img {
+	display: none ;}
+div.point p img {
+	display: inline ;}

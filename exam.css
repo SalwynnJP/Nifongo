@@ -1,0 +1,58 @@
+@import url(normal.css) ;
+h2 {
+	background-color: #F0F8FF ;
+	text-align: center ;
+	margin: 0 ; 
+	border-top: 2px dotted #1E90FF ;
+	border-left: none ;
+	border-bottom: 2px dotted #1E90FF ;
+	padding: 5px 0 ;}
+h3 {
+	background: #F0FFFF ;
+	margin: 0 ;
+	border-left: none ;
+	border-top: thin solid #3399cc ;	
+	padding: 3px 2em ;}
+h4 {
+	font-size: medium ;
+	font-weight: bold ;
+	font-style: normal ;
+	text-align: left ;
+	border-left: 0.5em solid #ffcc99 ;
+	border-bottom: thin solid #ff9933 ;	
+	letter-spacing: 0.2em ;
+	padding: 0 0 2px 0.5em ;}
+p {
+	text-indent: 0 ;}
+p:before {
+	content: url(image/p_sky.png) ;}
+p.noimg:before {
+	display: none ;}
+div.sect {
+	margin: 1em ;
+	padding: 1em ;
+	border: medium dashed #4682B4 ;}
+div.exa {
+	border: medium ridge #708090 ;
+	background-color: #F8F8FF ;
+	margin: 1em ;
+	padding: 1em ;}
+ol.que {
+	line-height: 2 ;
+	list-style: upper-roman outside ;}
+.hide {
+	font-size: larger ;
+	color: #DCDCDC ;
+	background: #DCDCDC ;}
+.hide:hover {
+	color: #000000 ;
+	background: #FFE4E1 ;}
+div.point {
+	margin: 1em ;
+	padding: 0.5em 1em ;
+	border: thin dotted #333333 ;
+	background: #FFFAFA ;
+	font-size: smaller ;
+	font-family: sans-serif ;}
+div.point p:before {
+	content: url('image/s_pencil2_b.gif') ;}

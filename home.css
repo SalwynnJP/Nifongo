@@ -1,0 +1,132 @@
+body {
+	color: black ;
+	background: white ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 0 ;
+	padding: 0 ;
+	outline: none ;
+	font-family: "New York", "Georgia", serif ;
+	line-height: 1.0 ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0033cc ;
+	text-decoration: none ;}
+a:visited {
+	color: #330066 ;
+	text-decoration: none ;}
+a:active {
+	color: #FF0033 ;
+	text-decoration: none ;}
+img {
+	border-style: none ;}
+table {
+	width: 100% ;
+	border-collapse: collapse ;
+	border-spacing: 0;
+	padding: 0 ;
+	margin: 0 ;
+	border-style: none ;
+	line-height: 1.0 ;}
+tr,td {
+	margin: 0 ;
+	padding: 0 ;
+	border-style: none ;}
+tr.top {
+	background: url('image/top_center.png') ;
+	background-repeat: repeat-x ;
+	height: 24px ;}
+td.tleft {
+	width: 65px ;
+	text-align: left ;}
+td.tcent {
+	padding-top: 1px ;
+	text-align: center ;
+	background: url('image/top_center.png') ;
+	background-repeat: repeat-x ;
+	font-family: "Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W3", sans-serif ;
+	font-size: smaller ;}
+td.tright {
+	width: 10px ;
+	text-align: right ;}
+tr.add {
+	background: url('image/add_back.png') ;
+	background-repeat: repeat-x ;
+	height: 31px ;}
+td.add_cent {
+	background: url('image/add_cent_back.png') ;
+	background-repeat: repeat-x ;}
+td.add_left {
+	text-align: left ;
+	width: 65px ;}
+td.add_right {
+	text-align: center ;
+	width: 130px ;}
+tr.book {
+	background: url('image/book_back.png') ;
+	background-repeat: repeat-x ;
+	height: 21px ;}
+tr.tab {
+	background: url('image/tab_back.png') ;
+	background-repeat: repeat-x ;
+	height: 22px ;}
+tr.book img {
+	vertical-align: middle; }
+tr.body {
+	background: white ;}
+tr.bottom {
+	background: url('image/bottom_back.png') ;
+	background-repeat: repeat-x ;
+	text-align: right ;
+	height: 16px ;}	
+img.top {
+	vertical-align: top; }
+table img {
+	vertical-align: text-bottom; }
+span.note {
+	font-size: x-small ;
+	vertical-align: 10px ;
+	font-family: "Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W3", sans-serif ;}
+div.body {
+	padding: 0.5em 1em 5em 1em ;
+	background: url('image/wind_back.png') ;
+	background-repeat: repeat ;
+	border-bottom: thin solid silver ;}
+address {
+	display: inline ;
+	font-size : 80% ;
+	font-style : oblique ;
+	font-family: "Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W3", sans-serif ;}
+address a:link {
+	color: #000000 ;}
+address img {
+	vertical-align: text-top ;
+	padding-right: 2px ;
+	padding-top: 1px ;}
+div.aza {
+	text-align: right ;
+	border-top: medium solid navy ;
+	padding-right: 2em ;
+	padding-top: 2em ;}
+p {
+	font-size: larger ;
+	border-bottom: thin dotted silver ;
+	margin: 1em 2em ;
+	padding-bottom: 5px ;}
+.center {
+	text-align: center ;}
+.double {
+	text-align: center ;
+	letter-spacing: 0.3em ;}
+
+.double a {
+	padding-right: 7% ;
+	padding-left:  7% ;}
+.small {
+	font-size: smaller ;}

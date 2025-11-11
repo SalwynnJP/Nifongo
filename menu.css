@@ -1,0 +1,147 @@
+body {
+	color: black ;
+	background-color: white ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 1em ;
+	padding: 1em ;
+	outline: none ;
+	font-family: "New York", "Georgia", serif ;
+	line-height: 1.7 ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0033cc ;
+	text-decoration: none ;}
+a:visited {
+	color: #330066 ;
+	text-decoration: none ;}
+a:active {
+	color: #FF0033 ;
+	text-decoration: none ;}
+a:hover { 
+	position: relative ;
+	top: 1px ;
+	left: 1px ;}
+a:focus {
+	color: black ;
+	text-decoration: none ;
+	outline: 1px red ;}
+img {
+	border-style: none ; 
+	vertical-align: middle ;}
+div.main {
+	padding-left: 2em ;}
+h1,h2,h3 {
+	font-family: sans-serif ;}
+h1 {
+	font-size: x-large ;
+	font-style : normal ;
+	text-align: center ;}
+h2 {
+	background-color: #F5F5F5 ;
+	font-size: large ;
+	font-style: normal ;
+	text-align: left ;
+	margin: 1em ; 
+	border-top: thin solid gray ;
+	border-bottom: thin solid gray ;
+	padding: 5px ;
+	letter-spacing: 0.1em ;}
+h3 {
+	font-size: large ;
+	font-style: normal ;
+	text-align: left ;}
+abbr,acronym {
+	border-bottom: 1px dotted #333333 ;
+	cursor: help ;}
+ul,ol {
+	list-style-position: outside ;
+	line-height: 2.0 ; }
+ul {
+	list-style-type: circle ;}
+ul li.cir {
+	list-style-type: circle ;}	
+ul li.sec {
+	list-style-type: disc ;}
+ul li.squ {
+	list-style-type: square ;}
+ul li.none {
+	list-style-type: none ;}
+ol ol {
+	list-style-type: upper-alpha ;}
+ol ol ol {
+	list-style-type: lower-alpha ;}
+.right {
+	text-align: right ;}
+.left {
+	text-align: left ;}
+.center {
+	text-align: center ;}
+address {
+	font-size : medium ;
+	font-style : oblique ;
+	text-align: right ;
+	border-top : thin solid gray ;
+	margin-top : 1em ;
+	padding: 1em 0.5em 0 0 ;
+	background-color: #e6e6fa ;}
+address.top {
+	margin-right: 122px ;}
+div.back {
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 2em ;
+	padding-top: 1em ;}
+div.totop {
+	text-align: right ;
+	margin: 1em 1em 1em 0 ;
+	background-color: #DCDCDC ;}
+div.logo img {
+	display: inline ;
+	margin: 15px 15px 8px 15px ;}
+div.logo {
+	position:relative;
+	bottom: 46px ;
+	text-align: right;}
+div.mom {
+	font-size: small ;
+	color: #333333 ;}
+.kasen {
+	text-decoration: underline;
+	letter-spacing : 0.1em ;}
+.italic {
+	font-style: italic ;}
+.syatai {
+	font-style: oblique ;}
+.cursive {
+	font-family: cursive ;}
+.bold {
+	font-weight: bolder ;}
+.large {
+	font-size: larger ;}
+.small {
+	font-size: smaller ;}
+.mini {
+	font-size: small ;}
+.red {
+	color: red ;}
+.kesi {
+	text-decoration: line-through ;}
+.uesen {
+	text-decoration: overline ;}
+.big {
+	font-size: larger ;
+	font-weight: bolder ;}
+.en {
+	font-family: "Courier", "Courier New", monospace ;}
+.goth {
+	font-family: "Arial", sans-serif ;}
+.times {
+	font-family: "Times Roman", "Times New Roman", "Times", serif ;}
+hr { 
+	display: none ;}

@@ -1,0 +1,164 @@
+body {
+	color: black ;
+	background-color: white ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 1em 2em ;
+	padding: 0 1em ;
+	border: none ;
+	font-family: "New York", "Georgia", serif ;
+	line-height: 2.0 ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #4169E1 ;
+	text-decoration: underline ;}
+a:visited {
+	color: #0033cc ;
+	text-decoration: none ;}
+a:active {
+	color: #DC143C ;
+	text-decoration: none ;}
+a:focus {
+	color: black ;
+	text-decoration: none ;
+	border: 1px gray ;}
+p {
+	background-color: white ;
+	border: solid medium #88C2B5 ;
+	text-indent: 1em ;
+	padding: 1em ;}
+p.se {
+	border: solid medium #E68E8A ;}
+p.menu {
+	border-style: none ;
+	text-indent: 0 ;
+	padding: 0 ;
+	font-size: larger ;
+	text-align: center ;}
+div.date {
+	text-align: right ;}
+div.note {
+	border: thin solid gray ;}
+div.main {
+	background-color: #F0E3C2 ;
+	padding: 0.5em 1.5em ;}
+ins {
+	font-size: smaller ;
+	font-style: italic ;
+	background-color: #FAFAFA ;
+	color: red ;
+	text-decoration: none ;}
+ins.br {
+	margin-right: 0.5em ;
+	display: block ;}	
+ins:before {content: " ( !! " ; }
+ins:after {content: " ) " ; }
+del {
+	text-decoration: line-through ;}	
+h1,h2,h3,h4 {
+	font-family: sans-serif ;}
+h1 {
+	font-size: xx-large ;
+	text-align: center ;}
+h2 {
+	font-size: large ;
+	font-style : normal ;
+	text-align: left ;
+	margin-bottom: 1em;}
+h3 {
+	background-color: #F5F5F5 ;
+	font-size : large ;
+	font-style: normal ;
+	font-weight: bold ;
+	text-align: left ;
+	border-top: 2px solid #A9A9A9 ;
+	border-bottom: 2px solid #A9A9A9 ;
+	padding: 3px 0 5px 	1.5em ;
+	letter-spacing: 0.1em ;}
+strong {
+	font-weight: bolder ;
+	font-style: normal ;}
+em {
+	font-weight: normal ;
+	font-style: italic ;}
+dfn {
+	font-weight: normal ;
+	font-style: normal ;
+	text-decoration: none ;
+	border-bottom: thin dotted navy ;
+	cursor: help ;}
+abbr,acronym {
+	border-bottom: 1px dotted #333333 ;
+	cursor: help ;}
+cite {
+	font-style: normal ;}
+sup {
+	color: #cc0000 ;
+	font-weight: bold ;}
+blockquote {
+	border-left : solid silver ;
+	padding-left : 0.5em ; }
+address {
+	font-size : medium ;
+	font-style : oblique ;
+	text-align: right ;
+	border-top : thin solid gray ;
+	margin-top : 1em ;
+	padding-top: 1em ;
+	background-color: #e6e6fa ;}
+div.back {
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 2em ;
+	padding-top: 1em ;}
+div.totop {
+	text-align: right ;
+	margin: 1em 1em 1em 0 ;
+	background-color: #DCDCDC ;}
+pre {
+	display: inline ;
+	overflow: auto ;}
+.kasen {
+	text-decoration: underline;
+	letter-spacing : 0.1em ;}
+.italic {
+	font-style: italic ;}
+.syatai {
+	font-style: oblique ;}
+.cursive {
+	font-family: cursive ;}
+.bold {
+	font-weight: bolder ;}
+.big {
+	font-size: larger ;}
+.small {
+	font-size: smaller ;}
+.re {
+	color: #DC143C ;
+	border: thin solid ;
+	cursor: pointer ;} 
+.bl {
+	color: #4169E1 ;
+	border: thin solid ;
+	cursor: pointer ;}
+.gr {
+	color: #3CB371 ;
+	border: thin solid ;
+	cursor: pointer ;}
+.red {
+	color: #DC143C ;}
+.fr {
+	border-bottom: thin dotted red ;}
+.en {
+	font-family: "Courier", "Courier New", monospace ;}
+.goth {
+	font-family: "Arial", sans-serif ;}
+.times {
+	font-family: "Times Roman", "Times New Roman", "Times", serif ;}
+hr { 
+	display: none ;}

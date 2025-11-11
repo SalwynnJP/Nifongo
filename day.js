@@ -1,0 +1,1 @@
+lmd=new Date(document.lastModified);var yy=lmd.getFullYear();var mm=lmd.getMonth()+1;var dd=lmd.getDate();today=new Date()document.write("更新日："+yy+"年"+mm+"月"+dd+"日 "+" ／ 今日は "+(today.getMonth()+1)+"月"+today.getDate()+"日です。");

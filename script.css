@@ -1,0 +1,133 @@
+body {
+	color: black ;
+	background: #FFFFFF ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 1em 2em 1em 2em ;
+	padding: 1em ;
+	outline: none ;
+	font-family: "New York", "Georgia", serif ;
+	line-height: 2.0 ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0033cc ;
+	text-decoration: underline ;}
+a:visited {
+	color: #330066 ;
+	text-decoration: none ;}
+a:active {
+	color: #FF0033 ;
+	text-decoration: none ;}
+a:focus {
+	color: black ;
+	text-decoration: none ;
+	outline: 1px gray ;}
+p {
+	text-indent: 1em ;}
+p.person {
+	border: 2px solid gray ;
+	margin-left: 1em ;
+	padding: 0.4em ;
+	font-style: oblique ;
+	background-color: #FFFFF0 ;}
+p.map {
+	background: #FFFAF0 ;
+	text-align: center ;
+	margin: 0 5% 0 60% ;
+	padding: 0 0.5em ;
+	width: 35% ;
+	border: 2px outset gray ;}
+ins {
+	display: block ;
+	font-size: smaller ;
+	text-decoration: none ;
+	background-color: #FFFFE0 ;
+	border: thin dotted #666666 ;
+	margin-left: 3em ;}
+h1,h2,h3,h4 {
+	font-family: sans-serif ;}
+h1 {
+	padding-top: 0.3em ;
+	border-top: double #333333 ;
+	font-size: xx-large ;
+	font-style : normal ;
+	text-align: center ;}
+h2 {
+	font-size: x-large ;
+	text-align: center ;
+	padding-bottom: 0.5em ;
+	margin-bottom: 1em ;
+	border-bottom: double #333333 ;}
+img {
+	border-style: none ; 
+	vertical-align: middle ;}
+strong {
+	font-weight: bolder ;
+	font-style: normal ;}
+em {
+	font-weight: normal ;
+	font-style: italic ;}
+dfn {
+	font-weight: normal ;
+	font-style: normal ;
+	text-decoration: none ;
+	border-bottom: thin dotted navy ;
+	cursor: help ;}
+abbr,acronym {
+	border-bottom: 1px dotted #333333 ;
+	cursor: help ;}
+cite {
+	font-style: normal ;}
+sup {
+	color: #cc0000 ;
+	font-weight: bold ;}
+blockquote {
+	border-left : solid silver ;
+	padding-left : 0.5em ; }
+pre {
+	display: inline ;
+	overflow: auto ;}
+div.title {
+	background: #FFFAFA ;
+	margin: 0 1em ;
+	border: thin solid black ;
+	font-weight: bolder ;
+	text-align: center ;}
+div.back {
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 2em ;
+	padding-top: 1em ;}
+div.totop {
+	text-align: right ;
+	margin: 1em 1em 1em 0 ;
+	background-color: #DCDCDC ;}
+.kasen {
+	text-decoration: underline;
+	letter-spacing : 0.1em ;}
+.italic {
+	font-style: italic ;}
+.syatai {
+	font-style: oblique ;}
+.cursive {
+	font-family: cursive ;}
+.bold {
+	font-weight: bolder ;}
+.large {
+	font-size: larger ;}
+.small {
+	font-size: smaller ;}
+.red {
+	color: red ;}
+.big {
+	font-size: larger ;
+	font-weight: bolder ;}
+.en {
+	font-family: "Courier", "Courier New", monospace ;}
+hr { 
+	display: none ;}

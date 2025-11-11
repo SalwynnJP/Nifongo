@@ -1,0 +1,42 @@
+div.sect {
+	margin-top: 1.5em ;
+	border-top-style: none ;}
+div.base {
+	border: medium double #4682B4 ;
+	background: #F0F8FF;
+	margin: 0 1em ;
+	padding: 0.3em 0.5em ;}
+div.base p {
+	font-size: larger ;
+	text-indent: 0 ;}
+div.base p.small {
+	font-size: medium ;}
+div.base p img {
+	display: inline ;
+	vertical-align: text-bottom ;
+	margin: 0.2em 0.5em ;}
+div.point {
+	font-family: "Arial", sans-serif ;
+	border: thick double #4169E1 ;
+	background: #FFFFE0 ;
+	margin: 0.2em 1em 0.2em 3em ;
+	padding: 0.3em 0.5em ;}
+div.point p {
+	margin-left: 30px ;
+	text-indent: 0 ;}
+div.point p img {
+	display: inline ;
+	vertical-align: text-bottom ;
+	margin-right: 3px ;}
+dl img {
+	vertical-align: baseline ;
+	display: inline ;
+	margin-right: 5px ;}
+div.doc {
+	width: 640px ;
+	border: 2px solid #333333 ;
+	margin: 1em auto ;
+	padding: 1em ;}
+	
+
+	
