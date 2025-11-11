@@ -1,0 +1,26 @@
+dl {
+	border: none ;}
+dt,dd {
+	font-family: serif ;}
+dt {
+	counter-increment: qnum ;
+	margin-bottom: 0 ;}
+dt:before {
+	content: "Q" counter(qnum) ". " ;}
+dd {
+	border-bottom: thin dashed #333333 ;
+	margin-bottom: 2em ;}
+.t4 ol li {
+	counter-increment: anum ;
+	display: inline ;
+	padding: 1em ;}
+.t4 ol li:before {
+	content: counter(anum) ". ";}
+.t4b dt {
+	font-weight: bold ;}
+.kasen {
+	font-weight: bold ;
+	background: #CCCCFF ;}
+.inline {
+	display: inline ;
+	vertical-align: middle ;}
