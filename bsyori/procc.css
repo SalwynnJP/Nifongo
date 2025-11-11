@@ -1,0 +1,266 @@
+body {
+	color: #000000 ;
+	background: #FFFAF0 ; 
+	font-size: medium ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-variant: normal ;
+	text-align: left ;
+	text-decoration: none ;
+	letter-spacing: normal ;
+	margin: 0 ;
+	padding: 0.5em 2.5em ;
+	border-left: 0.5em dotted #DCDCDC ;
+	border-right: 0.2em solid #DCDCDC ;
+	outline: none ;
+	font-family: "New York", "Georgia", serif ;
+	line-height: 2.0 ;}
+div.main {
+	background: #FFFFFF ; 
+	border: 4px groove #4169E1 ;
+	padding: 1em 1.5em ;}
+div.sect {
+	margin-bottom: 1.5em ;}
+div.link {
+	clear: both ;
+	border-top: thin dotted #666666 ;
+	border-bottom: thin dotted #666666 ;
+	margin: 3em 35% 0 -0.5em ;
+	padding: 0.5em 0 0.5em 2em ;}	
+div.back {
+	border-top: thin dashed navy ;
+	margin: 1.5em 0 1em 0 ;
+	padding: 1em 0 0 1.5em ;}
+div.totop {
+	clear: both ;
+	text-align: right ;
+	margin: 1em 1em 1em 0 ;
+	background-color: #DCDCDC ;}
+div.main div.totop {
+	background-color: transparent ;}
+a {
+	border-style: none ;}
+a:link {
+	color: #0000CC ;
+	text-decoration: underline ;}
+a:visited {
+	color: #4B0082 ;
+	text-decoration: none ;}
+a:active {
+	color: #0000CC ;
+	text-decoration: none ;}
+a:focus {
+	color: black ;
+	text-decoration: none ;
+	background: #DC143C ;}
+p {
+	text-indent: 1em ;}
+p.none {
+	text-align: left ;
+	text-indent: 0 ;}	
+h1,h2,h3,h4,h5,h6 {
+	font-family: sans-serif ;}
+h1 {
+	color:#000000 ;
+	background:	#F5F5F5 ;
+	border-top: thin dashed #333333 ;
+	border-bottom: thin dashed #333333 ;
+	font-size: small ;	
+	text-align: right ;
+	margin: 1em 0 ;
+	padding: 0 1.5em ;
+	letter-spacing: 0.1em ;}
+h2 {
+	font-size: x-large ;
+	font-style: normal ;
+	text-align: center ;
+	margin: 1.5em 1em 1em 1em ; 
+	border-bottom: 2px solid #0000FF ;
+	padding: 0 ;
+	letter-spacing: 0.1em ;}
+h3 {
+	font-size: large ;
+	background: #F8F8FF ;
+	font-weight: bold ;
+	font-style: normal ;
+	text-align: left ;
+	border-right: thin solid #00008B ;
+	border-top: thin solid #3399cc ;	
+	border-bottom: thin solid #3399cc ;	
+	letter-spacing: 0.1em ;
+	margin: 2em 0 1.5em 0 ;
+	padding-left: 1em ;}
+h4 {
+	background: #FFFAFA ;
+	font-size: large ;
+	font-weight: 900 ;
+	border-top: thin dotted #333333;
+	border-bottom: thin dotted #333333;
+	margin: 3em 0 1.5em ;
+	padding: 0.2em ;
+	letter-spacing: 0.1em ;}
+h5 {
+	background: #F8F8FF ;
+	border-top: thin solid #191970 ;
+	border-left: 3px solid #191970 ;
+	border-bottom: thin dotted #191970 ;
+	font-size: large ;
+	font-weight: 700 ;
+	margin: 3em 0 1em 1.5em ;
+	padding: 0 1.5em ;
+	letter-spacing: 0.2em ;}
+h6 {
+	background: #FFFAFA ;
+	font-size: large ;
+	font-weight: 700 ;
+	text-align: center ;
+	border-top: thin solid #333333 ;
+	border-left: 2px solid #999999 ;
+	border-bottom: thin solid #DCDCDC ;
+	margin: 3.5em 2.5em 1.5em ;
+	letter-spacing: 0.1em ;}
+img {
+	border-style: none ; 
+	vertical-align: middle ;}
+.limg {
+	margin: 1em ;
+	display: inline ;
+	float: left ;}
+.limg img {
+	display: inline ;}
+.rimg {
+	margin: 1em ;
+	display: inline ;
+	float: right ;}
+.rimg img {
+	display: inline ;}
+.cl {
+	clear: both ;}	
+strong {
+	font-weight: 900 ;
+	font-style: normal ;}
+em {
+	font-weight: normal ;
+	font-style: italic ;}
+dfn {
+	font-weight: normal ;
+	font-style: normal ;
+	text-decoration: none ;
+	border-bottom: thin dotted #000080 ;
+	cursor: help ;}
+abbr,acronym {
+	border-bottom: 1px dotted #333333 ;
+	cursor: help ;}
+cite {
+	font-style: normal ;}
+q {quotes: "「" "」" "『" "』"; }
+q:before {content: open-quote; }
+q:after {content: close-quote; }
+blockquote {
+	border-left : solid #C0C0C0 ;
+	margin: 0.5em 0 ;
+	padding-left : 0.7em ; }
+ul,ol {
+	list-style-position: outside ;}
+ol {
+	padding-top: 0.5em ;
+	padding-bottom: 0.5em ;
+	border-top: 2px dashed #DCDCDC ;
+	border-bottom: 2px dashed #DCDCDC ;}
+li a {
+	text-decoration: none ;}
+ul ul {
+	list-style-type: none ;}
+dl {
+	margin: 1em 2em 0 1em ;
+	padding: 0.5em 0 ;
+	border-top: 3px dotted #DCDCDC ;
+	border-bottom: 3px dotted #DCDCDC ;}
+dt,dd {
+	font-family: sans-serif ;}
+dt {
+	font-weight: bold ;
+	line-height: 1.5 ;}
+dd {
+	font-weight: normal ;}
+table {
+	border: thin solid #000000 ; 
+	table-layout: auto ;
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	text-align: center ;}
+table td,th {
+	border: thin solid #666666 ; 
+	border-collapse: collapse ; 
+	empty-cells: show ;
+	text-align: center ;
+	padding: 1px 3px;}
+table th {
+	font-family: sans-serif ;}
+caption {
+	font-family: sans-serif ;
+	caption-side: top ;
+	font-size: larger ;
+	font-weight: bolder ;
+	letter-spacing: 0.1em ;}	
+pre {
+	font-size: 1em ;
+	font-family: monospace ;	
+	border: thin dotted #F08080 ;
+	padding: 1em ;
+	margin: 0 1em ;
+	overflow: auto ;}
+div.samp {
+	border: 2px dashed #F08080 ;
+	padding: 1em ;
+	margin: 0 1em ;}
+div.smpnt {
+	margin-top: -1.1em ;
+	margin-left: -1.1em ;
+	font-size: smaller ;
+	font-style: oblique ;
+	padding: 0 ;}
+div.hint {
+	margin: 1em 1em 1em 2.5em ;
+	padding: 1em ;
+	border: thin dotted #666666 ;
+	background: #FAFAFA ;}
+.try {
+	text-indent: 0em ;
+	padding: 1em ;
+	margin-top: 1em ; 
+	margin-bottom: 1em ;
+	background: #E6E6FA ;}
+.try:before {
+	content: url(../image/keijiban.png) ;}
+.center {
+	text-align: center ;}
+.right {
+	text-align: right ;}
+.kasen {
+	text-decoration: underline;
+	letter-spacing : 0.1em ;}
+.italic {
+	font-style: italic ;}
+.syatai {
+	font-style: oblique ;}
+.bold {
+	font-weight: bolder ;}
+.big {
+	font-size: larger ;}
+.small {
+	font-size: smaller ;}
+.red {
+	color: red ;}
+.en {
+	font-family: "Courier", "Courier New", monospace ;
+	font-size: smaller ;
+	border: thin dotted #6495ED ;
+	padding: 0 4pt ;
+	margin: 0 0.1em ;}
+.goth {
+	font-family: "Arial", sans-serif ;}
+.times {
+	font-family: "Times Roman", "Times New Roman", "Times", serif ;}
+hr { 
+	display: none ;}

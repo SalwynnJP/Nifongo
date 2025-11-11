@@ -1,0 +1,34 @@
+@import url(procc.css);
+table {
+	margin-left: 2em ;
+	border: thin solid #000000 ; 
+	text-align: left ;}
+td,th {
+	border: thin solid #000000 ;
+	padding: 0 1em ;}
+caption {
+	font-size: medium ;
+	font-weight: normal ;
+	letter-spacing: 0 ;}	
+table.sm1 {	
+	border-collapse: collapse ; 
+	margin-bottom: 1em ;}
+table.sm2 {
+	border-collapse: separate ;}
+table.sm3 {
+	border-collapse: separate ;
+	border-spacing: 1px ;
+	margin-bottom: 1em ;}
+table.sm4 {
+	border-collapse: separate ;
+	border-spacing: 10px 1px ;}
+table.sm5 {
+	border-collapse: separate;
+	margin-bottom: 1em ;}
+table.sm5 td {
+	empty-cells: show ;}
+table.sm6  {
+	border-collapse: separate;
+	empty-cells: hide ;}
+table.sm6 td {
+	empty-cells: hide ;}

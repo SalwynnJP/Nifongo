@@ -1,0 +1,7 @@
+@import url(procc.css);
+a:active {
+	text-decoration: underline ;}
+a.samp1:active {
+	color: red ;}
+a.samp2:hover {
+	background: yellow ;}

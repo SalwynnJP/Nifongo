@@ -1,0 +1,22 @@
+div.col1 {
+	margin-bottom: 2em ;
+	float: left ;
+	width: 47% ;}
+div.col2 {
+	margin-bottom: 2em ;
+	float: right ;
+	width: 47% ;
+	border-left: thin dashed #666666 ;}
+div.col3 {
+	clear: both ;
+	float: left ;
+	width: 47% ;}
+div.back {
+	clear: both ;}
+ul {
+	padding: 0 1em ;
+	list-style-type: none ;}
+ul li a {
+	padding-left: 0.3em ;}
+h3 {
+	margin-left: 2px ;}

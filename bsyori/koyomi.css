@@ -1,0 +1,17 @@
+@import url(../normal.css);
+table {
+	width: 100% ;
+	border: medium solid black ;
+	font-size: small ;}
+table td {
+	text-align: right ;}
+tbody {
+	border-top: medium solid #333333 ;
+	border-bottom: medium solid #333333 ;}
+.s {
+	background-color: #FFE4E1 ;
+	font-weight: bolder ;}
+.w {
+	background-color: #F5F5F5 ;}
+.m {
+	background-color: #FFFFE0 ;}

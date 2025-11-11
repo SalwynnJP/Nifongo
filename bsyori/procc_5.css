@@ -1,0 +1,37 @@
+@import url(procc.css);
+div.samp ol {
+	border: thin solid #DCDCDC ;
+	font-size: smaller ;}
+ol#samp1 {
+	list-style-type: upper-roman ;}
+ol#samp2 {
+	list-style-type: lower-roman ;}
+ol#samp3 {
+	list-style-type: upper-alpha ;}
+ol#samp4 {
+	list-style-type: lower-alpha ;}
+ol#samp5 {
+	list-style-type: decimal-leading-zero ;}
+ol#samp6 {
+	list-style-type: cjk-ideographic ;}
+ol#samp7 {
+	list-style-type: hiragana ;}
+ol#samp8 {
+	list-style-type: katakana ;}
+ol#samp9 {
+	list-style-type: hiragana-iroha ;}
+ol#samp10 {
+	list-style-type: katakana-iroha ;}
+ol#samp11 {
+	list-style-type: lower-greek ;}
+div.samp ul {
+	border: thin solid #DCDCDC ;
+	font-size: smaller ;}
+ul#samp12 {
+	list-style-type: none ;}
+ul#samp13 {
+	list-style-type: disc ;}
+ul#samp14 {
+	list-style-type: circle ;}
+ul#samp15 {
+	list-style-type: square ;}

@@ -1,0 +1,7 @@
+@import url(procc.css);
+div.bgimg {
+	text-align: center ;
+	background-image: url("back.png");
+	padding: 0 ;
+	border: thin solid black ;
+	height: 5em ;}

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/code.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:21 GMT -->
+<head>
+	<meta name="generator" content="mi" />
+	<link rev="made" title="作者" href="mailto:uchiyama@kazu.nifty.jp" />
+	<link rel="stylesheet" type="text/css" href="../normal.css" media="screen,tv" />
+	<link rel="stylesheet" type="text/css" href="seikei.css" media="screen,tv" />
+	<title>日文文書処理</title>
+</head>
+<body>
+<h1 id="top">日文文書処理</h1>
+<h2><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードについて</h2>
+<h3><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードとは</h3>
+<div class="rimg">
+<img src="code_0.png" width="315" height="206" alt="例：「憂」←→6182／「鬱」←→9B31" />
+</div>
+<p>わたしたちが<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>っているコンピュータでは、さまざまな<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>を<ruby><rb>利用</rb><rp>(</rp><rt>りよう</rt><rp>)</rp></ruby>することができる。これは、ひとつひとつの<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>に<ruby><rb>固有</rb><rp>(</rp><rt>こゆう</rt><rp>)</rp></ruby>の<ruby><rb>数値</rb><rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>が<ruby><rb>割</rb><rp>(</rp><rt>わ</rt><rp>)</rp></ruby>り<ruby><rb>当</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>てられているからである。コンピュータは、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>を<ruby><rb>数値</rb><rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>に<ruby><rb>置</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>き<ruby><rb>換</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>えて<ruby><rb>処理</rb><rp>(</rp><rt>しょり</rt><rp>)</rp></ruby>しているのである。</p>
+<p>しかし、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>と<ruby><rb>数値</rb><rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>の<ruby><rb>対応</rb><rp>(</rp><rt>たいおう</rt><rp>)</rp></ruby>に<ruby><rb>一定</rb><rp>(</rp><rt>いっていの</rt><rp>)</rp></ruby>のルールがなければ、コンピュータの<ruby><rb>間</rb><rp>(</rp><rt>あいだ</rt><rp>)</rp></ruby>で、データの<ruby><rb>共有</rb><rp>(</rp><rt>きょうゆう</rt><rp>)</rp></ruby>ができなくなってしまう。そのために、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>と<ruby><rb>数値</rb><rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>の<ruby><rb>対応</rb><rp>(</rp><rt>たいおう</rt><rp>)</rp></ruby>を<ruby><rb>定</rb><rp>(</rp><rt>さだ</rt><rp>)</rp></ruby>めたきまりが、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コード<span class="en">character code</span>である（<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コード<ruby><rb>体系</rb><rp>(</rp><rt>たいけい</rt><rp>)</rp></ruby>ともいう）。</p>
+<dl class="c3">
+	<dt class="big"><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コード<span class="en">character code</span></dt>
+	<dd class="large">ひとつひとつの<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>への<ruby><rb>数値</rb><rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>の<ruby><rb>割</rb><rp>(</rp><rt>わ</rt><rp>)</rp></ruby>り<ruby><rb>当</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>てを<ruby><rb>定</rb><rp>(</rp><rt>さだ</rt><rp>)</rp></ruby>めたきまりのこと</dd>
+</dl>
+<p>また、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードは、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>セット<span class="en">character set</span>と<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>符号化方式</rb><rp>(</rp><rt>ふごうかほうしき</rt><rp>)</rp></ruby><span class="en">character encoding</span>の<ruby><rb>組</rb><rp>(</rp><rt>く</rt><rp>)</rp></ruby>み<ruby><rb>合</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>わせであるといえる。</p>
+<h4><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>セット</h4>
+<p><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードは、アルファベット、<ruby><rb>漢字</rb><rp>(</rp><rt>かんじ</rt><rp>)</rp></ruby>、ハングルなど、<ruby><rb>特定</rb><rp>(</rp><rt>とくてい</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>のまとまりに<ruby><rb>対</rb><rp>(</rp><rt>たい</rt><rp>)</rp></ruby>して<ruby><rb>定</rb><rp>(</rp><rt>さだ</rt><rp>)</rp></ruby>められている。たとえば、<ruby><rb><acronym title="American Standard Code for Information Interchange">ASCII</acronym></rb><rp>(</rp><rt>アスキー</rt><rp>)</rp></ruby>（<acronym title="United States-American Standard Code for Information Interchange">US-ASCII</acronym>）は、アルファベットへの<ruby><rb>数値</rb><rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>の<ruby><rb>割</rb><rp>(</rp><rt>わ</rt><rp>)</rp></ruby>り<ruby><rb>当</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>て<ruby><rb>方</rb><rp>(</rp><rt>かた</rt><rp>)</rp></ruby>を<ruby><rb>定</rb><rp>(</rp><rt>さだ</rt><rp>)</rp></ruby>めたものである</p>
+<p><ruby><rb>特定</rb><rp>(</rp><rt>とくてい</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>のまとまりに<ruby><rb>対</rb><rp>(</rp><rt>たい</rt><rp>)</rp></ruby>する<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>と<ruby><rb>数値</rb><rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>の<ruby><rb>対応</rb><rp>(</rp><rt>たいおう</rt><rp>)</rp></ruby>を、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>セット<span class="en">character set</span>という（<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>集合</rb><rp>(</rp><rt>しゅうごう</rt><rp>)</rp></ruby>、<ruby><rb>符号化</rb><rp>(</rp><rt>ふごうか</rt><rp>)</rp></ruby><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>集合</rb><rp>(</rp><rt>しゅうごう</rt><rp>)</rp></ruby>、キャラクターセットともいう）。</p>
+<div class="img">
+	<img src="code_2.png" width="335" height="210" alt="" />
+</div>
+<p><ruby><rb>一般</rb><rp>(</rp><rt>いっぱん</rt><rp>)</rp></ruby>に、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>セットは、<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>で<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>われる<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>セット、<ruby><rb>中国語</rb><rp>(</rp><rt>ちゅうごくご</rt><rp>)</rp></ruby>で<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>われる<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>セットのように、<ruby><rb>言語</rb><rp>(</rp><rt>げんご</rt><rp>)</rp></ruby>ごとに<ruby><rb>作</rb><rp>(</rp><rt>つく</rt><rp>)</rp></ruby>られている。</p>
+<h4><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>符号化方式</rb><rp>(</rp><rt>ふごうかほうしき</rt><rp>)</rp></ruby></h4>
+<div class="rimg">
+	<img src="code_1.png" width="300" height="200" alt="" />
+</div>
+<p><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードでは、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>に<ruby><rb>対</rb><rp>(</rp><rt>たい</rt><rp>)</rp></ruby>する<ruby><rb>数値</rb><rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>の<ruby><rb>割</rb><rp>(</rp><rt>わ</rt><rp>)</rp></ruby>り<ruby><rb>当</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>て<ruby><rb>方</rb><rp>(</rp><rt>かた</rt><rp>)</rp></ruby>の<ruby><rb>規則</rb><rp>(</rp><rt>きそく</rt><rp>)</rp></ruby>（<ruby><rb>原理</rb><rp>(</rp><rt>げんり</rt><rp>)</rp></ruby>）が<ruby><rb>必要</rb><rp>(</rp><rt>ひつよう</rt><rp>)</rp></ruby>である。この<ruby><rb>規則</rb><rp>(</rp><rt>きそく</rt><rp>)</rp></ruby>を<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>符号化方式</rb><rp>(</rp><rt>ふごうかほうしき</rt><rp>)</rp></ruby><span class="en">character encoding (scheme)</span>という（<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>エンコーディングともいう）。</p>
+<p>たとえば、<abbr title="Extended UNIX Code">EUC</abbr>や<abbr title="8-bit UCS Transformation Format">UTF-8</abbr>などは、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>符号化方式</rb><rp>(</rp><rt>ふごうかほうしき</rt><rp>)</rp></ruby>を<ruby><rb>示</rb><rp>(</rp><rt>しめ</rt><rp>)</rp></ruby>したものである。</p>
+<h4 class="cl"><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>セットと<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>符号化方式</rb><rp>(</rp><rt>ふごうかほうしき</rt><rp>)</rp></ruby></h4>
+<div class="limg">
+	<img src="code_3.png" width="195" height="216" alt="" />
+</div>
+<p><ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>セットと<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>符号化方式</rb><rp>(</rp><rt>ふごうかほうしき</rt><rp>)</rp></ruby>の<ruby><rb>組</rb><rp>(</rp><rt>く</rt><rp>)</rp></ruby>み<ruby><rb>合</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>わせが、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードである。</p>
+<p>ただし、「<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コード」の<ruby><rb>名前</rb><rp>(</rp><rt>なまえ</rt><rp>)</rp></ruby>（<ruby><rb>呼</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>び<ruby><rb>方</rb><rp>(</rp><rt>かた</rt><rp>)</rp></ruby>）は、「<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>符号化方式</rb><rp>(</rp><rt>ふごうかほうしき</rt><rp>)</rp></ruby>」と<ruby><rb>区別</rb><rp>(</rp><rt>くべつ</rt><rp>)</rp></ruby>されないことも<ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>い。また、「<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コード」という<ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>が、「<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>セット」と<ruby><rb>同</rb><rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じ<ruby><rb>意味</rb><rp>(</rp><rt>いみ</rt><rp>)</rp></ruby>で<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>われたり、「<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby><ruby><rb>符号化方式</rb><rp>(</rp><rt>ふごうかほうしき</rt><rp>)</rp></ruby>」と<ruby><rb>同</rb><rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じ<ruby><rb>意味</rb><rp>(</rp><rt>いみ</rt><rp>)</rp></ruby>で<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>われることもあるので、<ruby><rb>注意</rb><rp>(</rp><rt>ちゅうい</rt><rp>)</rp></ruby>が<ruby><rb>必要</rb><rp>(</rp><rt>ひつよう</rt><rp>)</rp></ruby>である。</p>
+<table summary="文字コードの呼び方の例を、言語・文字セット・文字符号化方式との対応によって整理した表。文字コードの呼び方が、文字符号化方式と同じ場合も多いことがわかる。" class="small cl">
+	<caption>文字コードの呼び方の例</caption>
+<thead>
+	<tr class="c1">
+		<th scope="col">言語</th><th scope="col">文字セット</th><th scope="col">文字符号化方式</th><th scope="col">文字コードの呼び方</th>
+	</tr>
+</thead>
+<tfoot class="c8">
+	<tr>
+		<td class="small right" colspan="4">*JIS X 0208を米MicroSoft社が独自に拡張したもの（IBM拡張文字とNEC特殊文字が含まれる）</td>
+	</tr>
+</tfoot>
+<tbody>
+	<tr>
+		<td rowspan="4" class="c4">日本語</td><td rowspan="3" class="c0">JIS X 0208<br />JIS X 0213</td><td class="c0">ISO-2022-JP</td><td class="c3"><acronym title="Japanese Industrial Standards">JIS</acronym>コード（JIS漢字）</td>
+	</tr>
+	<tr>
+		<td class="c0">Shift_JIS</td><td class="c3">シフト<acronym title="Japanese Industrial Standards">JIS</acronym>（SJIS）</td>
+	</tr>
+	<tr>
+		<td class="c0"><abbr title="Extended UNIX Code">EUC</abbr></td><td class="c3">日本語EUC（EUC-JP）</td>
+	</tr>
+	<tr>
+		<td class="c0">Microsoft漢字*</td><td class="c0">Shift_JIS</td><td class="c3">Windows-31J（<abbr title="MicroSoft">ＭＳ</abbr>漢字コード、CP932、MS932）</td>
+	</tr>
+	<tr>
+		<td rowspan="2" class="c4">多言語</td><td rowspan="2" class="c0">ISO/IEC 10646</td><td class="c0"><abbr title="8-bit UCS Transformation Format">UTF-8</abbr></td><td rowspan="2" class="c3">Unicode（ユニコード）</td>
+	</tr>
+	<tr>
+		<td class="c0"><abbr title="16-bit UCS Transformation Format">UTF-16</abbr></td>
+	</tr>
+	<tr>
+		<td rowspan="2" class="c4">繁体字中国語</td><td class="c0">Big5</td><td class="c0">Big5</td><td class="c3">Big5</td>
+	</tr>
+	<tr>
+		<td class="c0"><abbr title="Chinese National Standards">CNS</abbr> 1164</td><td class="c0">EUC</td><td class="c3">繁体字中国語EUC（EUC-TW）</td>
+	</tr>
+	<tr>
+		<td class="c4">簡体字中国語</td><td class="c0"><abbr title="Guo jia Biao zhun">GB</abbr> 2312</td><td class="c0">EUC</td><td class="c3">簡体字中国語EUC（EUC-CN）</td>
+	</tr>
+	<tr>
+		<td class="c4">英語</td><td class="c0"><acronym title="American Standard Code for Information Interchange">ASCII</acronym></td><td class="c0">ASCII</td><td class="c3">ASCII（アスキーコード）</td>
+	</tr>
+</tbody>
+</table>
+<h4 class="cl"><ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コード</h4>
+<p><ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードには、<ruby><rb>主</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>に<ruby><rb>次</rb><rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>の３<ruby><rb>種類</rb><rp>(</rp><rt>しゅるい</rt><rp>)</rp></ruby>のものがある。</p>
+<dl class="small">
+	<dt>1.&nbsp;<span class="large">JISコード</span>（ジス・コード）</dt>
+	<dd>主に、電子メールで使われる。</dd>
+	<dt>2.&nbsp;<span class="large">シフトJIS</span>（シフト・ジス）</dt>
+	<dd>主に、パソコンで使われる。また、日本語のウェブページでも多く用いられる。</dd>
+	<dt>3.&nbsp;<span class="large">日本語EUC</span>（にほんご・イーユーシー）</dt>
+	<dd>主に、UNIXで使われる。日本語のウェブページにも用いられる。</dd>
+</dl>
+<h2 id="bake"><ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けについて</h2>
+<h3><ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けとは</h3>
+<p>ひらがなや<ruby><rb>漢字</rb><rp>(</rp><rt>かんじ</rt><rp>)</rp></ruby>が<ruby><rb>意味不明</rb><rp>(</rp><rt>いみふめい</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>や<ruby><rb>記号</rb><rp>(</rp><rt>きごう</rt><rp>)</rp></ruby>に<ruby><rb>変</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>わってしまうことを<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けという。</p>
+<p><ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けの<ruby><rb>主</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>な<ruby><rb>理由</rb><rp>(</rp><rt>りゆう</rt><rp>)</rp></ruby>は、<ruby><rb>次</rb><rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>のようなものである。</p>
+<ol class="point">
+	<li><ruby><rb>本来</rb><rp>(</rp><rt>ほんらい</rt><rp>)</rp></ruby>のものとは<ruby><rb>別</rb><rp>(</rp><rt>べつ</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードで<ruby><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>み<ruby><rb>込</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>んだ</li>
+	<li>データからの<ruby><rb>情報</rb><rp>(</rp><rt>じょうほう</rt><rp>)</rp></ruby>の<ruby><rb>一部</rb><rp>(</rp><rt>いちぶ</rt><rp>)</rp></ruby>が<ruby><rb>欠落</rb><rp>(</rp><rt>けつらく</rt><rp>)</rp></ruby>してしまった</li>
+	<li><ruby><rb>文書</rb><rp>(</rp><rt>ぶんしょ</rt><rp>)</rp></ruby>の<ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby>に「<ruby><rb>機種依存文字</rb><rp>(</rp><rt>きしゅいぞんもじ</rt><rp>)</rp></ruby>」を<ruby><rb>使用</rb><rp>(</rp><rt>しよう</rt><rp>)</rp></ruby>している</li>
+	<li><ruby><rb>適切</rb><rp>(</rp><rt>てきせつ</rt><rp>)</rp></ruby>なフォントがインストールされていない</li>
+</ol>
+<h3><ruby><rb>別</rb><rp>(</rp><rt>べつ</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードでの<ruby><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>み<ruby><rb>込</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>み</h3>
+<p><ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>くの<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードは、コンピュータ（ソフトウェア）が<ruby><rb>適切</rb><rp>(</rp><rt>てきせつ</rt><rp>)</rp></ruby>に<ruby><rb>設定</rb><rp>(</rp><rt>せってい</rt><rp>)</rp></ruby>（<ruby><rb>変換</rb><rp>(</rp><rt>へんかん</rt><rp>)</rp></ruby>）するので、あまり<ruby><rb>気</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>にする<ruby><rb>必要</rb><rp>(</rp><rt>ひつよう</rt><rp>)</rp></ruby>はない。</p>
+<p>しかし、<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>かの<ruby><rb>理由</rb><rp>(</rp><rt>りゆう</rt><rp>)</rp></ruby>で、<ruby><rb>本来</rb><rp>(</rp><rt>ほんらい</rt><rp>)</rp></ruby>のものとは<ruby><rb>別</rb><rp>(</rp><rt>べつ</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードで<ruby><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>み<ruby><rb>込</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>んでしまうと、<ruby><rb>意味不明</rb><rp>(</rp><rt>いみふめい</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>や<ruby><rb>記号</rb><rp>(</rp><rt>きごう</rt><rp>)</rp></ruby>が<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>されることになる（<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>け）。これは、<ruby><rb>主</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>に<ruby><rb>次</rb><rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>のような<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>に<ruby><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>きる。</p>
+<div class="border">
+<ol class="uab">
+	<li>テキストファイルを&quot;Windows Notepad&quot;（<span xml:lang="zh-tw">記事本</span>）などのアプリケーションソフトで<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>くとき</li>
+	<li>ウェブページを&quot;Internet Explorer&quot;などのウェブブラウザで<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>するとき</li>
+</ol>
+</div>
+<h4>テキストファイルの<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby></h4>
+<p>たとえば、MicroSoft Windowsでは、テキストファイルのアイコンをダブルクリックすると&quot;Windows Notepad&quot;（<span xml:lang="zh-tw">記事本</span>）で<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>くようになっている。しかし、&quot;Windows Notepad&quot;（<span xml:lang="zh-tw">記事本</span>）が<ruby><rb>判別</rb><rp>(</rp><rt>はんべつ</rt><rp>)</rp></ruby>できる<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードは<ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>くない。そのため、システムと<ruby><rb>異</rb><rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なる<ruby><rb>言語</rb><rp>(</rp><rt>げんご</rt><rp>)</rp></ruby>の<ruby><rb>文書</rb><rp>(</rp><rt>げんご</rt><rp>)</rp></ruby>などはうまく<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>けないことも<ruby><rb>少</rb><rp>(</rp><rt>すく</rt><rp>)</rp></ruby>なくない。</p>
+<p>そのような<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>は、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードの<ruby><rb>変換</rb><rp>(</rp><rt>へんかん</rt><rp>)</rp></ruby>ソフト（コンバータ）を<ruby><rb>利用</rb><rp>(</rp><rt>りよう</rt><rp>)</rp></ruby>するか、<ruby><rb>別</rb><rp>(</rp><rt>べつ</rt><rp>)</rp></ruby>のアプリケーションで<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>く<ruby><rb>必要</rb><rp>(</rp><rt>ひつよう</rt><rp>)</rp></ruby>がある。たとえば、&quot;Microsoft Word&quot;ならば、&quot;Windows Notepad&quot;が<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>けないファイルもうまく<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>けるかもしれない。</p>
+<div class="img border">
+<div class="goth small">Windows NotePadで開くと文字化けするテキストファイルも</div>
+<img src="code_4.png" width="250" height="230" alt="" />
+<img src="code_6.png" width="270" height="200" alt="" />
+<div class="goth small">右クリックから&quot;Microsoft Word&quot;で開くと正しく開ける</div>
+<img src="code_5.png" width="250" height="230" alt="" />
+<img src="code_7.png" width="270" height="200" alt="" />
+</div>
+<p>なお、すべての<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードの<ruby><rb>間</rb><rp>(</rp><rt>あいだ</rt><rp>)</rp></ruby>に<ruby><rb>互換性</rb><rp>(</rp><rt>ごかんせい</rt><rp>)</rp></ruby>があるわけではないので、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードの<ruby><rb>変換</rb><rp>(</rp><rt>へんかん</rt><rp>)</rp></ruby>ソフト（コンバータ）を<ruby><rb>利用</rb><rp>(</rp><rt>りよう</rt><rp>)</rp></ruby>するときには<ruby><rb>注意</rb><rp>(</rp><rt>ちゅうい</rt><rp>)</rp></ruby>が<ruby><rb>必要</rb><rp>(</rp><rt>ひつよう</rt><rp>)</rp></ruby>である。</p>
+<p>また、<ruby><rb>異</rb><rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なる<abbr title="Operating System">OS</abbr>でテキストファイルを<ruby><rb>交換</rb><rp>(</rp><rt>こうかん</rt><rp>)</rp></ruby>したとき、<ruby><rb>改行</rb><rp>(</rp><rt>かいぎょう</rt><rp>)</rp></ruby>コードの<ruby><rb>問題</rb><rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>が<ruby><rb>生</rb><rp>(</rp><rt>しょう</rt><rp>)</rp></ruby>じることがある。たとえば、<abbr title="MicroSoft">MS</abbr> WindowsとMacintoshでテキストファイルを<ruby><rb>交換</rb><rp>(</rp><rt>こうかん</rt><rp>)</rp></ruby>したときには、MS WindowsではMacintoshのテキストファイルの<ruby><rb>行</rb><rp>(</rp><rt>ぎょう</rt><rp>)</rp></ruby>がつながって<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>え、MacintoshではMS Windowsのテキストファイルの<ruby><rb>行</rb><rp>(</rp><rt>ぎょう</rt><rp>)</rp></ruby>が<ruby><rb>二重</rb><rp>(</rp><rt>にじゅう</rt><rp>)</rp></ruby>に<ruby><rb>改行</rb><rp>(</rp><rt>かいぎょう</rt><rp>)</rp></ruby>されて<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>える（ことがある）。</p>
+<div class="border small">
+<p>もとのテキスト</p>
+<pre>行く川の流れは絶えずして、しかももとの水にあらず。
+よどみに浮ぶうたかたは、かつ消えかつ結びて、久しく止とゞまりたる例なし。
+世の中にある人と住家と、またかくの如し。</pre>
+<p>MS Windows → Macintosh</p>
+<pre>行く川の流れは絶えずして、しかももとの水にあらず。<br />
+よどみに浮ぶうたかたは、かつ消えかつ結びて、久しく止とゞまりたる例なし。<br />
+世の中にある人と住家と、またかくの如し。<br /></pre>
+<p>Macintosh → MS Windows</p>
+<pre>行く川の流れは絶えずして、しかももとの水にあらず。よどみに浮ぶうたかたは、かつ消えかつ結びて、久しく止とゞまりたる例なし。世の中にある人と住家と、またかくの如し。</pre>
+</div>
+<p>この<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>も、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードの<ruby><rb>変換</rb><rp>(</rp><rt>へんかん</rt><rp>)</rp></ruby>ソフト（コンバータ）を<ruby><rb>利用</rb><rp>(</rp><rt>りよう</rt><rp>)</rp></ruby>するか、<ruby><rb>別</rb><rp>(</rp><rt>べつ</rt><rp>)</rp></ruby>のアプリケーションで<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>く<ruby><rb>必要</rb><rp>(</rp><rt>ひつよう</rt><rp>)</rp></ruby>がある。たとえば、MS Windowsならば、&quot;Microsoft Word&quot;を<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>えば、Macintoshのテキストファイルも<ruby><rb>正</rb><rp>(</rp><rt>ただ</rt><rp>)</rp></ruby>しく<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>くことができる（はずである）。</p>
+<h4>ウェブページの<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby></h4>
+<p>たとえば、「<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby><abbr title="Extended UNIX Code">EUC</abbr>」のウェブページを「シフトJIS」として<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>いてしまうと、<ruby><rb>意味不明</rb><rp>(</rp><rt>いみふめい</rt><rp>)</rp></ruby>の<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>や<ruby><rb>記号</rb><rp>(</rp><rt>きごう</rt><rp>)</rp></ruby>が<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>されるだけである。</p>
+<div class="img">
+<div class="small goth">ウェブページの文字化け</div>
+<img src="code_10.png" width="250" height="218" alt="" />
+<img src="code_11.png" width="250" height="218" alt="" />
+</div>
+<p>これは、</p>
+<ol>
+	<li>&quot;Internet Explorer&quot;などのウェブブラウザが、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードの<ruby><rb>判別</rb><rp>(</rp><rt>はんべつ</rt><rp>)</rp></ruby>を<ruby><rb>誤</rb><rp>(</rp><rt>あやま</rt><rp>)</rp></ruby>った<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby></li>
+	<li>ウェブページやサーバが<ruby><rb>指定</rb><rp>(</rp><rt>してい</rt><rp>)</rp></ruby>する<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードが<ruby><rb>実際</rb><rp>(</rp><rt>じっさい</rt><rp>)</rp></ruby>のページの<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードと<ruby><rb>異</rb><rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なる<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby></li>
+</ol>
+<p class="none">に<ruby><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>きる。</p>
+<p>このときには、ウェブブラウザの<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードの<ruby><rb>設定</rb><rp>(</rp><rt>せってい</rt><rp>)</rp></ruby>を<ruby><rb>正</rb><rp>(</rp><rt>ただ</rt><rp>)</rp></ruby>しく<ruby><rb>変更</rb><rp>(</rp><rt>へんこう</rt><rp>)</rp></ruby>する<ruby><rb>必要</rb><rp>(</rp><rt>ひつよう</rt><rp>)</rp></ruby>がある。</p>
+<div class="img border">
+<div class="goth small">ブラウザでの文字コードの設定の例（Internet Explorer中文版）</div>
+<img src="code_8.png" width="400" height="300" alt="" />
+</div>
+<p>また、&quot;Internet Explorer&quot;<span class="small">（中文版）</span>では、「<ruby><rb>自動判別</rb><rp>(</rp><rt>じどうはんべつ</rt><rp>)</rp></ruby>」の<ruby><rb>設定</rb><rp>(</rp><rt>せってい</rt><rp>)</rp></ruby>になっているとき、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードがUTF-8の<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>ページを<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>こうとすると<ruby><rb>空白</rb><rp>(</rp><rt>くうはく</rt><rp>)</rp></ruby>のページが<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>される<span class="small">（<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>も<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>されない）</span>ことがある。このときも、ウェブブラウザの<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードの<ruby><rb>設定</rb><rp>(</rp><rt>せってい</rt><rp>)</rp></ruby>を<ruby><rb>正</rb><rp>(</rp><rt>ただ</rt><rp>)</rp></ruby>しく<ruby><rb>変更</rb><rp>(</rp><rt>へんこう</rt><rp>)</rp></ruby>する<ruby><rb>必要</rb><rp>(</rp><rt>ひつよう</rt><rp>)</rp></ruby>がある。</p>
+<h3>データの<ruby><rb>欠落</rb><rp>(</rp><rt>けつらく</rt><rp>)</rp></ruby></h3>
+<p><ruby><rb>主</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>に、<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>電子</rb><rp>(</rp><rt>でんし</rt><rp>)</rp></ruby>メールに<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>われるのは、JISコード（ISO-2022-JP）である<span class="small">（<ruby><rb>最近</rb><rp>(</rp><rt>さいきん</rt><rp>)</rp></ruby>では、Unicodeも<ruby><rb>普及</rb><rp>(</rp><rt>ふきゅう</rt><rp>)</rp></ruby>してきている）</span>。<ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>くのメールソフトでは、<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>電子</rb><rp>(</rp><rt>でんし</rt><rp>)</rp></ruby>メールの<ruby><rb>送信時</rb><rp>(</rp><rt>そうしんじ</rt><rp>)</rp></ruby>に<ruby><rb>自動的</rb><rp>(</rp><rt>じどうてき</rt><rp>)</rp></ruby>にJISコードに<ruby><rb>変換</rb><rp>(</rp><rt>へんかん</rt><rp>)</rp></ruby>されるようになっている。これは、シフトJISやEUC-JPが8<acronym title="binary digit">bit</acronym>のエンコードであるのに<ruby><rb>対</rb><rp>(</rp><rt>たい</rt><rp>)</rp></ruby>して、JISコードが7bitのエンコードだからである。</p>
+<p><ruby><rb>電子</rb><rp>(</rp><rt>でんし</rt><rp>)</rp></ruby>メールは、<ruby><rb>英語</rb><rp>(</rp><rt>えいご</rt><rp>)</rp></ruby>を<ruby><rb>中心</rb><rp>(</rp><rt>ちゅうしん</rt><rp>)</rp></ruby>に<ruby><rb>発展</rb><rp>(</rp><rt>はってん</rt><rp>)</rp></ruby>したことから、7bitのエンコードが<ruby><rb>標準</rb><rp>(</rp><rt>ひょうじゅん</rt><rp>)</rp></ruby>となっていた。<ruby><rb>現在</rb><rp>(</rp><rt>げんざい</rt><rp>)</rp></ruby>でも、メールサーバ<span class="en">mail server</span>の<ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby>には、7bitのコードしか<ruby><rb>適切</rb><rp>(</rp><rt>てきせつ</rt><rp>)</rp></ruby>に<ruby><rb>処理</rb><rp>(</rp><rt>しょり</rt><rp>)</rp></ruby>しないものがある。そのため、メールに8bitのコードを<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>うと、<ruby><rb>電子</rb><rp>(</rp><rt>でんし</rt><rp>)</rp></ruby>メールからデータの<ruby><rb>一部</rb><rp>(</rp><rt>いちぶ</rt><rp>)</rp></ruby>が<ruby><rb>欠落</rb><rp>(</rp><rt>けつらく</rt><rp>)</rp></ruby>してしまうことがある。</p>
+<div class="img">
+<div class="small goth">電子メールの文字化け</div>
+<img src="code_12.png" width="450" height="225" alt="" />
+</div>
+<p>メール<ruby><rb>送信時</rb><rp>(</rp><rt>そうしんじ</rt><rp>)</rp></ruby>の<ruby><rb>設定</rb><rp>(</rp><rt>せってい</rt><rp>)</rp></ruby>などによって、シフトJISやEUC-JPでメールを<ruby><rb>送</rb><rp>(</rp><rt>おく</rt><rp>)</rp></ruby>った<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>には、<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けするデータの<ruby><rb>欠落</rb><rp>(</rp><rt>けつらく</rt><rp>)</rp></ruby>によって<ruby><rb>可能性</rb><rp>(</rp><rt>かのうせい</rt><rp>)</rp></ruby>がある。データの<ruby><rb>欠落</rb><rp>(</rp><rt>けつらく</rt><rp>)</rp></ruby>による<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けは、<ruby><rb>復元</rb><rp>(</rp><rt>ふくげん</rt><rp>)</rp></ruby>が<ruby><rb>困難</rb><rp>(</rp><rt>こんなん</rt><rp>)</rp></ruby>である。<ruby><rb>電子</rb><rp>(</rp><rt>でんし</rt><rp>)</rp></ruby>メールが<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けして、どうしても<ruby><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>めないときには、もう<ruby><rb>一度</rb><rp>(</rp><rt>いちど</rt><rp>)</rp></ruby>メールを<ruby><rb>送</rb><rp>(</rp><rt>おく</rt><rp>)</rp></ruby>ってもらうしかない（<ruby><rb>送信時</rb><rp>(</rp><rt>そうしんじ</rt><rp>)</rp></ruby>の<ruby><rb>設定</rb><rp>(</rp><rt>せってい</rt><rp>)</rp></ruby>を<ruby><rb>確認</rb><rp>(</rp><rt>かくにん</rt><rp>)</rp></ruby>してもらった<ruby><rb>方</rb><rp>(</rp><rt>ほう</rt><rp>)</rp></ruby>がよい。<ruby><rb>本文</rb><rp>(</rp><rt>ほんぶん</rt><rp>)</rp></ruby>を<ruby><rb>添付</rb><rp>(</rp><rt>てんぷ</rt><rp>)</rp></ruby>ファイルで<ruby><rb>送</rb><rp>(</rp><rt>おく</rt><rp>)</rp></ruby>りなおしてもらう<ruby><rb>方法</rb><rp>(</rp><rt>ほうほう</rt><rp>)</rp></ruby>もある）。</p>
+<p>また、<ruby><rb>電子</rb><rp>(</rp><rt>でんし</rt><rp>)</rp></ruby>メールの<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けは、メール<ruby><rb>送信時</rb><rp>(</rp><rt>そうしんじ</rt><rp>)</rp></ruby>のコード<ruby><rb>変換</rb><rp>(</rp><rt>へんかん</rt><rp>)</rp></ruby>のエラーなどによっても<ruby><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>きる。この<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>も、<ruby><rb>復元</rb><rp>(</rp><rt>ふくげん</rt><rp>)</rp></ruby>は<ruby><rb>困難</rb><rp>(</rp><rt>こんなん</rt><rp>)</rp></ruby>なので、もう<ruby><rb>一度</rb><rp>(</rp><rt>いちど</rt><rp>)</rp></ruby>メールを<ruby><rb>送</rb><rp>(</rp><rt>おく</rt><rp>)</rp></ruby>ってもらうことになる。</p>
+<h3><ruby><rb>機種依存文字</rb><rp>(</rp><rt>きしゅいぞんもじ</rt><rp>)</rp></ruby></h3>
+<div class="rimg">
+<img src="code_13.png" width="270" height="250" alt="" />
+<div class="center small goth">シフトJISでの機種依存文字の例</div>
+</div>
+<p><ruby><rb>特定</rb><rp>(</rp><rt>とくてい</rt><rp>)</rp></ruby>のコンピュータや<abbr title="Operating System">OS</abbr>でしか<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>できない<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>を「<ruby><rb>機種依存文字</rb><rp>(</rp><rt>きしゅいぞんもじ</rt><rp>)</rp></ruby>」という。</p>
+<p>どの<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>が<ruby><rb>機種依存文字</rb><rp>(</rp><rt>きしゅいぞんもじ</rt><rp>)</rp></ruby>かは、<ruby><rb>使用</rb><rp>(</rp><rt>しよう</rt><rp>)</rp></ruby>する<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>コードによって<ruby><rb>異</rb><rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なる。<ruby><rb>例</rb><rp>(</rp><rt>たと</rt><rp>)</rp></ruby>えば、シフトJISでは、<ruby><rb>丸囲</rb><rp>(</rp><rt>まるがこ</rt><rp>)</rp></ruby>み<ruby><rb>数字</rb><rp>(</rp><rt>すうじ</rt><rp>)</rp></ruby>やローマ<ruby><rb>数字</rb><rp>(</rp><rt>すうじ</rt><rp>)</rp></ruby>は<ruby><rb>機種依存文字</rb><rp>(</rp><rt>きしゅいぞんもじ</rt><rp>)</rp></ruby>であり、<ruby><rb>異</rb><rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なる<ruby><rb>環境</rb><rp>(</rp><rt>かんきょう</rt><rp>)</rp></ruby>では<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けする。ただし、Unicodeでは、<ruby><rb>丸囲</rb><rp>(</rp><rt>まるがこ</rt><rp>)</rp></ruby>み<ruby><rb>数字</rb><rp>(</rp><rt>すうじ</rt><rp>)</rp></ruby>やローマ<ruby><rb>数字</rb><rp>(</rp><rt>すうじ</rt><rp>)</rp></ruby>は<ruby><rb>機種依存文字</rb><rp>(</rp><rt>きしゅいぞんもじ</rt><rp>)</rp></ruby>ではない。</p>
+<p>テキストに<ruby><rb>機種依存文字</rb><rp>(</rp><rt>きしゅいぞんもじ</rt><rp>)</rp></ruby>が<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>われている<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>は、<ruby><rb>異</rb><rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なる<ruby><rb>環境</rb><rp>(</rp><rt>かんきょう</rt><rp>)</rp></ruby>で<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>したときに、<ruby><rb>必</rb><rp>(</rp><rt>かなら</rt><rp>)</rp></ruby>ず<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けする。また、<ruby><rb>機種依存文字</rb><rp>(</rp><rt>きしゅいぞんもじ</rt><rp>)</rp></ruby>の<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>は、フォントによっても<ruby><rb>異</rb><rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なるので、<ruby><rb>同</rb><rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じOSでも<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>が<ruby><rb>変</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>わってしまうことがある。そのため、テキストに<ruby><rb>機種依存文字</rb><rp>(</rp><rt>きしゅいぞんもじ</rt><rp>)</rp></ruby>が<ruby><rb>含</rb><rp>(</rp><rt>ふく</rt><rp>)</rp></ruby>まれないようにした<ruby><rb>方</rb><rp>(</rp><rt>ほう</rt><rp>)</rp></ruby>がよいだろう。</p>
+<div class="cl limg">
+<img src="code_9.png" width="385" height="170" alt="" />
+</div>
+<p>いわゆる「<ruby><rb>半角</rb><rp>(</rp><rt>はんかく</rt><rp>)</rp></ruby>カナ」（１バイトのかな<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>）は、<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けの<ruby><rb>原因</rb><rp>(</rp><rt>げんいん</rt><rp>)</rp></ruby>となることがあるので、<ruby><rb>電子</rb><rp>(</rp><rt>でんし</rt><rp>)</rp></ruby>メールでは、できるだけ<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>わない<ruby><rb>方</rb><rp>(</rp><rt>ほう</rt><rp>)</rp></ruby>がよい。また、<ruby><rb>半角</rb><rp>(</rp><rt>はんかく</rt><rp>)</rp></ruby>カナは、<abbr title="Rich Text Format">RTF</abbr>などの<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>き<ruby><rb>出</rb><rp>(</rp><rt>だ</rt><rp>)</rp></ruby>しでも、<ruby><rb>問題</rb><rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby>となることがある。</p>
+<h3 class="cl"><ruby><rb>適切</rb><rp>(</rp><rt>てきせつ</rt><rp>)</rp></ruby>なフォント</h3>
+<div class="rimg">
+<img src="code_14.png" width="215" height="280" alt="" />
+<div class="center small goth">各国語フォントによる文字の形の違い</div>
+</div>
+<p><ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>、<ruby><rb>中国語</rb><rp>(</rp><rt>ちゅうごくご</rt><rp>)</rp></ruby>、<ruby><rb>韓国語</rb><rp>(</rp><rt>かんこくご</rt><rp>)</rp></ruby>などの<ruby><rb>非</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>アルファベット<ruby><rb>言語</rb><rp>(</rp><rt>げんご</rt><rp>)</rp></ruby>では、それぞれの<ruby><rb>言語</rb><rp>(</rp><rt>げんご</rt><rp>)</rp></ruby>のフォントがインストールされていないと、<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>を<ruby><rb>正</rb><rp>(</rp><rt>ただ</rt><rp>)</rp></ruby>しく<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>することができない。たとえば、<ruby><rb>繁体字中国語</rb><rp>(</rp><rt>はんたいじちゅうごくご</rt><rp>)</rp></ruby>のフォントがインストールされていない<ruby><rb>環境</rb><rp>(</rp><rt>かんきょう</rt><rp>)</rp></ruby>では、Big5でのテキストは<ruby><rb>正</rb><rp>(</rp><rt>ただ</rt><rp>)</rp></ruby>しく<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>できない。</p>
+<p>なお、<ruby><rb>同</rb><rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じ<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>でもフォントによって<ruby><rb>文字</rb><rp>(</rp><rt>もじ</rt><rp>)</rp></ruby>の<ruby><rb>形</rb><rp>(</rp><rt>かたち</rt><rp>)</rp></ruby>に<ruby><rb>違</rb><rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>いがある<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>がある。<ruby><rb>言語</rb><rp>(</rp><rt>げんご</rt><rp>)</rp></ruby>が<ruby><rb>異</rb><rp>(</rp><rt>こと</rt><rp>)</rp></ruby>なる<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>（たとえば、<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>漢字</rb><rp>(</rp><rt>かんじ</rt><rp>)</rp></ruby>を<ruby><rb>繁体字中国語</rb><rp>(</rp><rt>はんたいじちゅうごくご</rt><rp>)</rp></ruby>のフォントで<ruby><rb>表示</rb><rp>(</rp><rt>ひょうじ</rt><rp>)</rp></ruby>・<ruby><rb>印刷</rb><rp>(</rp><rt>いんさつ</rt><rp>)</rp></ruby>するとき）には<ruby><rb>気</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>をつけなければならない<span class="small">（<ruby><rb>特</rb><rp>(</rp><rt>とく</rt><rp>)</rp></ruby>に、<ruby><rb>人名</rb><rp>(</rp><rt>じんめい</rt><rp>)</rp></ruby>に<ruby><rb>関</rb><rp>(</rp><rt>かん</rt><rp>)</rp></ruby>しては<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>わぬトラブルになることがある）</span>。</p>
+<p class="cl">また、フォントの<ruby><rb>設定</rb><rp>(</rp><rt>せってい</rt><rp>)</rp></ruby>によっては、<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>のリッチテキストフォーマットのファイル（<ruby><rb>拡張子</rb><rp>(</rp><rt>かくちょうし</rt><rp>)</rp></ruby>「.rtf」）がうまく<ruby><rb>開</rb><rp>(</rp><rt>ひら</rt><rp>)</rp></ruby>けないことがある。</p>
+<p>たとえば、<ruby><rb>中国語版</rb><rp>(</rp><rt>ちゅうごくご</rt><rp>)</rp></ruby>の&quot;Microsoft Word&quot;を<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>って<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>のリッチテキストフォーマットのファイルを<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>き<ruby><rb>出</rb><rp>(</rp><rt>だ</rt><rp>)</rp></ruby>す<ruby><rb>場合</rb><rp>(</rp><rt>ばあい</rt><rp>)</rp></ruby>、&quot;ＭＳ明朝&quot;や&quot;ＭＳゴシック&quot;などの<ruby><rb>一般的</rb><rp>(</rp><rt>いっぱん</rt><rp>)</rp></ruby>な<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>フォントに<ruby><rb>設定</rb><rp>(</rp><rt>せってい</rt><rp>)</rp></ruby>した<ruby><rb>方</rb><rp>(</rp><rt>ほう</rt><rp>)</rp></ruby>がよい。また、<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>のリッチテキストファイルが<ruby><rb>文字化</rb><rp>(</rp><rt>もじば</rt><rp>)</rp></ruby>けするときにも、フォントを&quot;ＭＳ明朝&quot;や&quot;ＭＳゴシック&quot;などに<ruby><rb>変</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>えると<ruby><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>めることがある。</p>
+<div class="totop"><a href="#top" title="このページの先頭へ">ページの先頭へ↑</a><br /><a href="#top" onclick="history.back(); return false;" onkeypress="history.back(); return false;" title="ひとつ前に戻る">←ひとつ前に戻る</a></div>
+<div class="back"><a href="index.html">目次へ</a><br />
+<a href="../index-2.html">トップページへ</a></div>
+</body>
+
+<!-- Mirrored from www7a.biglobe.ne.jp/nifongo/bsyori/code.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Nov 2025 10:40:24 GMT -->
+</html>

@@ -1,0 +1,83 @@
+@import url(procc.css);
+ol ol {
+	list-style-type: lower-alpha ;}
+table.unit {
+	margin-left: 4em ;
+	border-width: 2px ;}
+table.funit {
+	margin-left: 1em ;
+	margin-bottom: 1em ;
+	border-width: 2px ;}
+table.funit thead {
+	background: #DCDCDC ;}
+table.funit tbody th {
+	background: #F5F5DC ;}
+table.funit tfoot {
+	background: #FFFACD ;
+	text-align: left ;}
+table.funit tfoot td {
+	padding: 5px 3px ;}
+table.clcont {
+	margin-left: 1em ;
+	border-width: 2px ;}
+table.clcont thead {
+	background: #DCDCDC ;}	
+table.clcont tbody th {
+	background: #F5F5DC ;}	
+table.unit tbody {
+	border-width: 2px ;}
+table.unit th {
+	background: #F5F5DC ;}
+.gdca {
+	color: #0000FF ;
+	background: #FFFF99 ;}
+.bdca {
+	color: #FF0000 ;
+	background: #FF99CC ;}
+.bdcb {
+	color:  #0000FF ;
+	background: #FF0000 ;}
+.bdcc {
+	color: #666666 ;
+	background: #CCCCFF ;}
+.blue {
+	color: #0000FF ;}
+.yellow {
+	color: #FFFF00 ;}
+.bdcd {
+	background: #00FF00 ;
+	color : #0000FF ;}
+.gray {
+	background: #CCCCCC ;}
+.bgred {	
+	background: #FF0000 ;}
+.xxss {
+	font-size: xx-small ;}
+.xs {
+	font-size: x-small ;}
+.ss {
+	font-size: small ;}
+.xxll {
+	font-size: xx-large ;}
+.xl {
+	font-size: x-large ;}
+.ll {
+	font-size: large ;}
+.uesen {
+	text-decoration: overline ;}
+.keshi {
+	text-decoration: line-through ;}
+.wide {
+	letter-spacing: 1em ;}
+.narrow {
+	letter-spacing: -2px ;}
+.min {
+	font-family: serif ;}
+.lh12 {
+	line-height: 1.2 ;}
+.em2 {
+	font-size: 2em ;}
+.pt18 {
+	font-size: 18pt ;}
+.per60 {
+	font-size: 60% ;}
